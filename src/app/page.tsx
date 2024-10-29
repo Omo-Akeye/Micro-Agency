@@ -1,101 +1,99 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
+import ProjectSlider from "./components/ProjectSlider";
+
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [showAboutPopup, setShowAboutPopup] = useState(false);
+  const [showChatPopup, setShowChatPopup] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="max-w-[1440px] mx-auto  orbit-regular mb-32">
+      <nav className="w-[90%] flex justify-between mt-[3%] mx-auto items-center relative">
+        <span className="flex items-center gap-4">
+          <img src="/Group 2.svg" alt="profile" width={60} className="cursor-pointer"/>
+          <div className="flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px]">
+            <img src="/Ellipse 4.svg" alt="active" width={14} />
+            <p className="text-xs">
+              <span className="mr-2 text-[#000000] text-opacity-60">Status:</span> Open to work
+            </p>
+          </div>
+      
+          <div
+            className=" cursor-pointer flex"
+            onMouseEnter={() => setShowChatPopup(true)}
+            onMouseLeave={() => setShowChatPopup(false)}
+            onClick={() => setShowChatPopup(!showChatPopup)}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+           <img src="/Frame 418.svg" alt="" className=""/>  
+            {showChatPopup && (
+              <div className="rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1">
+                Let’s Chat
+              </div>
+            )}
+          </div>
+        </span>
+
+
+
+
+
+
+
+        <div className="flex gap-x-6">
+          <p className="flex underline items-center gap-x-3">
+            Links <img src="/Vector (Stroke).svg" alt="arrow" />
+          </p>
+          
+
+          <div >
+          <p
+              className="flex underline items-center gap-x-3 cursor-pointer"
+              onClick={() => setShowAboutPopup(!showAboutPopup)}
+            >
+              About{" "}
+              <img
+                src="/Vector (Stroke).svg"
+                alt="arrow"
+                className={`transition-transform duration-300 ${showAboutPopup ? "rotate-180" : ""}`}
+              />
+            </p>
+            {/* About Popup */}
+            {showAboutPopup && (
+              <div className="absolute top-8 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px]">
+                <div className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Our micro team</div>
+                <ul className="mt-3 space-y-3">
+                  <li className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                    <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
+                    <span>Isaac Oreoluwa - Designer</span>
+                  </li>
+                  <li className="flex items-center bg-[#F5F5F5] py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                    <img src="/akeye.svg" alt="Akeye Saheed" width={34} className="mr-[10px]" />
+                    <span>Akeye Saheed - Developer</span>
+                  </li>
+                </ul>
+              </div>
+            )}
+
+          </div>
+        
+          <img src="/Rocket.svg" alt="rocket" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </nav>
+
+      <section className="flex items-center w-[40%] mx-auto gap-x-3 mt-24">
+        <p>Design <span className="text-[#000000] text-opacity-60 underline">Isaac Oreoluwa</span></p>
+        <span>.</span>
+        <p>Development <span className="text-[#000000] text-opacity-60 underline">Akeye Saheed</span></p>
+      </section>
+
+      <section className="mt-[70px] relative w-[80%] mx-auto">
+        <h2 className="uppercase ml-5 mb-6">Featured Projects</h2>
+      
+
+     <ProjectSlider/>
+      </section>
     </div>
   );
 }
