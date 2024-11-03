@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Nav from "./components/Nav";
 
 
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+       <link rel="shortcut icon" href="/Group 2.svg" />
+      <body className="orbit-regular">
+        <Nav/>
         {children}
       </body>
     </html>

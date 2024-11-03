@@ -18,3 +18,17 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  .rotate-animation {
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
