@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProjectSlider from "./components/ProjectSlider";
 import Link from "next/link";
 
@@ -8,6 +8,25 @@ import Link from "next/link";
 export default function Home() {
   const [showAboutPopup, setShowAboutPopup] = useState(false);
   const [showLinkPopup, setShowLinkPopup] = useState(false);
+  const aboutPopupRef = useRef<HTMLDivElement | null>(null);
+  const linkPopupRef = useRef<HTMLDivElement | null>(null);
+  
+
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (aboutPopupRef.current && !aboutPopupRef.current.contains(event.target as Node)) {
+        setShowAboutPopup(false);
+      }
+      if (linkPopupRef.current && !linkPopupRef.current.contains(event.target as Node)) {
+        setShowLinkPopup(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   
 
   return (
@@ -22,7 +41,7 @@ export default function Home() {
 
 
       <div className="flex gap-x-6 md:hidden mt-10 w-[90%] mx-auto relative ">
-          <div >
+          <div ref={linkPopupRef} >
           <div
               className="flex underline items-center gap-x-3 cursor-pointer"
               onClick={() => setShowLinkPopup(!showLinkPopup)}
@@ -54,7 +73,7 @@ export default function Home() {
           </div>
           
 
-          <div >
+          <div ref={aboutPopupRef} >
           <p
               className="flex underline items-center gap-x-3 cursor-pointer"
               onClick={() => setShowAboutPopup(!showAboutPopup)}

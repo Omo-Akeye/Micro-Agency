@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useState,useEffect, useRef } from 'react'
 import { useParams } from 'next/navigation';
 
 const navImages = {
@@ -24,10 +24,27 @@ export default function Nav() {
     const [showLinkPopup, setShowLinkPopup] = useState(false);
 
     const params = useParams();
+    const aboutPopupRef = useRef<HTMLDivElement | null>(null);
+    const linkPopupRef = useRef<HTMLDivElement | null>(null);
     
    
     const currentProfile = params?.name as string;
     const images = navImages[currentProfile as keyof typeof navImages] || navImages.default;
+
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (aboutPopupRef.current && !aboutPopupRef.current.contains(event.target as Node)) {
+          setShowAboutPopup(false);
+        }
+        if (linkPopupRef.current && !linkPopupRef.current.contains(event.target as Node)) {
+          setShowLinkPopup(false);
+        }
+      };
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
   return (
     <nav className="w-[90%] flex max-md:flex-col justify-between md:mt-[3%] mt-[41px] mx-auto items-center relative ">
         <span className="flex items-center gap-4 relative">
@@ -73,7 +90,7 @@ export default function Nav() {
 
         <div className="md:flex gap-x-6 hidden">
 
-<div >
+<div ref={linkPopupRef}>
           <div
               className="flex underline items-center gap-x-3 cursor-pointer"
               onClick={() => setShowLinkPopup(!showLinkPopup)}
@@ -105,7 +122,7 @@ export default function Nav() {
           </div>
           
 
-          <div >
+          <div ref={aboutPopupRef} >
           <p
               className="flex underline items-center gap-x-3 cursor-pointer"
               onClick={() => setShowAboutPopup(!showAboutPopup)}
