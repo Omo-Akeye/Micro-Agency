@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   const [showAboutPopup, setShowAboutPopup] = useState(false);
+  const [showLinkPopup, setShowLinkPopup] = useState(false);
   
 
   return (
@@ -21,9 +22,36 @@ export default function Home() {
 
 
       <div className="flex gap-x-6 md:hidden mt-10 w-[90%] mx-auto relative ">
-          <p className="flex underline items-center gap-x-3">
-            Links <img src="/Vector (Stroke).svg" alt="arrow" />
-          </p>
+          <div >
+          <div
+              className="flex underline items-center gap-x-3 cursor-pointer"
+              onClick={() => setShowLinkPopup(!showLinkPopup)}
+            >
+              Link{" "}
+              <img
+                src="/Vector (Stroke).svg"
+                alt="arrow"
+                className={`transition-transform duration-300 ${showLinkPopup ? "rotate-180" : ""}`}
+              />
+            </div>
+            {/* link Popup */}
+            {showLinkPopup && (
+              <div className="absolute top-8 left-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-2 max-w-[350px] bg-white flex flex-col space-y-3 z-20">
+                <a href="#" className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
+                  Email
+                </a>
+              
+                  <a href="#" className="inline-flex items-center bg-[#F5F5F5]  py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
+                   LinkedIn
+                  </a>
+                  <a href="#" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
+                    Twitter
+                  </a>
+                
+              </div>
+            )}
+
+          </div>
           
 
           <div >
@@ -40,7 +68,7 @@ export default function Home() {
             </p>
        
             {showAboutPopup && (
-              <div className="absolute top-0 left-2 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] z-20 max-sm:bg-white">
+              <div className="absolute top-0 left-2 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] z-20 bg-white">
                 <div className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Our micro team</div>
                 <div className="mt-3 space-y-3">
                   <Link href="/about/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">

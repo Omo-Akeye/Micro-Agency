@@ -14,7 +14,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Bime website revamp",
-    description: "UI design, UX improvement, development. Copywriting",
+    description: "UI design,UX improvement,developement. Copywriting",
     hoverIMG: "/Group 11.svg",
     Link: "https://revamp-xi.vercel.app/",
     year: 2024,
@@ -69,7 +69,7 @@ export default function ProjectSlider() {
 
          
           {hoveredProjectIndex === index && (
-            <div className="absolute flex items-center justify-center rounded-[10px] transition-opacity duration-300 ease-in-out max-w-[550px] max-h-80 sm:right-0 sm:top-[10%] max-md:w-[300px] z-20 max-sm:w-[200px] max-sm:right-0">
+            <div className="absolute flex items-center justify-center rounded-[10px] transition-opacity duration-300 ease-in-out max-w-[550px] max-h-80 sm:right-0 sm:top-[10%] max-md:w-[300px] z-20 max-sm:hidden">
               <img
                 src={project.hoverIMG}
                 alt={`${project.title} preview`}
@@ -80,10 +80,10 @@ export default function ProjectSlider() {
         </div>
       ))}
 
-      <div className="flex justify-between mt-8 max-md:flex-col">
+      <div className="flex justify-between mt-8 max-md:inline-block">
         <div 
           onClick={() => router.push('/')}
-          className="px-5 py-3 hover:bg-[#F5F5F5] inline-flex cursor-pointer"
+          className="px-5 py-3 inline-flex cursor-pointer"
         >
           Water Sheder Website
         </div>
