@@ -53,7 +53,7 @@ export default function Home() {
                 className={`transition-transform duration-300 ${showLinkPopup ? "rotate-180" : ""}`}
               />
             </div>
-            {/* link Popup */}
+            
             {showLinkPopup && (
               <div className="absolute top-8 left-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-2 max-w-[350px] bg-white flex flex-col space-y-3 z-20">
                 <a href="#" className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 

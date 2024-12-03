@@ -152,7 +152,7 @@ export default function Nav() {
             )}
 
           </div>
-          <img src="/Rocket.svg" alt="rocket" className="rotate-animation" />
+          <img src="/Help.svg" alt="rocket" className="rotate-animation" />
      
         </div>
       </nav>
