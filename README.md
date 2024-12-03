@@ -14,7 +14,7 @@ A responsive and modern website for showcasing the projects we’ve worked on as
 1.Clone the project
 ```bash
   git clone https://github.com/Omo-Akeye/Micro-Agency.git
-  cd micro-agency-website
+  cd micro-Agency
 ```
 2.Install dependencies
 
