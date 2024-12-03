@@ -30,8 +30,8 @@ A responsive and modern website for showcasing the projects we’ve worked on as
 4.Start the development server
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
 # Live Demo
-Check out the live version of the website: [text](https://micro-agency.vercel.app/)
+Check out the live version of the website: [Micro Agency](https://micro-agency.vercel.app/)
