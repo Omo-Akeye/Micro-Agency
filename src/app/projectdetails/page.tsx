@@ -8,7 +8,7 @@ export default function page() {
         <div>
             <h2 className='font-medium'>Bime Revamp Website</h2>
             <p className='text-gray-500 mb-6'>2024-UI design, UX improvement,Developement</p>
-             <span className="bg-[#F5F5F5F5] px-[10px] py-[10px] text-sm font-medium rounded-lg">
+             <span className="bg-[#F5F5F5F5] px-[10px] py-[10px] text-xs font-medium rounded-lg">
                 Copy Writing by <a href="https://x.com/copybyhabeeb" className='underline'>Copybyhabeeb</a>
              </span>
         </div>
@@ -22,9 +22,9 @@ export default function page() {
         Bime is an intelligent business built right into the heart; it allows users to add sales and expenses, and they get to see profit and money generated on a daily, monthly, and annual basis.
         </p>
 
-        <img src="/Group 11.svg" width={466} />
+        <img src="/Group 11.svg" width={466} className='transition ease-in delay-150 hover:scale-125 duration-200' />
         <p>We were approached to revamp the landing page of 'Bime' after recognizing significant challenges in its current website. First-time visitors struggled to grasp the core message and purpose of the platform, particularly in the hero section, which failed to communicate effectively. As experts, we identified inconsistencies throughout the site that misaligned with the brand’s objectives, potentially impacting conversion rates. Our goal was to reimagine the website to clearly convey the brand’s value while ensuring an engaging and user-friendly experience.</p>
-        <img src="/Final 1.svg" alt='bime' width={466}/>
+        <img src="/Final 1.svg" alt='bime' width={466}  className='transition ease-in- delay-150 hover:scale-125 duration-200'/>
 
 
         <div className='flex-col items-start'>

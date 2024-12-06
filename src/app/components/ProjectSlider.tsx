@@ -82,8 +82,7 @@ export default function ProjectSlider() {
 
       <div className="flex justify-between mt-8 max-md:inline-block">
         <div 
-          onClick={() => router.push('/')}
-          className="px-5 py-3 inline-flex cursor-pointer"
+          className="px-5 py-3 inline-flex"
         >
           Water Sheder Website
         </div>

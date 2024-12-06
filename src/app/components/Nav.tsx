@@ -90,7 +90,7 @@ export default function Nav() {
 
         <div className="md:flex gap-x-6 hidden">
 
-<div ref={linkPopupRef}>
+<div ref={linkPopupRef} className='relative'>
           <div
               className="flex underline items-center gap-x-3 cursor-pointer"
               onClick={() => setShowLinkPopup(!showLinkPopup)}
@@ -104,7 +104,7 @@ export default function Nav() {
             </div>
             {/* link Popup */}
             {showLinkPopup && (
-              <div className="absolute top-8 right-[10%] rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white flex flex-col space-y-3">
+              <div className="absolute top-[4%] right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white flex flex-col space-y-3">
                 <a href="#" className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
                   Email
                 </a>
@@ -136,7 +136,7 @@ export default function Nav() {
             </p>
             {/* About Popup */}
             {showAboutPopup && (
-              <div className="absolute top-8 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white">
+              <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white">
                 <div className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Our micro team</div>
                 <div className="mt-3 space-y-3">
                   <Link href="/about/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
