@@ -1,6 +1,9 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 
 export default function page() {
+  const [showChatPopup, setShowChatPopup] = useState(false);
   return (
     <div className='lg:w-[60%] md:my-28 mx-auto w-[80%] sm:my-20 my-10'>
 
@@ -35,6 +38,20 @@ export default function page() {
     <p>Whether you're launching a new app, redesigning your platform, or need support for ongoing development, we’re here to help you build with clarity and confidence.</p>
 
     <p className="my-8">Let’s Build Something Great Together.</p>
+
+    <div
+            className=" cursor-pointer flex"
+            onMouseEnter={() => setShowChatPopup(true)}
+            onMouseLeave={() => setShowChatPopup(false)}
+            onClick={() => setShowChatPopup(!showChatPopup)}
+          >
+           <img src="/Frame 418.svg" alt="" className=""/>  
+            {showChatPopup && (
+              <div className="rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
+                Let’s Chat
+              </div>
+            )}
+          </div>
 
       
     </div>
