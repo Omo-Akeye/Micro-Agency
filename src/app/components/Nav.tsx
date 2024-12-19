@@ -47,9 +47,11 @@ export default function Nav() {
     }, []);
   return (
     <nav className="w-[90%] flex max-md:flex-col justify-between md:mt-[3%] mt-[41px] mx-auto items-center relative ">
-        <span className="flex items-center gap-4 relative">
+        <span className="flex items-center md:gap-4 max-md:justify-between relative max-md:w-full">
      
 
+     <div className=" flex items-center gap-4">
+      
 <Link href={"/"}>
             <img 
               src={images.profile} 
@@ -60,13 +62,15 @@ export default function Nav() {
           </Link>
           
         
-<div className="flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px]">
+<div className="flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px] h-fit">
       <div className="w-3.5 h-3.5 rounded-full bg-green-500 animate-pulse" />
-      <p className="md:text-xs text-[10px]">
-        <span className="mr-2 text-[#000000] text-opacity-60">Status:</span> Open to work
+      <p className="md:text-xs font-medium text-[10px]">
+      1 spot remaining
       </p>
     </div>
       
+     </div>
+
           <div
             className=" cursor-pointer flex"
             onMouseEnter={() => setShowChatPopup(true)}
@@ -75,7 +79,7 @@ export default function Nav() {
           >
            <img src="/Frame 418.svg" alt="" className=""/>  
             {showChatPopup && (
-              <div className="rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
+              <div className="max-md:hidden rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
                 Let’s Chat
               </div>
             )}

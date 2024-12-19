@@ -47,7 +47,7 @@ export default function page() {
           >
            <img src="/Frame 418.svg" alt="" className=""/>  
             {showChatPopup && (
-              <div className="rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
+              <div className="max-md:hidden rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
                 Let’s Chat
               </div>
             )}

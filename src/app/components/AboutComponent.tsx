@@ -25,9 +25,9 @@ export default function AboutComponent({logo,name,firstParagraph,secondParagh,th
  <p className='my-10'>{secondParagh}</p>
  <p>{thirdParagraph}</p>
 
- <div className='flex gap-x-9 mt-16 flex-wrap space-y-3 items-center'>
+ <div className='flex gap-x-9 mt-16 flex-wrap items-center'>
     {socials.map((social,index)=> (
-       <a className='underline' href={social.href} key={index}>{social.linkTitle}</a> 
+       <a className='underline max-sm:mt-1' href={social.href} key={index}>{social.linkTitle}</a> 
     ))}
 
  </div>
