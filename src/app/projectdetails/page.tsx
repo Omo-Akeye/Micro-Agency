@@ -1,4 +1,5 @@
 
+import Link from 'next/link'
 import React from 'react'
 
 export default function page() {
@@ -21,10 +22,21 @@ export default function page() {
         <p>
         Bime is an intelligent business built right into the heart; it allows users to add sales and expenses, and they get to see profit and money generated on a daily, monthly, and annual basis.
         </p>
-
+        <div>
+        <Link href="https://revamp-xi.vercel.app" >
         <img src="/Group 11.svg" width={466} className='transition ease-in delay-150 hover:scale-125 duration-200' />
+        </Link>
+       </div>
+        
         <p>We were approached to revamp the landing page of 'Bime' after recognizing significant challenges in its current website. First-time visitors struggled to grasp the core message and purpose of the platform, particularly in the hero section, which failed to communicate effectively. As experts, we identified inconsistencies throughout the site that misaligned with the brand’s objectives, potentially impacting conversion rates. Our goal was to reimagine the website to clearly convey the brand’s value while ensuring an engaging and user-friendly experience.</p>
+       
+
+       <div>
+       <Link href="https://revamp-xi.vercel.app/#business" >
         <img src="/Final 1.svg" alt='bime' width={466}  className='transition ease-in- delay-150 hover:scale-125 duration-200'/>
+        </Link>
+       </div>
+        
 
 
         <div className='flex-col items-start'>

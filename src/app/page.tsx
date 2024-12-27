@@ -33,7 +33,16 @@ export default function Home() {
     <div className="max-w-[1440px] mx-auto  orbit-regular mb-32">
     
 
-      <section className="flex md:items-center md:justify-center md:w-[80%] w-[90%] xl:w-[50%] md:mt-24 mx-auto mt-[68px] max-md:flex-col ">
+        <main className="w-[90%] mx-auto sm:text-center md:mt-28 mt-14 z-0">
+        <h1 className="text-[#000000]/[0.4] xl:text-[80px] xl:leading-[88px]  min-[860px]:text-6xl text-5xl">
+          From Sketch to Scale:
+          </h1>
+        <h1 className="xl:text-[80px] xl:leading-[88px] min-[860px]:text-6xl text-5xl">   
+         We Design and Develop
+         </h1>
+        </main>
+        
+      <section className="flex md:items-center md:justify-center md:w-[80%] w-[90%] xl:w-[50%] md:mt-24 mx-auto mt-12 max-md:flex-col ">
         <div className="flex gap-x-3"><img src="/Layers.svg" alt="design" />Design <a href="https://www.behance.net/isaacoreoluwa" className="text-[#000000] text-opacity-60 underline">Isaac Oreoluwa</a></div>
         <img src="/dot.png" alt="dot" className="mx-6 max-md:hidden" />
         <div className="flex gap-x-3 max-md:mt-2"> <img src="/Code 2.svg" alt="code"  />Development <a href="https://akeye-portfolio.netlify.app/" className="text-[#000000] text-opacity-60 underline">Akeye Saheed</a></div>

@@ -49,7 +49,6 @@ export default function Nav() {
     <nav className="w-[90%] flex max-md:flex-col justify-between md:mt-[3%] mt-[41px] mx-auto items-center relative ">
         <span className="flex items-center md:gap-4 max-md:justify-between relative max-md:w-full">
      
-
      <div className=" flex items-center gap-4">
       
 <Link href={"/"}>
