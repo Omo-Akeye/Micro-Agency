@@ -23,7 +23,7 @@ export default function page() {
         Bime is an intelligent business built right into the heart; it allows users to add sales and expenses, and they get to see profit and money generated on a daily, monthly, and annual basis.
         </p>
         <div>
-        <Link href="https://revamp-xi.vercel.app" >
+        <Link href="https://revamp-xi.vercel.app" className="inline-flex" >
         <img src="/Group 11.svg" width={466} className='transition ease-in delay-150 hover:scale-125 duration-200' />
         </Link>
        </div>
@@ -32,7 +32,7 @@ export default function page() {
        
 
        <div>
-       <Link href="https://revamp-xi.vercel.app/#business" >
+       <Link href="https://revamp-xi.vercel.app/#business" className="inline-flex" >
         <img src="/Final 1.svg" alt='bime' width={466}  className='transition ease-in- delay-150 hover:scale-125 duration-200'/>
         </Link>
        </div>
