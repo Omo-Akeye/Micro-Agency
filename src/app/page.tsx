@@ -33,7 +33,7 @@ export default function Home() {
     <div className="max-w-[1440px] mx-auto  orbit-regular mb-32">
     
 
-        <main className="w-[90%] mx-auto sm:text-center md:mt-28 mt-14 z-0">
+        <main className="w-[90%] mx-auto sm:text-center md:mt-28 mt-14 z-0 md:space-y-[-4px]">
         <h1 className="text-[#000000]/[0.4] xl:text-[80px] xl:leading-[88px]  min-[860px]:text-6xl text-5xl">
           From Sketch to Scale:
           </h1>
