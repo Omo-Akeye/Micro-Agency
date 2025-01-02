@@ -49,7 +49,7 @@ export default function ProjectSlider() {
             </p>
             <div className="flex items-center text-[#000000] text-opacity-60 text-sm">
               <p>{project.year}</p>
-              <p className="mx-2">-</p>
+              <p className="mx-2 roun">-</p>
               <p>
                 {project.description}
                 {project.descriptionLink && (
@@ -84,7 +84,7 @@ export default function ProjectSlider() {
         <div 
           className="px-5 py-3 inline-flex"
         >
-          Water Sheder Website
+          Pay4Me Website Redesign
         </div>
         <div className="inline-flex px-2 py-2 rounded bg-[#F5F5F5] items-center">
           <img src="/Hourglass Line.svg" alt="hour-glass" />

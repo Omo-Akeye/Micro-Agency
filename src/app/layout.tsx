@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
 import Nav from "./components/Nav";
 
 
 
 export const metadata: Metadata = {
-  title: "Micro Agency",
-  description: "our micro agency",
+  title: "Function Studio",
+  description: "We Design and Develop websites and applications for your business",
 };
 
 export default function RootLayout({
@@ -17,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <link rel="shortcut icon" href="/Group 2.svg" />
+       <link rel="shortcut icon" href="/abstract.svg" />
+    
       <body className="orbit-regular">
         <Nav/>
         {children}

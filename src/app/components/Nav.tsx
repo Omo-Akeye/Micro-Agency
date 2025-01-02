@@ -5,16 +5,20 @@ import { useParams } from 'next/navigation';
 
 const navImages = {
   akeye: {
-    logo: "/Code 2.svg",
-    profile: "/akeye-nav.svg"
+    // logo: "/Code 2.svg",
+    // profile: "/akeye-nav.svg"
+        logo: "/abstract.svg",
+    profile: "/abstract.svg"
   },
   ore: {
-    logo: "/Layers.svg",
-    profile: "/ore-nav.svg"
+    // logo: "/Layers.svg",
+    // profile: "/ore-nav.svg"
+        logo: "/abstract.svg",
+    profile: "/abstract.svg"
   },
   default: {
-    logo: "/Group 2.svg",
-    profile: "/Group 2.svg"
+    logo: "/abstract.svg",
+    profile: "/abstract.svg"
   }
 };
 
@@ -70,7 +74,7 @@ export default function Nav() {
       
      </div>
 
-          <div
+          <a href="mailto:functionstudio247@gmail.com"
             className=" cursor-pointer flex"
             onMouseEnter={() => setShowChatPopup(true)}
             onMouseLeave={() => setShowChatPopup(false)}
@@ -82,7 +86,7 @@ export default function Nav() {
                 Let’s Chat
               </div>
             )}
-          </div>
+          </a>
         </span>
 
 
@@ -108,14 +112,11 @@ export default function Nav() {
             {/* link Popup */}
             {showLinkPopup && (
               <div className="absolute top-[4%] right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white flex flex-col space-y-3">
-                <a href="#" className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
+                <a href="mailto:functionstudio247@gmail.com " className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
                   Email
                 </a>
-              
-                  <a href="#" className="inline-flex items-center bg-[#F5F5F5]  py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
-                   LinkedIn
-                  </a>
-                  <a href="#" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
+            
+                  <a href="https://x.com/functionstudioo" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
                     Twitter
                   </a>
                 
@@ -140,9 +141,9 @@ export default function Nav() {
             {/* About Popup */}
             {showAboutPopup && (
               <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] bg-white">
-                <Link href="/microteam" className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Our micro team</Link>
+                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
                 <div className="mt-3 space-y-3">
-                  <Link href="/about/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                  <Link href="/about/oreoluwa" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
                     <span>Isaac Oreoluwa - Designer</span>
                   </Link>

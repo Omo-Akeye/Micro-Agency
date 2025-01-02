@@ -13,9 +13,9 @@ export default function page() {
             <img src="/Code 2.svg" alt="code" /> 
         </div>
 
-       <h1  className='md:mt-7 mt-4 mb-11'><span className="text-[#00000066] text-opacity-40">About </span> Our Micro Team</h1>
+       <h1  className='md:mt-7 mt-4 mb-11'><span className="text-[#00000066] text-opacity-40">About </span> Function Studio</h1>
 
-       <p>We’re a micro team made up of a designer and a developer, combining creativity and code to bring digital products to life. With a shared passion for solving real-world problems, we collaborate seamlessly to deliver user-friendly, high-quality solutions tailored to your needs.</p>
+       <p>We’re a team made up of a designer and a developer, combining creativity and code to bring digital products to life. With a shared passion for solving real-world problems, we collaborate seamlessly to deliver user-friendly, high-quality solutions tailored to your needs.</p>
         <p className="my-8">What We Do</p>
         <p>Our strength lies in bridging design and development to build products that look great and perform even better. From crafting intuitive user experiences to writing clean, scalable code, we handle every step of the process to bring your ideas to reality</p>
         
@@ -39,7 +39,7 @@ export default function page() {
 
     <p className="my-8">Let’s Build Something Great Together.</p>
 
-    <div
+    <a href="mailto:functionstudio247@gmail.com"
             className=" cursor-pointer flex"
             onMouseEnter={() => setShowChatPopup(true)}
             onMouseLeave={() => setShowChatPopup(false)}
@@ -51,7 +51,7 @@ export default function page() {
                 Let’s Chat
               </div>
             )}
-          </div>
+          </a>
 
       
     </div>
