@@ -42,7 +42,7 @@ export default function ProjectSlider() {
        
           <div 
             onClick={() => router.push('/projectdetails')}
-            className="px-5 py-4 rounded-[10px] hover:bg-[#F5F5F5] inline-flex flex-col cursor-pointer hover:ease-in-out max-sm:relative"
+            className="md:px-5 max-md:pl-2 py-4 rounded-[10px] hover:bg-[#F5F5F5] inline-flex flex-col cursor-pointer hover:ease-in-out max-sm:relative"
           >
             <p className="underline capitalize mb-[8px] inline-flex">
               {project.title}
@@ -80,15 +80,19 @@ export default function ProjectSlider() {
         </div>
       ))}
 
-      <div className="flex justify-between mt-8 max-md:inline-block">
+      <div className="flex justify-between mt-8 max-md:inline-block max-md:pl-2 ">
         <div 
-          className="px-5 py-3 inline-flex"
+          className="md:px-5 max-md:pr-7 py-3 inline-flex"
+          
         >
-          Pay4Me Website Redesign
+          Pay4Me Website Revamp
         </div>
-        <div className="inline-flex px-2 py-2 rounded bg-[#F5F5F5] items-center">
+        <div className="inline-flex px-2 py-2 rounded bg-[#F5F5F5] items-center justify-center gap-x-2">
           <img src="/Hourglass Line.svg" alt="hour-glass" />
+          <p>
           Coming soon
+          </p>
+        
         </div>
       </div>
     </div>

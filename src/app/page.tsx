@@ -34,10 +34,10 @@ export default function Home() {
     
 
         <main className="w-[90%] mx-auto sm:text-center md:mt-28 mt-14 z-0 md:space-y-[-4px]">
-        <h1 className="text-[#000000]/[0.4] xl:text-[80px] xl:leading-[88px]  min-[860px]:text-6xl text-5xl">
+        <h1 className="text-[#000000]/[0.4] xl:text-[80px] xl:leading-[88px]  min-[860px]:text-6xl text-5xl tracking-tight">
           From Sketch to Scale:
           </h1>
-        <h1 className="xl:text-[80px] xl:leading-[88px] min-[860px]:text-6xl text-5xl">   
+        <h1 className="xl:text-[80px] xl:leading-[88px] min-[860px]:text-6xl text-5xl tracking-tight">   
          We Design and Develop
          </h1>
         </main>
@@ -65,14 +65,10 @@ export default function Home() {
             
             {showLinkPopup && (
               <div className="absolute top-8 left-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-2 max-w-[350px] bg-white flex flex-col space-y-3 z-20">
-                <a href="#" className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
+                <a href="mailto:functionstudio247@gmail.com " className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
                   Email
                 </a>
-              
-                  <a href="#" className="inline-flex items-center bg-[#F5F5F5]  py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
-                   LinkedIn
-                  </a>
-                  <a href="#" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
+                  <a href="https://x.com/functionstudioo" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
                     Twitter
                   </a>
                 
@@ -97,9 +93,9 @@ export default function Home() {
        
             {showAboutPopup && (
               <div className="absolute top-0 left-2 rounded-md transition-opacity duration-300 ease-in-out opacity-100 mt-8 max-w-[350px] z-20 bg-white">
-                <Link href="/microteam" className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
+                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
                 <div className="mt-3 space-y-3">
-                  <Link href="/about/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                  <Link href="/about/oreoluwa" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
                     <span>Isaac Oreoluwa - Designer</span>
                   </Link>
