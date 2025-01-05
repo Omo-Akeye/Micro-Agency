@@ -1,11 +1,6 @@
 import AboutComponent from '@/app/components/AboutComponent';
 import React from 'react';
 
-interface AboutPageProps {
-  params: {
-    name: string;
-  };
-}
 
 type TeamMember = {
   name: string;
@@ -30,8 +25,8 @@ export function generateStaticParams() {
   ];
 }
 
-export default async function AboutPage({ params }: AboutPageProps) {
-  const { name } = await params;
+export default async function AboutPage({ params }: {params: Promise<{ name: string }>}) {
+  const { name } = await  params;
   
   const teamMembers: TeamMembers = {
     akeye: {
