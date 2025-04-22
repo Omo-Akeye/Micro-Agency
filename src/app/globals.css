@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +24,14 @@
   .rotate-animation {
     animation: rotate 4s linear infinite;
   }
+  .merriweather {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+  }
+  .hero-spacing {
+    letter-spacing: 6%;
   
+  }
   @keyframes rotate {
     from {
       transform: rotate(0deg);
@@ -31,4 +40,11 @@
       transform: rotate(360deg);
     }
   }
+  .hero {
+    font-weight: 600;
+    font-size: 70.25px;
+    line-height: 68.72px;
+    letter-spacing: -6%;
+  }
+
   

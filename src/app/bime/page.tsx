@@ -58,10 +58,14 @@ export default function page() {
           Increased User Engagement:The revamp has resulted in higher user engagement and improved conversion rates, aligning with the business's objectives.
         </li>
       </ul>
-      <div className="mt-24 md:p-11 p-6 w-full border-2 border-black border-dashed rounded-xl">
+      <div className="mt-24 md:p-11 p-4 max-sm:text-left w-full border-2 border-black border-dashed rounded-xl flex sm:space-x-16 max-sm:flex-col max-sm:space-y-2">
       <a href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
+
+      <a href="#" className='underline flex sm:gap-x-2 max-sm:w-full justify-start' >
+      Read full casestudy   <img src="/Arrow Right Up.svg" alt="" /></a>
       </div>
+
     </div>
 
 
