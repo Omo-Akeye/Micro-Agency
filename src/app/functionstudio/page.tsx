@@ -1,27 +1,24 @@
-"use client"
 
-import React, { useState } from 'react'
 
 export default function page() {
-  const [showChatPopup, setShowChatPopup] = useState(false);
   return (
-    <div className='lg:w-[60%] md:my-28 mx-auto w-[80%] sm:my-20 my-10'>
+    <div className='mx-auto my-10 max-sm:mx-7'>
 
-        <div className="flex gap-x-2 items-center">
+        <div className="flex gap-x-2 items-center justify-end">
             <img src="/Layers.svg" alt="layer" />
             <img src="/Line 2.svg" alt="line" />
             <img src="/Code 2.svg" alt="code" /> 
         </div>
 
-       <h1  className='md:mt-7 mt-4 mb-11'><span className="text-[#00000066] text-opacity-40">About </span> Function Studio</h1>
+       <h1  className='merriweather sm:text-[75.85px] sm:leading-[80px] sm:tracking-[-4%] mt-7 mb-12  text-[30px] leading-[30.36px] tracking-[-6%]'><span className="text-[#00000066] text-opacity-40">About </span> <br /> Function Studioo</h1>
 
        <p>We’re a team made up of a designer and a developer, combining creativity and code to bring digital products to life. With a shared passion for solving real-world problems, we collaborate seamlessly to deliver user-friendly, high-quality solutions tailored to your needs.</p>
-        <p className="my-8">What We Do</p>
+        <p className="my-8 font-semibold">What We Do</p>
         <p>Our strength lies in bridging design and development to build products that look great and perform even better. From crafting intuitive user experiences to writing clean, scalable code, we handle every step of the process to bring your ideas to reality</p>
         
 
         <div className='flex-col items-start my-8'>
-      <h2 className=" mb-6">Why Work With Us?</h2>
+      <h2 className=" mb-6 font-semibold">Why Work With Us?</h2>
       <ul className="space-y-3 list-disc pl-[3%]">
         <li>
         Streamlined Collaboration: No back-and-forth between separate teams; we’re in sync from start to finish.
@@ -35,24 +32,28 @@ export default function page() {
       </ul>
     </div>
 
+    <div className='flex-col items-start my-8'>
+      <h2 className=" mb-6 font-semibold">What you get</h2>
+      <ul className="space-y-3 list-disc pl-[3%]">
+        <li>
+        UX-first design — Thoughtful experiences that put your users first
+        </li>
+        <li>
+        Tailored aesthetics — Visually distinct interfaces shaped around your brand
+        </li>
+        <li>
+        Dynamic animations — Smooth, scroll-triggered and auto-play interactions that bring your site to life
+        </li>
+        <li>
+        Custom web development — No templates, no shortcuts—just handcrafted code
+        </li>
+        <li>High-converting eCommerce — Optimized storefronts built to drive sales</li>
+      </ul>
+    </div>
+
     <p>Whether you're launching a new app, redesigning your platform, or need support for ongoing development, we’re here to help you build with clarity and confidence.</p>
 
-    <p className="my-8">Let’s Build Something Great Together.</p>
-
-    <a href="mailto:functionstudio247@gmail.com"
-            className=" cursor-pointer flex"
-            onMouseEnter={() => setShowChatPopup(true)}
-            onMouseLeave={() => setShowChatPopup(false)}
-            onClick={() => setShowChatPopup(!showChatPopup)}
-          >
-           <img src="/Frame 418.svg" alt="" className=""/>  
-            {showChatPopup && (
-              <div className="max-md:hidden rounded-md transition-opacity duration-300  bg-[#F5F5F5] flex items-center ml-2 py-2 px-1 max-md:absolute max-md:right-[4%] max-md:bottom-[-55%]">
-                Let’s Chat
-              </div>
-            )}
-          </a>
-
+    <p className="my-8 underline font-medium">Let’s Build Something Great Together.</p>
       
     </div>
   )

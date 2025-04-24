@@ -1,24 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --font-orbit: 'Orbit', sans-serif;
-  }
-  
-  .font-orbit {
-    font-family: var(--font-orbit);
-  }
-  
 
-   .orbit-regular {
-    font-family: "Orbit", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  .inter{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
   }
 
   .rotate-animation {
@@ -40,11 +31,58 @@
       transform: rotate(360deg);
     }
   }
-  .hero {
-    font-weight: 600;
-    font-size: 70.25px;
-    line-height: 68.72px;
-    letter-spacing: -6%;
-  }
 
   
+
+
+
+  
+.inner {
+  position: relative;
+  width: 100%;
+  /* overflow: hidden; */
+  height: 274px;
+}
+
+
+.inner img {
+  max-width: 480px;
+  height: 274px;
+  padding: 0 15px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .inner {
+    position: relative;
+    width: 100%;
+    /* overflow: hidden; */
+    height: 165px;
+  } 
+  .inner img {
+    max-width: 284px;
+    height: 165px;
+    padding: 0 10px;
+    object-fit: cover;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+}
+
+.wrapper section {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}

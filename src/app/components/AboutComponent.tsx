@@ -15,7 +15,8 @@ interface AboutProps {
 }
 export default function AboutComponent({logo,name,firstParagraph,secondParagh,thirdParagraph,socials}:AboutProps) {
   return (
-    <div className='lg:w-[60%] md:my-28 mx-auto w-[80%] sm:my-20 my-10'>
+    // <div className='lg:w-[60%] md:my-28 mx-auto w-[80%] sm:my-20 my-10'>
+    <div className='mx-auto md:my-28 my-10 max-sm:mx-7 sm:my-20'>
     <img src={logo}/>
     <div className='flex md:mt-7 mt-4 mb-11 gap-x-2'>
       <span className='text-[#00000066] text-opacity-40'>About</span>

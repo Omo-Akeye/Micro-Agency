@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='w-[80%] lg:w-[60%] mx-auto md:my-20 my-10'>
+    <div className='mx-auto md:my-20 my-10 max-sm:mx-7'>
       <section className='flex max-md:flex-col justify-between'>
         <div>
             <h2 className='font-medium'>Bime Revamp Website</h2>
