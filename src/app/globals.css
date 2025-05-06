@@ -32,7 +32,9 @@
     }
   }
 
-  
+  .shadow-xs {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  }
 
 
 
@@ -85,4 +87,22 @@
   100% {
     transform: translate(-100%);
   }
+}
+@keyframes swipeRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.wrapper-right section {
+  animation: swipeRight var(--speed) linear infinite;
+}
+.wrapper-right {
+  position: absolute;
+  display: flex;
+  width: 100%;
+}
+
+.wrapper-right section {
+  display: flex;
+  will-change: transform;
 }

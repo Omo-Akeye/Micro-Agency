@@ -1,50 +1,175 @@
-interface Image {
-    id: any;
-    image: string;
-  }
+// interface Image {
+//     id: any;
+//     image: string;
+//   }
   
-  interface InfiniteScrollingProps {
-    images: Image[];
-    speed?: number;
-  }
+//   interface InfiniteScrollingProps {
+//     images: Image[];
+//     speed?: number;
+//   }
   
-const InfiniteScrolling = ({ images, speed = 5000 }:InfiniteScrollingProps) => {
-    return (
-      <div className="inner ">
-        <div className="wrapper">
-          <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
-            {images.map(({ id, image }) => (
-              <div className="image" key={id}>
-                <img src={image} alt={id} />
-              </div>
-            ))}
-          </section>
-          <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
-            {images.map(({ id, image }) => (
-              <div className="image" key={id}>
-                <img src={image} alt={id} />
-              </div>
-            ))}
-          </section>
-          <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
-            {images.map(({ id, image }) => (
-              <div className="image" key={id}>
-                <img src={image} alt={id} />
-              </div>
-            ))}
-          </section>
-        </div>
+// const InfiniteScrolling = ({ images, speed = 5000 }:InfiniteScrollingProps) => {
+//     return (
+//       <div className="inner ">
+//         <div className="wrapper">
+//           <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+//             {images.map(({ id, image }) => (
+//               <div className="image" key={id}>
+//                 <img src={image} alt={id} className="rounded-[10px]" />
+//               </div>
+//             ))}
+//           </section>
+//           <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+//             {images.map(({ id, image }) => (
+//               <div className="image" key={id}>
+//                 <img src={image} alt={id} className="rounded-[10px]" />
+//               </div>
+//             ))}
+//           </section>
+//           <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+//             {images.map(({ id, image }) => (
+//               <div className="image" key={id}>
+//                 <img src={image} alt={id} className="rounded-[10px]" />
+//               </div>
+//             ))}
+//           </section>
+//         </div>
+//       </div>
+//     );
+//   };
+  
+import Image from 'next/image';
+import React from 'react';
+
+interface ImageItem {
+  id: any;
+  image: string;
+}
+
+interface InfiniteScrollingProps {
+  images: ImageItem[];
+  speed?: number;
+}
+
+export const InfiniteScrolling = ({ images, speed = 5000 }: InfiniteScrollingProps) => {
+  return (
+    <div className="inner">
+      <div className="wrapper">
+        <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+          {images.map(({ id, image }) => (
+            <div className="image shadow-xs" key={id}>
+              <Image
+                src={image}
+                alt={`Image ${id}`}
+                width={500}
+                height={311}
+                className="rounded-[5px] object-cover"
+                quality={80}
+                priority={false}
+              />
+            </div>
+          ))}
+        </section>
+        <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+          {images.map(({ id, image }) => (
+            <div className="image shadow-xs" key={id}>
+              <Image
+                src={image}
+                alt={`Image ${id}`}
+                width={500}
+                height={311}
+                className="rounded-[10px] object-cover"
+                quality={80}
+                priority={false}
+              />
+            </div>
+          ))}
+        </section>
+        <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+          {images.map(({ id, image }) => (
+            <div className="image shadow-xs" key={id}>
+              <Image
+                src={image}
+                alt={`Image ${id}`}
+                width={500}
+                height={311}
+                className="rounded-[10px] object-cover"
+                quality={80}
+                priority={false}
+              />
+            </div>
+          ))}
+        </section>
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
+
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// interface ImageItem {
+//   id: any;
+//   image: string;
+// }
+
+interface InfiniteScrollingRightProps {
+  images: ImageItem[];
+  speed?: number;
+}
+
+export const InfiniteScrollingRight = ({ 
+  images, 
+  speed = 5000 
+}: InfiniteScrollingRightProps) => {
+  return (
+    <div className="inner">
+      <div className="wrapper-right">
+        {/* First set */}
+        <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+          {images.map(({ id, image }) => (
+            <div className="image shadow-xs" key={`right-first-${id}`}>
+              <Image
+                src={image}
+                alt={`Image ${id}`}
+                width={500}
+                height={311}
+                className="rounded-[5px] object-cover"
+                quality={80}
+                priority={false}
+              />
+            </div>
+          ))}
+        </section>
+        
+        {/* Second set (duplicate for seamless looping) */}
+        <section style={{ "--speed": `${speed}ms` } as React.CSSProperties}>
+          {images.map(({ id, image }) => (
+            <div className="image shadow-xs" key={`right-second-${id}`}>
+              <Image
+                src={image}
+                alt={`Image ${id}`}
+                width={500}
+                height={311}
+                className="rounded-[10px] object-cover"
+                quality={80}
+                priority={false}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
+    </div>
+  );
+};
 
 
 
 
   const InfiniteScrollImages = () => {
     const images = [
-        "/reviews.svg","/reviews.svg","/reviews.svg","/reviews.svg","/reviews.svg","/reviews.svg","/reviews.svg","/reviews.svg",
+        "/reviews.svg","/scroll-image1.svg","/scroll-image2.svg","/scroll-image3.svg","/scroll-image4.svg","/scroll-image5.svg","/scroll-image6.svg","/scroll-image7.svg","/scroll-image8.svg","/scroll-image10.svg"
       ].map((image) => ({
         id: crypto.randomUUID(),
         image
@@ -56,6 +181,8 @@ const InfiniteScrolling = ({ images, speed = 5000 }:InfiniteScrollingProps) => {
     );
   };
 
+  export default InfiniteScrollImages;
 
 
-  export default InfiniteScrollImages
+
+  

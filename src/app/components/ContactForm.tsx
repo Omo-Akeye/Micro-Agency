@@ -1,47 +1,110 @@
 import { useState } from 'react';
 // import { sendContactForm } from '../lib/api';
 
-export default function ContactForm({setShowChatPopup,showChatPopup}) {
-  const [activeTab, setActiveTab] = useState('message');
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    service: 'Development',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [error, setError] = useState('');
+// export default function ContactForm({setShowChatPopup,showChatPopup}) {
+  // const [activeTab, setActiveTab] = useState('message');
+  // const [formData, setFormData] = useState({
+  //   fullName: '',
+  //   email: '',
+  //   service: 'Development',
+  //   message: '',
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [submitSuccess, setSubmitSuccess] = useState(false);
+  // const [error, setError] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: value,
+  //   }));
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setError('');
 
-    try {
-    //   await sendContactForm(formData);
-      setSubmitSuccess(true);
-      setFormData({
-        fullName: '',
-        email: '',
-        service: 'Development',
-        message: '',
-      });
-    } catch (err) {
-      setError('Failed to send message. Please try again.');
-      console.error('Error sending form:', err);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //   try {
+  //   //   await sendContactForm(formData);
+  //     setSubmitSuccess(true);
+  //     setFormData({
+  //       fullName: '',
+  //       email: '',
+  //       service: 'Development',
+  //       message: '',
+  //     });
+  //   } catch (err) {
+  //     setError('Failed to send message. Please try again.');
+  //     console.error('Error sending form:', err);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+
+  export default function ContactForm({setShowChatPopup, showChatPopup}) {
+    const [activeTab, setActiveTab] = useState('message');
+    const [formData, setFormData] = useState({
+      fullName: '',
+      email: '',
+      services: ['Development'], // Changed from service to services array
+      message: '',
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [error, setError] = useState('');
+  
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    };
+  
+    // New handler specifically for service checkboxes
+    const handleServiceChange = (service) => {
+      const updatedServices = [...formData.services];
+      
+      if (updatedServices.includes(service)) {
+        // Remove service if already selected
+        const index = updatedServices.indexOf(service);
+        updatedServices.splice(index, 1);
+      } else {
+        // Add service if not selected
+        updatedServices.push(service);
+      }
+      
+      setFormData((prev) => ({
+        ...prev,
+        services: updatedServices,
+      }));
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+      setError('');
+  
+      try {
+        // await sendContactForm(formData);
+        setSubmitSuccess(true);
+        setFormData({
+          fullName: '',
+          email: '',
+          services: ['Development'], // Reset to default service
+          message: '',
+        });
+      } catch (err) {
+        setError('Failed to send message. Please try again.');
+        console.error('Error sending form:', err);
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+  
 
   return (
     <div className="lg:w-[890px] ms:w-[85%] w-[90%]  mx-auto z-50">
@@ -98,9 +161,9 @@ export default function ContactForm({setShowChatPopup,showChatPopup}) {
               />
             </div>
 
-            <div className="mb-6">
-              <p className="sm:text-xl text-sm font-medium mb-6">What service are you interested in?</p>
-              <div className="flex flex-wrap gap-4 max-sm:text-xs">
+            {/* <div className="mb-6">
+              <p className="sm:text-xl text-sm font-medium sm:mb-6 mb-4">What service are you interested in?</p>
+              <div className="flex flex-wrap sm:gap-4 gap-2 max-sm:text-xs">
                 {['Web design', 'Development', 'Product design', 'Motion design'].map((service) => (
                   <label key={service} className="inline-flex items-center">
                     <input
@@ -111,6 +174,34 @@ export default function ContactForm({setShowChatPopup,showChatPopup}) {
                       onChange={handleChange}
                       className="mr-2"
                     />
+                    <span>{service}</span>
+                  </label>
+                ))}
+              </div>
+            </div> */}
+
+
+<div className="mb-6">
+              <p className="sm:text-xl text-sm font-medium sm:mb-6 mb-4">What service(s) are you interested in?</p>
+              <div className="flex flex-wrap sm:gap-4 gap-2 max-sm:text-xs">
+                {['Web design', 'Development', 'Product design', 'Motion design'].map((service) => (
+                  <label key={service} className="inline-flex items-center cursor-pointer">
+                    <div 
+                      className="relative flex items-center justify-center mr-2 w-5 h-5 border border-gray-300 rounded-full"
+                      onClick={() => handleServiceChange(service)}
+                    >
+                      {formData.services.includes(service) && (
+                        <div className="w-3 h-3 bg-black rounded-full"></div>
+                      )}
+                      <input
+                        type="checkbox"
+                        name="services"
+                        value={service}
+                        checked={formData.services.includes(service)}
+                        onChange={() => handleServiceChange(service)}
+                        className="sr-only" // Hidden but accessible
+                      />
+                    </div>
                     <span>{service}</span>
                   </label>
                 ))}

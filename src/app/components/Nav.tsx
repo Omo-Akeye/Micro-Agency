@@ -26,6 +26,12 @@ export default function Nav() {
     const [showAboutPopup, setShowAboutPopup] = useState(false);
     const [showLinkPopup, setShowLinkPopup] = useState(false);
     const [shotLinkPopup, setShotLinkPopup] = useState(false);
+    const closeMobileMenu = () => {
+      setShowMobileMenu(false);
+    };
+
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
 
     const params = useParams();
     const aboutPopupRef = useRef<HTMLDivElement | null>(null);
@@ -71,35 +77,33 @@ export default function Nav() {
           </Link>
           
         
-<div className="flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px] h-fit max-sm:mr-1.5">
+<div className="flex items-center gap-x-2 px-3 py-2.5 border-[#D9D9D9] border rounded-[36.88px] h-fit max-sm:mr-1.5">
       <div className="w-3.5 h-3.5 rounded-full bg-green-500 animate-pulse" />
       <p className="md:text-xs font-medium text-[10px] max-sm:hidden">
       1 spot remaining
       </p>
     </div>
 
-    <div className='text-xs bg-[#000000] text-white flex gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer' onClick={()=>setShowChatPopup(!showChatPopup)}>
-          Start a project <img src="/arrow-left.svg"/>
-          </div>
-      
-     </div>
 
-   
+<div 
+  className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group"
+  onClick={() => setShowChatPopup(!showChatPopup)}
+>
+  Start a project 
+  <img 
+    src="/arrow-left.svg" 
+    className="transition-transform duration-300 group-hover:translate-x-2" 
+    alt="Arrow"
+  />
+</div>
 
-        
-
+</div> 
         </span>
 
+        <img src="/Hamburger Menu.svg" alt="hamburger" className="min-[900px]:hidden cursor-pointer"
+         onClick={() => setShowMobileMenu(true)} />
 
-        <img src="/Hamburger Menu.svg" alt="hamburger" className="min-[900px]:hidden" />
-
-
-
-
-
-
-
-        <div className="min-[900px]:flex gap-x-6 hidden">
+        <div className="min-[900px]:flex gap-x-6 hidden items-center">
 
 <div ref={linkPopupRef} className='relative'>
           <div
@@ -144,14 +148,14 @@ export default function Nav() {
             </p>
             {/* About Popup */}
             {showAboutPopup && (
-              <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 max-w-[350px] bg-white mt-8">
-                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-6 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
+              <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 max-w-[350px] bg-white mt-8 z-50">
+                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-4 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
                 <div className="mt-3 space-y-3">
-                  <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                  <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
                     <span>Isaac Oreoluwa - Designer</span>
                   </Link>
-                  <Link href="/about/akeye" className="flex items-center bg-[#F5F5F5] py-[10px] px-6 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
+                  <Link href="/akeye" className="flex items-center bg-[#F5F5F5] py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/akeye.svg" alt="Akeye Saheed" width={34} className="mr-[10px]" />
                     <span>Akeye Saheed - Developer</span>
                   </Link>
@@ -161,33 +165,8 @@ export default function Nav() {
 
           </div>
 
-          <div ref={shotPopupRef} className='relative'>
-          <div
-              className="flex underline items-center gap-x-3 cursor-pointer"
-              onClick={() => setShotLinkPopup(!shotLinkPopup )}
-            >
-              Shots{" "}
-              <img
-                src="/Vector (Stroke).svg"
-                alt="arrow"
-                className={`transition-transform duration-300 ${shotLinkPopup ? "rotate-180" : ""}`}
-              />
-            </div>
-          
-            {shotLinkPopup && (
-              <div className="absolute top-7 right-0  transition-opacity duration-300 ease-in-out opacity-100 w-[517px] bg-[#F5F5F5] flex flex-col space-y-3 px-6 rounded-xl py-8 mt-4 z-50 mb-4">
-                
-                <h1 className="text-2xl mb-8">Rad.ng</h1>
-                <img src="/gif.gif"
-                className="w-full" alt="gif" />
-                  <h1 className="text-2xl my-8">Pay4me</h1>
-                  
-                <img src="/pay4me.gif"
-                className="w-full" alt="gif" />
-              </div>
-            )}
-
-          </div>
+{/* 
+          </div> */}
           <img src="/Help.svg" alt="rocket" className="rotate-animation" />
      
         </div>
@@ -198,39 +177,100 @@ export default function Nav() {
 
  <main>
     
-
-
- {/* <section className="w-[890px] flex gap-16 merriweather px-10 py-[74px] border-2 border-[#D0D0D0] rounded-[15px] items-center justify-center">
- <div>
-   <h1 className="text-[81.4px] leading-[73.7px] tracking-[-4%]">Let’s <br/>
-   </h1>
-
-   <span className="flex items-center">
- <h1 className="text-[81.4px] leading-[73.7px] tracking-[-4%]">
-  chat
- </h1>
- <img src="/Arrow 1 (1).svg" alt="arrow" />
- </span>
- </div>
- <span className="w-[0.83px] bg-[#000000] h-[340px]"></span>
- <div >
- <h1 className="text-[81.4px] leading-[73.7px] tracking-[-4%]">
- Book a 
- </h1>
- <span className="flex items-center">
- <h1 className="text-[81.4px] leading-[73.7px] tracking-[-4%]">
-  call
- </h1>
- <img src="/Arrow 1 (1).svg" alt="arrow" />
- </span>
-
-
- </div>
-</section> */}
 <ContactForm setShowChatPopup={setShowChatPopup} showChatPopup={showChatPopup}/>
  </main>
 
 </div>
+      )}
+
+{showMobileMenu && (
+        <div className="fixed inset-0 bg-white z-50 overflow-auto p-4 min-[900px]:hidden pt-[41px]">
+          
+
+
+
+    {/*  */}
+          <div className="flex items-center justify-between mb-16">
+            <section className="flex gap-2 items-center">
+            <Link href={"/"}>
+            <img 
+              src={images.profile} 
+              alt="profile" 
+              width={60} 
+              className="cursor-pointer"
+            />
+          </Link>
+            <div className="inline-flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px] h-fit max-sm:mr-1.5">
+      <div className="w-3.5 h-3.5 rounded-full bg-green-500 animate-pulse" />
+      <p className="md:text-xs font-medium text-[10px] max-sm:hidden">
+      1 spot remaining
+      </p>
+    </div>
+
+    <button 
+              onClick={() => setShowChatPopup(true)}
+              className="text-xs bg-black text-white flex items-center gap-2 px-4 py-2.5 rounded-full"
+            >
+              Start a project
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            </section>
+         
+
+
+            <button 
+              onClick={() => setShowMobileMenu(false)}
+              
+            >
+              <img src="/Close Circle.svg" alt="Close" className="w-6 h-6" />
+            </button>
+          </div>
+         
+          
+          <div className="space-y-8">
+            {/* Links Section */}
+            <div>
+              <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">Links</h2>
+              <ul className="flex items-center max-sm:justify-between sm:gap-4">
+                <li className=" py-2">
+                  <a href="https://twitter.com/functionstudioo" className="text-4xl underline font-medium">Twitter</a>
+                </li>
+                <li className="py-2">
+                  <a href="https://linkedin.com" className="text-4xl underline font-medium">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+            
+            {/* About Section */}
+            <div>
+              <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">About</h2>
+              <Link href="/functionstudio" className="text-4xl font-medium underline" 
+               onClick={closeMobileMenu} >Function studioo</Link>
+              <ul className="flex flex-col mt-6 gap-6">
+            
+                <li className="">
+                  <Link href="/ore" className="text-4xl flex items-center gap-2 underline font-medium" 
+                   onClick={closeMobileMenu} >
+                  <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
+                    Isaac Oreoluwa - Designer
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/akeye" className="text-4xl flex items-center gap-2 underline font-medium" 
+                   onClick={closeMobileMenu} >
+                    Akeye Saheed
+                   
+                    -Developer
+
+                     <img src="/akeye.svg" alt="Akeye Saheed" width={34} className="" /> 
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       )}
 
      
