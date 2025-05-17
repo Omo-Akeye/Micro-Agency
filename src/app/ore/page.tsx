@@ -1,8 +1,5 @@
 import { InfiniteScrolling, InfiniteScrollingRight } from "../components/InfiniteScrolling";
 
-
-
-
 const page = () => {
 
     const images1 = [

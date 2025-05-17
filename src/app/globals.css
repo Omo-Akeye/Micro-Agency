@@ -43,13 +43,13 @@
   position: relative;
   width: 100%;
   /* overflow: hidden; */
-  height: 274px;
+  height: 311px;
 }
 
 
 .inner img {
   max-width: 480px;
-  height: 274px;
+  height: 312px;
   padding: 0 15px;
   object-fit: cover;
 }

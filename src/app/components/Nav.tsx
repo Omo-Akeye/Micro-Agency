@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React, { useState,useEffect, useRef } from 'react'
 import { useParams } from 'next/navigation';
-import ContactForm from './ContactForm';
+
 
 const navImages = {
   akeye: {
@@ -85,7 +85,7 @@ export default function Nav() {
     </div>
 
 
-<div 
+{/* <div 
   className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group"
   onClick={() => setShowChatPopup(!showChatPopup)}
 >
@@ -95,7 +95,19 @@ export default function Nav() {
     className="transition-transform duration-300 group-hover:translate-x-2" 
     alt="Arrow"
   />
-</div>
+</div> */}
+
+<Link href="/startproject">
+  <div className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group">
+    Start a project 
+    <img 
+      src="/arrow-left.svg" 
+      className="transition-transform duration-300 group-hover:translate-x-2" 
+      alt="Arrow"
+    />
+  </div>
+</Link>
+
 
 </div> 
         </span>
@@ -120,7 +132,7 @@ export default function Nav() {
           
             {showLinkPopup && (
               <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100  max-w-[350px] bg-white flex flex-col space-y-3 mt-4">
-                <a href="mailto:functionstudio247@gmail.com " className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
+                <a href="mailto:function@functionstudio.online " className="bg-[#F5F5F5]  inline-flex py-[10px] pr-12 pl-4 items-center rounded-lg cursor-pointer hover:text-gray-500 "> 
                   Email
                 </a>
             
@@ -172,16 +184,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {showChatPopup && (
- <div className="fixed bg-white w-full h-full inset-0 z-50 items-center flex justify-center">
-
- <main>
-    
-<ContactForm setShowChatPopup={setShowChatPopup} showChatPopup={showChatPopup}/>
- </main>
-
-</div>
-      )}
+  
 
 {showMobileMenu && (
         <div className="fixed inset-0 bg-white z-50 overflow-auto p-4 min-[900px]:hidden pt-[41px]">
