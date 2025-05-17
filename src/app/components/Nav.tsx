@@ -193,8 +193,8 @@ export default function Nav() {
 
 
     {/*  */}
-          <div className="flex items-center justify-between mb-16">
-            <section className="flex gap-2 items-center">
+          <div className="flex items-center justify-end mb-16">
+            {/* <section className="flex gap-2 items-center">
             <Link href={"/"}>
             <img 
               src={images.profile} 
@@ -219,7 +219,7 @@ export default function Nav() {
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-            </section>
+            </section> */}
          
 
 
@@ -236,7 +236,7 @@ export default function Nav() {
             {/* Links Section */}
             <div>
               <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">Links</h2>
-              <ul className="flex items-center max-sm:justify-between sm:gap-4">
+              <ul className="flex items-center  gap-4">
                 <li className=" py-2">
                   <a href="https://twitter.com/functionstudioo" className="text-4xl underline font-medium">Twitter</a>
                 </li>
