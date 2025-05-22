@@ -18,7 +18,7 @@ const page = () => {
   ];
   return (
     <div className='mx-auto md:my-20 my-10 max-sm:mx-7 z-0'>
-       <section className='flex max-md:flex-col justify-between'>
+       <section className='flex max-md:flex-col justify-between max-sm:mb-4'>
         <div>
             <h2 className='font-semibold'>Pay4me</h2>
             <p className='text-gray-500 mb-6'>2025 - Financial technology</p>
@@ -31,7 +31,7 @@ const page = () => {
 
       <main>
        
-        <img src="/pay-4me-hero.svg" alt="pay4me" className="w-full  rounded-sm transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs"/>
+        <img src="https://ik.imagekit.io/9t24q4vku9/pay-4me-hero.svg?updatedAt=1747833259386" alt="pay4me" className="w-full  rounded-sm transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs"/>
       
 
         <article className="flex flex-col gap-5 sm:mt-11 mt-6">
@@ -52,13 +52,13 @@ const page = () => {
 
                     <div className="my-14 flex flex-col w-full justify-center gap-6">
   <img 
-    src="/pay4me1.svg" 
-    alt="" 
+    src="https://ik.imagekit.io/9t24q4vku9/pay4me1.svg?updatedAt=1747832778440" 
+   alt="pay4me"
     className="w-full transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs" 
   />
   <img 
-    src="/pay4me2.svg" 
-    alt="" 
+    src="https://ik.imagekit.io/9t24q4vku9/pay4me2.svg?updatedAt=1747832747939" 
+   alt="pay4me" 
     className="w-full transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs" 
   />
 </div>
@@ -77,7 +77,7 @@ const page = () => {
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
 
       <a href="#"   onClick={(e) => e.preventDefault()}  className='underline flex sm:gap-x-2 max-sm:w-full justify-start text-[#0000007A]' >
-      Read full casestudy   <img src="/Arrow Right Up.svg" alt="" /></a>
+      Read full casestudy   <img src="/Arrow Right Up.svg" alt="pay4me" /></a>
       </div>
 
 

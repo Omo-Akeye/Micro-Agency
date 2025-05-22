@@ -54,7 +54,7 @@
 
 
 
-// app/layout.tsx (no "use client" here!)
+
 import type { Metadata } from "next";
 import "./globals.css";
 import LayoutWrapper from "./components/LayoutWrapper"; // adjust path if needed
@@ -63,23 +63,30 @@ export const metadata: Metadata = {
   title: "Function Studio",
   description: "We Design and Develop websites and applications for your business and digital products.",
   openGraph: {
+    title: "Function Studio",
+    description: "We Design and Develop websites and applications for your business and digital products.",
+    url: "https://functionstudio.online", 
+    siteName: "Function Studio",
+    type: "website", // Add this
     images: [
       {
-        url: "/opengraph-image.svg",
+        url: "https://ik.imagekit.io/9t24q4vku9/Frame%201000003438.png?updatedAt=1747869845550",
         width: 1200,
         height: 630,
-        alt: "Function Studioo",
+        alt: "Function Studio", // Fixed typo (was "Function Studioo")
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Function Studio", // Add this
+    description: "We Design and Develop websites and applications for your business and digital products.", // Add this
     images: [
       {
-        url: "/opengraph-image.svg",
+        url: "https://ik.imagekit.io/9t24q4vku9/Frame%201000003438.png?updatedAt=1747869845550",
         width: 1200,
         height: 630,
-        alt: "Function Studioo",
+        alt: "Function Studio", // Fixed typo
       },
     ],
   },

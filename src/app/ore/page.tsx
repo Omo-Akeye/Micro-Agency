@@ -1,20 +1,44 @@
-import { InfiniteScrolling, InfiniteScrollingRight } from "../components/InfiniteScrolling";
+// import { InfiniteScrolling, InfiniteScrollingRight } from "../components/InfiniteScrolling";
+
+import { OptimizedScroller } from "../components/InfiniteScrolling";
 
 const page = () => {
 
-    const images1 = [
-        "/oreframe1.svg","/oreframe2.svg","/oreframe3.svg","/oreframe4.svg","/oreframe5.svg","/oreframe6.svg","/oreframe7.svg","/oreframe8.svg","/oreframe9.svg","/oreframe10.svg"
-      ].map((image) => ({
-        id: crypto.randomUUID(),
-        image
-      }));
+   
+  const optimizeImageUrl = (url: string) => url.replace(/\?.*$/, '');
+  
+  // Process image arrays just once, not on every render
+  const images1 = [
+    "https://ik.imagekit.io/9t24q4vku9/oreframe1.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe2.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe3.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe4.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe6.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe7.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe8.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe9.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe10.svg"
+  ].map((image) => ({
+    id: crypto.randomUUID(),
+    image: optimizeImageUrl(image)
+  }));
 
-      const images2 = [
-        "/oreframe12.svg","/oreframe13.svg","/oreframe14.svg","/oreframe15.svg","/oreframe16.svg","/oreframe17.svg","/oreframe18.svg","/oreframe19.svg","/oreframe20.svg","/oreframe21.svg","/oreframe22.svg"
-      ].map((image) => ({
-        id: crypto.randomUUID(),
-        image
-      }));
+  const images2 = [
+    "https://ik.imagekit.io/9t24q4vku9/oreframe12.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe13.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe14.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe15.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe16.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe17.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe18.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe19.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe20.svg",
+    "https://ik.imagekit.io/9t24q4vku9/oreframe22.svg"
+  ].map((image) => ({
+    id: crypto.randomUUID(),
+    image: optimizeImageUrl(image)
+  }));
+
 
 
     return (
@@ -72,9 +96,11 @@ it shows <br />
           
              <div className="w-full flex flex-col gap-y-10">
      
-     <InfiniteScrollingRight images={images2} speed={50000} />
+     {/* <InfiniteScrollingRight images={images2} speed={50000} />
 
-     <InfiniteScrolling images={images1} speed={50000}   />
+     <InfiniteScrolling images={images1} speed={50000}   /> */}
+      <OptimizedScroller images={images2} speed={50000} direction="right" />
+          <OptimizedScroller images={images1} speed={50000} direction="left" />
     
       </div>
            </div>
@@ -93,16 +119,16 @@ it shows <br />
 
         <div className="flex gap-2.5 mt-4">
           <span>
-            <img src="/ore-rive.svg" width={73}/>
+            <img src="https://ik.imagekit.io/9t24q4vku9/ore-rive.svg?updatedAt=1747833271092" alt="ore" width={73}/>
           </span>
           <span className="text-lg" >
-            <p className="bg-[#FFFFFF1F] p-1">Oreoluwa <span className="text-white">(Reo)</span></p>
+            <p className="bg-[#FFFFFF1F] p-1 rounded-[4px]">Oreoluwa <span className="text-white">(Reo)</span></p>
             <h1>De$igner</h1>
           </span>
         </div>
     </section>
-    <img src="/Rectangle 30609.svg" alt="rectangle" className="w-full relative max-sm:hidden"/>
-    <img src="/Rectangle 30609 (1).svg" alt="rectangle" className="w-full relative sm:hidden"/>
+    <img src="https://ik.imagekit.io/9t24q4vku9/Rectangle%2030609.svg?updatedAt=1747832745544" alt="rectangle" className="w-full relative max-sm:hidden"/>
+    <img src="https://ik.imagekit.io/9t24q4vku9/Rectangle%2030609%20(1).svg?updatedAt=1747832743904" alt="rectangle" className="w-full relative sm:hidden"/>
    
 </div>
         </article>

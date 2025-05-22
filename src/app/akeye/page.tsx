@@ -9,7 +9,7 @@ const page = () => {
             <span className="inline-flex items-center align-middle">
               <img src="/Code 2.svg" alt="code" className="w-auto sm:h-[48px] inline-block align-middle transform translate-y-0" />
             </span>
-            ),<br className="max-sm:hidden"/> a <br className="sm:hidden"/> standout <br className="max-sm:hidden"/> Developer
+            ),<br className="max-sm:hidden"/> a <br className="sm:hidden"/> skilled<br className="max-sm:hidden"/> Developer
           </h1>
 
     

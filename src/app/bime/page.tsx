@@ -31,7 +31,7 @@ export default function page() {
    
      
        
-        <img src="/bime 1.svg"  className='transform transition-transform duration-300 ease-in-out hover:scale-105 w-full flex shadow-xs'/>
+        <img src="https://ik.imagekit.io/9t24q4vku9/bime%201.svg?updatedAt=1747834841674" alt='bime'   className='transform transition-transform duration-300 ease-in-out hover:scale-105 w-full flex shadow-xs'/>
       
 
        <p>
@@ -42,7 +42,7 @@ export default function page() {
        
 
    
-        <img src="/Final 1.svg" alt='bime'  className='transform transition-transform duration-300 ease-in-out hover:scale-105 w-full flex shadow-xs'/>
+        <img src="https://ik.imagekit.io/9t24q4vku9/Final%201.svg?updatedAt=1747834851940" alt='bime'  className='transform transition-transform duration-300 ease-in-out hover:scale-105 w-full flex shadow-xs'/>
      
 
 
