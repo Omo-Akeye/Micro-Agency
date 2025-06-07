@@ -14,6 +14,15 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: { addUtilities: (utilities: Record<string, Record<string, string>>) => void }) {
+      addUtilities({
+        '.text-stroke': {
+          '-webkit-text-stroke': '2px #fff', 
+          'color': 'transparent',
+        },
+      })
+    },
+  ],
 };
 export default config;

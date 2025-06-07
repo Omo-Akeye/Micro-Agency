@@ -67,26 +67,26 @@ export const metadata: Metadata = {
     description: "We Design and Develop websites and applications for your business and digital products.",
     url: "https://functionstudio.online", 
     siteName: "Function Studio",
-    type: "website", // Add this
+    type: "website", 
     images: [
       {
         url: "https://ik.imagekit.io/9t24q4vku9/Frame%201000003438.png?updatedAt=1747869845550",
         width: 1200,
         height: 630,
-        alt: "Function Studio", // Fixed typo (was "Function Studioo")
+        alt: "Function Studioo", 
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Function Studio", // Add this
-    description: "We Design and Develop websites and applications for your business and digital products.", // Add this
+    title: "Function Studio", 
+    description: "We Design and Develop websites and applications for your business and digital products.", 
     images: [
       {
         url: "https://ik.imagekit.io/9t24q4vku9/Frame%201000003438.png?updatedAt=1747869845550",
         width: 1200,
         height: 630,
-        alt: "Function Studio", // Fixed typo
+        alt: "Function Studioo", 
       },
     ],
   },
@@ -99,7 +99,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="/abstract.svg" />
+      <link rel="shortcut icon" href="/fav-icon.svg" />
       <body className="sm:overflow-x-hidden inter mx-auto relative">
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

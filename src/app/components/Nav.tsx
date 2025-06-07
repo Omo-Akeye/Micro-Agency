@@ -69,7 +69,7 @@ export default function Nav() {
       
 <Link href={"/"}>
             <img 
-              src={images.profile} 
+              src='/new-logo.png'
               alt="profile" 
               width={60} 
               className="cursor-pointer"
@@ -85,17 +85,6 @@ export default function Nav() {
     </div>
 
 
-{/* <div 
-  className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group"
-  onClick={() => setShowChatPopup(!showChatPopup)}
->
-  Start a project 
-  <img 
-    src="/arrow-left.svg" 
-    className="transition-transform duration-300 group-hover:translate-x-2" 
-    alt="Arrow"
-  />
-</div> */}
 
 <Link href="/startproject">
   <div className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group">
@@ -161,7 +150,7 @@ export default function Nav() {
             {/* About Popup */}
             {showAboutPopup && (
               <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 max-w-[350px] bg-white mt-8 z-50">
-                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-4 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/abstract.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
+                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-4 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/new-logo.png" width={34} className="mr-[10px]"/>Function Studio</Link>
                 <div className="mt-3 space-y-3">
                   <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
@@ -192,35 +181,9 @@ export default function Nav() {
 
 
 
-    {/*  */}
-          <div className="flex items-center justify-end mb-16">
-            {/* <section className="flex gap-2 items-center">
-            <Link href={"/"}>
-            <img 
-              src={images.profile} 
-              alt="profile" 
-              width={60} 
-              className="cursor-pointer"
-            />
-          </Link>
-            <div className="inline-flex items-center gap-x-2 px-3 py-2 border-[#D9D9D9] border-2 rounded-[36.88px] h-fit max-sm:mr-1.5">
-      <div className="w-3.5 h-3.5 rounded-full bg-green-500 animate-pulse" />
-      <p className="md:text-xs font-medium text-[10px] max-sm:hidden">
-      1 spot remaining
-      </p>
-    </div>
 
-    <button 
-              onClick={() => setShowChatPopup(true)}
-              className="text-xs bg-black text-white flex items-center gap-2 px-4 py-2.5 rounded-full"
-            >
-              Start a project
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            </section> */}
-         
+          <div className="flex items-center justify-end mb-16">
+       
 
 
             <button 
