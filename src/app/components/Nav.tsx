@@ -69,7 +69,7 @@ export default function Nav() {
       
 <Link href={"/"}>
             <img 
-              src='/new-logo.png'
+              src='/new-logo.svg'
               alt="profile" 
               width={60} 
               className="cursor-pointer"
@@ -150,7 +150,7 @@ export default function Nav() {
             {/* About Popup */}
             {showAboutPopup && (
               <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 max-w-[350px] bg-white mt-8 z-50">
-                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-4 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/new-logo.png" width={34} className="mr-[10px]"/>Function Studio</Link>
+                <Link href="/functionstudio" className="bg-[#F5F5F5]  flex py-[10px] px-4 items-center rounded-lg cursor-pointer hover:text-gray-500"> <img src="/new-logo.svg" width={34} className="mr-[10px]"/>Function Studio</Link>
                 <div className="mt-3 space-y-3">
                   <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500">
                     <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
