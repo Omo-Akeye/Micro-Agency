@@ -7,9 +7,6 @@ const page = () => {
   const optimizeImageUrl = (url: string) => url.replace(/\?.*$/, '');
   
 
-
-
-
     return (
       <div className="sm:mt-20 mt-7 ">
         <section className="flex flex-col justify-between max-sm:mx-7 sm:mb-10 max-sm:gap-7">
@@ -37,22 +34,25 @@ it shows <br />
           </div>
           <span className="flex  gap-4 max-sm:flex-wrap sm:items-end">
         <a href="https://www.behance.net/isaacoreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px] max-w-[105px] w-full">
-            {/* <p className="text-xs"> Behance</p> */}
-            <img src="/behance.svg"/>
+            <p className="text-xs"> Behance</p>
+            <img src="/bio-arrow.svg"/>
+            {/* <img src="/behance.svg"/> */}
         </a>
         <a href="http://linkedin.com/in/oshideroore/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
-            {/* <p className="text-xs">LinkedIn</p> */}
-            <img src="/linkedin.svg"/>
+            <p className="text-xs">LinkedIn</p>
+            <img src="/bio-arrow.svg"/>
+            {/* <img src="/linkedin.svg"/> */}
         </a>
         <a href="http://twitter.com/reoworx" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
-            <p className="text-sm font-black">Twitter</p>
-            {/* <img src="/bio-arrow.svg"/> */}
-            <FaSquareXTwitter />
+        <p className="text-xs">Twitter</p>
+            <img src="/bio-arrow.svg"/>
+            {/* <FaSquareXTwitter /> */}
         </a>
+
+    
         <a href="#" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
-            {/* <p className="text-xs">Contra</p> */}
-            <img src="/contra.svg"/>
-          
+            <p className="text-xs">Contra</p>
+            <img src="/bio-arrow.svg"/>          
         </a>
 
      
@@ -74,24 +74,34 @@ it shows <br />
  </p>
 <p>With a sharp eye for detail and a strategic mindset, I specialize in crafting products that not only look great but function seamlessly.</p>
 
-<section className="flex items-center sm:gap-14 gap-6">
-  <img src="/brand1.svg" alt="brand1" width={93} />
-  <img src="/brand2.svg" alt="brand2"  width={93} />
-  <img src="/brand3.svg" alt="brand3"  width={93} />
+<section className="grid sm:grid-cols-3 bg-[#F5F5F5] p-2 gap-3">
+  <div className="bg-white p-6 flex justify-center items-center">
+  <img src="/brand1.png" alt="brand1" className="h-6"  />
+  </div>
+
+  <div className="bg-white p-6 flex justify-center items-center">
+  <img src="/brand2.png" alt="brand2"  className="h-6"  />
+  </div>
+
+ <div className="bg-white p-6 flex justify-center items-center">
+ <img src="/brand3.png" alt="brand3" className="h-6" />
+ </div>
+
 </section>
 
 <div className="relative">
     <section className="absolute text-white z-50 sm:left-[5%] left-5 right-7  sm:right-[8%] top-[15%]">
-        {/* <p className="text-xs mb-4">STATUS</p> */}
+     
         <h1 className="sm:text-xl font-medium ">Currently diving into Rive to expand my motion design skills , exploring how subtle interactions can elevate product feel</h1>
 
-        <div className="flex gap-2.5 mt-4">
-          <span>
-            <img src="https://ik.imagekit.io/9t24q4vku9/ore-rive.svg?updatedAt=1747833271092" alt="ore" width={73}/>
+        <div className="flex justify-between mt-10">
+        
+          <span className="text-xl" >
+            <p className="p-1 rounded-[4px] text-[#FFFFFFA3]">Oreoluwa <span className="text-white">(Reo)</span></p>
           </span>
-          <span className="text-lg" >
-            <p className="bg-[#FFFFFF1F] p-1 rounded-[4px]">Oreoluwa <span className="text-white">(Reo)</span></p>
-            <h1>De$igner</h1>
+
+          <span>
+            <img src="https://ik.imagekit.io/9t24q4vku9/ore-rive.svg?updatedAt=1747833271092" alt="ore" className="h-[49px] w-[51.49px] rounded-full"/>
           </span>
         </div>
     </section>

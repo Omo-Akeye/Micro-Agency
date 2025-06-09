@@ -28,7 +28,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
   link
 }) => {
   return (
-    <div className={`group relative ${bgColor} rounded-[10px] p-6 overflow-hidden cursor-pointer sm:h-[380px] h-[320px] max-w-[747px] w-full `}>
+    <div className={`group relative ${bgColor} rounded-[10px] p-6 overflow-hidden cursor-pointer sm:h-[380px] h-[320px]  w-full `}>
       {/* Header */}
       <div className={`flex justify-between items-start mb-6 relative z-10 ${textColor} transition-all duration-300`}>
         <div>
@@ -39,16 +39,22 @@ const HoverCard: React.FC<HoverCardProps> = ({
           <span className="text-sm transition-all duration-300 group-hover:opacity-0">{year}</span>
         )}
       </div>
-
-      {/* Arrow Icon - appears on hover */}
-      <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
+      {!isComingSoon && (
+        <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={`${textColor?.includes('text-[#FFFFFF]') ? 'text-white' : 'text-gray-600'}`}>
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+      )}
+    
+      {/* <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={`${textColor?.includes('text-[#FFFFFF]') ? 'text-white' : 'text-gray-600'}`}>
           <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-      </div>
+      </div> */}
 
       {/* Default Images Container */}
-      <div className="absolute -bottom-[25%] left-6 right-6 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95">
+      <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95">
         <div className="absolute overflow-hidden transition-transform duration-500 bottom-[22%] max-w-[270px] sm:max-w-[392px] w-full z-50">
           <img 
             src={image1} 
@@ -57,7 +63,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
           />
         </div>
 
-        <div className="absolute overflow-hidden max-w-[270px] sm:max-w-[392px] w-full right-8 z-10 max-sm:top-[22%]">
+        <div className="absolute overflow-hidden max-w-[270px] sm:max-w-[392px] w-full right-[20%] z-10 max-sm:top-[22%] top-[2%]">
           <img 
             src={image2} 
             alt={`${title} image 2`}
@@ -90,8 +96,8 @@ const HoverCard: React.FC<HoverCardProps> = ({
         )}
       </div>
 
-      {/* Overlay for smooth transition */}
-      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-500 pointer-events-none"></div>
+    
+     
     </div>
   );
 };
@@ -104,10 +110,10 @@ const CardGrid = () => {
       category: "Financial technology",
       year: "2025",
       bgColor: "bg-gradient-to-b from-[#AFE274] to-[#D5FFA4]", 
-      image1: '/pay4me1.svg',
+      image1: '/pay4me1.png',
       textColor: "text-[#000000]",
-      image2: '/pay4me2.svg',
-      hoverImage: '/pay4me-hover.svg', 
+      image2: '/pay4me2.png',
+      hoverImage: '/pay4me-hover.png', 
       isComingSoon: false,
       link: "/pay4me"
     },
@@ -117,9 +123,9 @@ const CardGrid = () => {
       year: "2024",
       bgColor: "bg-gradient-to-b from-[#1DA1F2] to-[#88C9F2]",
       textColor: "text-[#000000]",
-      image1: "/bime1.svg",
-      image2: "/bime2.svg",
-      hoverImage: '/bime-hover.svg', 
+      image1: "/bime1.png",
+      image2: "/bime2.png",
+      hoverImage: '/bime-hover.png', 
       isComingSoon: false,
       link: "/bime"
     },
@@ -128,9 +134,9 @@ const CardGrid = () => {
       category: "Blockchain technology",
       year: "2025", 
       bgColor: "bg-gradient-to-b from-[#CE3679] to-[#881045]",
-      image1: "/votdine1.svg",
+      image1: "/votdine1.png",
       textColor: "text-[#FFFFFF]",
-      image2: "/votdine2.svg",
+      image2: "/votdine2.png",
       isComingSoon: true,
       link: ""
     }
@@ -140,7 +146,7 @@ const CardGrid = () => {
 
   return (
    
-    <div className='flex flex-col  max-w-[747px] w-full'>
+    <div className='flex flex-col  w-full'>
       <div className='flex justify-between items-center text-[#000000A3] mb-10'>
         <h2 className=''>Featured Projects</h2>
       <p>[03]</p>
