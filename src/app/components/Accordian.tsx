@@ -18,22 +18,27 @@ const defaultFAQData: FAQItem[] = [
   {
     id: 1,
     question: "What is it like working together?",
-    answer: "Working together is a collaborative experience where we focus on understanding your goals and delivering results that exceed expectations. Our team brings expertise, creativity, and dedication to every project."
+    answer: "Working with Function Studio means working with a tight, two-person team, designer and developer, who collaborate in real-time. We're fast, focused, and intentional. No handoffs, no delays. You’ll be part of a smooth process where ideas turn into usable products quickly. Think of it like working with a product-minded duo that handles both the look and the logic, without the bloat of a big agency."
   },
   {
     id: 2,
     question: "How much can we get done in a month?",
-    answer: "The scope of work depends on project complexity and requirements. Typically, we can complete significant milestones within a month, including design iterations, development phases, or complete feature implementations."
+    answer: "A lot, especially because we work as a synced designer–developer team. In one month, we can take an idea from early sketches to a live, working product. That might mean designing and building a full landing page, shipping a small web app, or tackling core parts of a larger platform. The exact output depends on the scope, but our setup removes the usual back-and-forth and helps us move fast without cutting corners"
   },
   {
     id: 3,
-    question: "Can I use it for just one month?",
-    answer: "Yes, we offer flexible engagement options including short-term projects. Whether you need a quick solution or ongoing support, we can tailor our services to match your timeline and budget."
+    question: "What kinds of projects do you take on?",
+    answer: "We focus on digital products - landing pages, web apps, and internal tools. Most of our work involves designing and building front-end experiences that are fast, clean, and easy to use. Whether you're a startup validating an idea or a team refining an existing platform, we step in where design and code need to work closely together."
   },
   {
     id: 4,
-    question: "What if I'm not happy with the work?",
-    answer: "Your satisfaction is our priority. We offer revision rounds and work closely with you throughout the process. If you're not satisfied, we'll make it right through additional revisions or discuss alternative solutions."
+    question: "Who do we work best with?",
+    answer: "We work best with founders, product leads, or small teams who value speed, clear communication, and tight collaboration. If you're looking for a no-fluff team that can move ideas into production without long timelines or layered approvals, we’ll likely be a great fit."
+  },
+    {
+    id: 5,
+    question: "What do you need from us to get started?",
+    answer: "Once we’ve had a discovery call and aligned on scope, we’ll just need a short brief, what you're trying to build, any existing materials (like brand assets or wireframes), and access to relevant tools. We’ll handle the rest from there, keeping you in the loop with frequent updates and check-ins"
   }
 ];
 
@@ -63,7 +68,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
             return (
               <div
                 key={item.id}
-                className="border-b border-[#00000052] overflow-hidden   duration-300 "
+                className="border-b border-[#00000052] overflow-hidden border-opacity-60   duration-300 "
               >
                 <button
                   onClick={() => toggleItem(item.id)}

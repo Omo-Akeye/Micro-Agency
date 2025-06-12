@@ -1,17 +1,22 @@
 import React from 'react'
 import ProjectSlider from '../components/OtherProjects';
+import { HoverCard } from '../components/FeaturedCards';
+import Link from 'next/link';
 
 export default function page() {
 
   const featuredProjects = [
     {
-      id: 'pay4me',
-      name: 'Pay4me',
-      year: '2025',
-      category: 'Financial technology',
-      logoSrc: '/pay4me.svg',
-      logoAlt: 'Pay4me logo',
-      href: '/pay4me'
+      title: "Pay4me",
+      category: "Financial technology",
+      year: "2025",
+      bgColor: "bg-gradient-to-b from-[#AFE274] to-[#D5FFA4]", 
+      image1: '/pay4me1.png',
+      textColor: "text-[#000000]",
+      image2: '/pay4me2.png',
+      hoverImage: '/pay4me-hover.png', 
+      isComingSoon: false,
+      link: "/pay4me"
     },
 
   ];
@@ -73,21 +78,36 @@ export default function page() {
              </span>
 
 
-             <div className=" max-sm:text-left w-full flex sm:space-x-16 max-sm:flex-col max-sm:space-y-2 items-center">
+             <div className="">
       <a href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
 
-      <a href="#" className='underline flex sm:gap-x-2 max-sm:w-full justify-start text-[#0000007A]' >
-      Read full casestudy   <img src="/Arrow Right Up.svg" alt="" /></a>
+      {/* <a href="#" className='underline flex sm:gap-x-2 max-sm:w-full justify-start text-[#0000007A]' >
+      Read full casestudy   <img src="/Arrow Right Up.svg" alt="" /></a> */}
       </div>
     
       </article>
 
-
-      <ProjectSlider 
-      projects={featuredProjects} 
-      title="Other Projects" 
-    />
+            <div className='mt-20'>
+              <h2 className='text-[#000000] mb-5'>Other Projects</h2>
+                 {featuredProjects.map((card, index) => (
+         
+            <Link key={index} href={card.link}>
+              <HoverCard
+                title={card.title}
+                category={card.category}
+                year={card.year}
+                bgColor={card.bgColor}
+                image1={card.image1}
+                image2={card.image2}
+                hoverImage={card.hoverImage}
+                textColor={card.textColor}  
+                isComingSoon={card.isComingSoon}
+                link={card.link}
+              />
+              </Link>
+            ))}
+            </div>
     </div>
   )
 }

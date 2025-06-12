@@ -1,17 +1,22 @@
 "use client"
 import React from 'react'
 import ProjectSlider from '../components/OtherProjects';
+import Link from 'next/link';
+import { HoverCard } from '../components/FeaturedCards';
 
 const page = () => {
   const featuredProjects = [
     {
-      id: 'bime',
-      name: 'Bime',
-      year: '2024',
-      category: 'Financial technology',
-      logoSrc: '/bimelogo.svg',
-      logoAlt: 'Bime logo',
-      href: '/bime'
+      title: "Bime",
+      category: "Financial technology", 
+      year: "2024",
+      bgColor: "bg-gradient-to-b from-[#1DA1F2] to-[#88C9F2]",
+      textColor: "text-[#000000]",
+      image1: "/bime1.png",
+      image2: "/bime2.png",
+      hoverImage: '/bime-hover.png', 
+      isComingSoon: false,
+      link: "/bime"
     },
 
 
@@ -31,7 +36,7 @@ const page = () => {
 
       <main>
        
-        <img src="https://ik.imagekit.io/9t24q4vku9/pay-4me-hero.svg?updatedAt=1747833259386" alt="pay4me" className="w-full  rounded-sm transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs"/>
+        <img src="/bime-main.png" alt="pay4me" className="w-full  rounded-sm transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs"/>
       
 
         <article className="flex flex-col gap-5 sm:mt-11 mt-6">
@@ -76,18 +81,33 @@ const page = () => {
       <a href="https://pay4meee.netlify.app/" className='underline flex gap-x-2' >
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
 
-      <a href="#"   onClick={(e) => e.preventDefault()}  className='underline flex sm:gap-x-2 max-sm:w-full justify-start text-[#0000007A]' >
-      Read full casestudy   <img src="/Arrow Right Up.svg" alt="pay4me" /></a>
+    
       </div>
 
 
       </main>
 
 
-      <ProjectSlider 
-      projects={featuredProjects} 
-      title="Other Projects" 
-    />
+       <div className='mt-20'>
+              <h2 className='text-[#000000] mb-5'>Other Projects</h2>
+                 {featuredProjects.map((card, index) => (
+         
+            <Link key={index} href={card.link}>
+              <HoverCard
+                title={card.title}
+                category={card.category}
+                year={card.year}
+                bgColor={card.bgColor}
+                image1={card.image1}
+                image2={card.image2}
+                hoverImage={card.hoverImage}
+                textColor={card.textColor}  
+                isComingSoon={card.isComingSoon}
+                link={card.link}
+              />
+              </Link>
+            ))}
+            </div>
     </div>
   )
 }

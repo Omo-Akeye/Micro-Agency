@@ -15,7 +15,7 @@ type HoverCardProps = {
   link?: string; 
 };
 
-const HoverCard: React.FC<HoverCardProps> = ({ 
+export const HoverCard: React.FC<HoverCardProps> = ({ 
   title, 
   category, 
   year, 
@@ -40,21 +40,17 @@ const HoverCard: React.FC<HoverCardProps> = ({
         )}
       </div>
       {!isComingSoon && (
-        <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
+        <div className="absolute top-6 right-6 opacity-0 sm:group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={`${textColor?.includes('text-[#FFFFFF]') ? 'text-white' : 'text-gray-600'}`}>
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
       )}
     
-      {/* <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 transform translate-x-2 group-hover:translate-x-0">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className={`${textColor?.includes('text-[#FFFFFF]') ? 'text-white' : 'text-gray-600'}`}>
-          <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </div> */}
 
       {/* Default Images Container */}
-      <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95">
+      {/* <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95"> */}
+       <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out transform translate-y-0 sm:group-hover:translate-y-full sm:group-hover:opacity-0">
         <div className="absolute overflow-hidden transition-transform duration-500 bottom-[22%] max-w-[270px] sm:max-w-[392px] w-full z-50">
           <img 
             src={image1} 
@@ -73,23 +69,25 @@ const HoverCard: React.FC<HoverCardProps> = ({
       </div>
 
       {/* Hover Content */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 group-hover:scale-100">
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100">
         {isComingSoon ? (
           <div className="text-center z-20">
             <h2 className={`text-4xl sm:text-8xl font-bold mb-4 text-white transition-all duration-500 transform translate-y-8 group-hover:translate-y-0`}>
               coming soon
             </h2>
-            <p className={`text-2xl text-white opacity-60 transition-all duration-500 delay-200 transform translate-y-4 group-hover:translate-y-0`}>
+            <p className={`text-2xl text-white opacity-60 transition-all duration-500 delay-200 transform translate-y-4 sm:group-hover:translate-y-0`}>
              <img src="/dev at work.png" alt="dev at work" className='w-[80%] sm:w-full h-full object-contain max-sm:mx-auto' />
             </p>
           </div>
         ) : (
           hoverImage && (
-            <div className="max-w-[392px] h-full flex items-center mt-10 justify-center">
+            <div className="max-w-[422px] h-full flex items-end mt-10 justify-center">
               <img 
                 src={hoverImage} 
                 alt={`${title} hover image`}
-                className=" max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform scale-90 group-hover:scale-100 opacity-90 group-hover:opacity-100"
+                // className=" max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform scale-90 group-hover:scale-100 opacity-90 group-hover:opacity-100"
+
+                 className="max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform translate-y-full sm:group-hover:translate-y-0 opacity-90 sm:group-hover:opacity-100"
               />
             </div>
           )
@@ -133,7 +131,7 @@ const CardGrid = () => {
       title: "Votdine",
       category: "Blockchain technology",
       year: "2025", 
-      bgColor: "bg-gradient-to-b from-[#CE3679] to-[#881045]",
+      bgColor: "bg-gradient-to-t from-[#CE3679] to-[#881045]",
       image1: "/votdine1.png",
       textColor: "text-[#FFFFFF]",
       image2: "/votdine2.png",
