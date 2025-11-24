@@ -83,10 +83,12 @@ it shows <br />
 
 </section>
 
-<div className="relative sm:h-[180px] h-[250px]">
+<div className="relative sm:h-[200px] h-[250px]">
     <section className="absolute text-white z-50 sm:left-[3%] left-5 right-7  sm:right-[8%] top-[15%]">
      
-        <h1 className="sm:text-xl font-medium ">Currently diving into Rive to expand my motion design skills , exploring how subtle interactions can elevate product feel</h1>
+        <h1 className="sm:text-xl font-medium ">
+          Shifting my focus toward product clarity, UX systems, and decision-making , building products that feel simple, intentional, and easy to understand
+        </h1>
 
         <div className="flex gap-2.5 mt-8">
            <span>
