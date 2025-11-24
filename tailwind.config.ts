@@ -8,6 +8,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend:{
+       screens: {
+        'xs': '480px',
+      }
+
+    }
+
+    
  
   },
   plugins: [

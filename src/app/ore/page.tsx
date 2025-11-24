@@ -1,20 +1,16 @@
-import { FaSquareXTwitter } from "react-icons/fa6";
+// import { FaSquareXTwitter } from "react-icons/fa6";
 
 
 const page = () => {
 
    
-
-  
-
     return (
       <div className="sm:mt-20 mt-7 ">
         <section className="flex flex-col justify-between max-sm:mx-7 sm:mb-10 max-sm:gap-7">
      
 
           <h1 className='merriweather md:text-[75.85px] sm:text-6xl md:leading-[80px] sm:tracking-[-4%] text-[32px] leading-[40.36px] tracking-[-8%]'>
-          <span  className="text-[#00000066] text-opacity-40">O</span>reo<span className="text-[#00000066] text-opacity-40">luwa</span> here<span className="text-[#00000066] text-opacity-40">.</span>
-I <br />  design with
+          <span  className="text-[#00000066] text-opacity-40">O</span>reo<span className="text-[#00000066] text-opacity-40">luwa</span> here<span className="text-[#00000066] text-opacity-40">.</span> I <br />  design with
 impact,  <br />  and 
 it shows <br /> 
           </h1>
@@ -22,7 +18,7 @@ it shows <br />
           <div className="flex  justify-between sm:mt-10 max-sm:flex-col max-sm:gap-4 max-sm:mb-7">
 
           <div className="inline-flex gap-2 max-h-10 h-full">
-          <a href="#" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
+          <a href="/Isaac_Oreoluwa_CV.pdf" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
             <p className="text-xs">CV</p>
             <img src="/CV.svg"/>
         </a>
@@ -50,7 +46,7 @@ it shows <br />
         </a>
 
     
-        <a href="#" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a href="https://contra.com/oshiderooreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
             <p className="text-xs">Contra</p>
             <img src="/bio-arrow.svg"/>          
         </a>

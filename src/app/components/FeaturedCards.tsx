@@ -12,7 +12,8 @@ type HoverCardProps = {
   bgColor?: string;
   textColor?: string;
   isComingSoon?: boolean;
-  link?: string; 
+  link?: string;
+   mobileImg?:string 
 };
 
 export const HoverCard: React.FC<HoverCardProps> = ({ 
@@ -25,7 +26,8 @@ export const HoverCard: React.FC<HoverCardProps> = ({
   bgColor,
   textColor,
   isComingSoon = false,
-  link
+  link,
+   mobileImg
 }) => {
   return (
     <div className={`group relative ${bgColor} rounded-[10px] p-6 overflow-hidden cursor-pointer sm:h-[380px] h-[320px]  w-full `}>
@@ -50,7 +52,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
 
       {/* Default Images Container */}
       {/* <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95"> */}
-       <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out transform translate-y-0 sm:group-hover:translate-y-full sm:group-hover:opacity-0">
+       <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out transform translate-y-0 sm:group-hover:translate-y-full sm:group-hover:opacity-0 max-xs:hidden">
         <div className="absolute overflow-hidden transition-transform duration-500 bottom-[22%] max-w-[270px] sm:max-w-[392px] w-full z-50">
           <img 
             src={image1} 
@@ -69,7 +71,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
       </div>
 
       {/* Hover Content */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100">
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100 max-xs:hidden">
         {isComingSoon ? (
           <div className="text-center z-20">
             <h2 className={`text-4xl sm:text-8xl font-bold mb-4 text-white transition-all duration-500 transform translate-y-8 group-hover:translate-y-0`}>
@@ -94,6 +96,25 @@ export const HoverCard: React.FC<HoverCardProps> = ({
         )}
       </div>
 
+
+      {/* <div className='sm:hidden max-w-[320px] w-full h-[220px]'>
+           <img 
+            src={mobileImg} 
+            alt={`${title} image 1`}
+            className="w-full h-full object-cover transition-transform duration-500"
+          />
+      </div> */}
+
+<div className='xs:hidden absolute bottom-0 left-6 right-6 h-[60%]'>
+  <div className="w-full h-full rounded-[12px] max-w-[355px] bg-white">
+    <img 
+      src={mobileImg} 
+      alt={`${title} mobile image`}
+      className="w-full h-full object-fit"
+    />
+  </div>
+</div>
+
     
      
     </div>
@@ -113,7 +134,8 @@ const CardGrid = () => {
       image2: '/pay4me2.png',
       hoverImage: '/pay4me-hover.png', 
       isComingSoon: false,
-      link: "/pay4me"
+      link: "/pay4me",
+      mobileImg:"/pay4me-hover.png"
     },
     {
       title: "Bime",
@@ -125,7 +147,8 @@ const CardGrid = () => {
       image2: "/bime2.png",
       hoverImage: '/bime-hover.png', 
       isComingSoon: false,
-      link: "/bime"
+      link: "/bime",
+      mobileImg:"/bime-hover.png"
     },
     {
       title: "Votdine",
@@ -136,7 +159,8 @@ const CardGrid = () => {
       textColor: "text-[#FFFFFF]",
       image2: "/votdine2.png",
       isComingSoon: true,
-      link: ""
+      link: "",
+      mobileImg:"/votdine1.png",
     }
   ];
 
@@ -165,6 +189,7 @@ const CardGrid = () => {
                 textColor={card.textColor}  
                 isComingSoon={card.isComingSoon}
                 link={card.link}
+                 mobileImg={card.mobileImg}
               />
             </Link>
           ) : (
@@ -180,6 +205,8 @@ const CardGrid = () => {
               textColor={card.textColor}  
               isComingSoon={card.isComingSoon}
               link={card.link}
+               mobileImg={card.mobileImg}
+              
             />
           )
         ))}

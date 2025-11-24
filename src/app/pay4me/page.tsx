@@ -57,12 +57,18 @@ const page = () => {
 
                     <div className="my-14 flex flex-col w-full justify-center gap-6">
   <img 
-    src="https://ik.imagekit.io/9t24q4vku9/pay4me1.svg?updatedAt=1747832778440" 
+    src="/Frame 1000003401.png"
    alt="pay4me"
     className="w-full transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs" 
   />
   <img 
-    src="https://ik.imagekit.io/9t24q4vku9/pay4me2.svg?updatedAt=1747832747939" 
+    src="/Frame 1000003402.png" 
+   alt="pay4me" 
+    className="w-full transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs" 
+  />
+
+    <img 
+    src="/Frame 1000003526.png" 
    alt="pay4me" 
     className="w-full transform transition-transform duration-300 ease-in-out hover:scale-105 shadow-xs" 
   />

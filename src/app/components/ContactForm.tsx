@@ -1,12 +1,13 @@
 "use client";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import emailjs from 'emailjs-com';
 
 
 export default function ContactForm() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("message");
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -16,6 +17,12 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [error, setError] = useState("");
+   useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab === 'call') {
+      setActiveTab('call');
+    }
+  }, [searchParams]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

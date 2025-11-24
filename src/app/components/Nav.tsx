@@ -66,7 +66,7 @@ export default function Nav() {
   return (
 
     <>
-     <nav className="w-full flex  justify-between md:mt-[3%] mt-[41px] mx-auto items-center relative max-sm:px-[2%]">
+     <nav className="w-full flex  justify-between md:mt-[3%] mt-[41px] mx-auto items-center relative max-sm:pr-[6%] max-sm:pl-[4%]">
         <span className="flex items-center md:gap-4 max-[900px]:justify-between relative max-md:w-full">
      
      <div className=" flex items-center sm:gap-x-2">
@@ -81,16 +81,16 @@ export default function Nav() {
           </Link>
           
         
-<div className="flex items-center gap-x-2 px-3 py-2.5 border-[#D9D9D9] border rounded-[36.88px] h-fit max-sm:mr-1.5">
+<div className="flex items-center gap-x-2 px-3 py-2.5 border-[#D9D9D9] border rounded-[36.88px] border-dashed h-fit max-sm:mr-1.5">
       <div className="w-3.5 h-3.5 rounded-full bg-green-500 animate-pulse" />
       <p className="md:text-xs font-medium text-[10px] max-sm:hidden">
-      1 spot remaining
+      Limited to 1 new project this month
       </p>
     </div>
 
 
 
-<Link href="/startproject">
+{/* <Link href="/startproject">
   <div className="text-xs bg-[#000000] text-white flex items-center gap-2 px-3 py-2.5 rounded-[36.88px] cursor-pointer group">
     Start a project 
     <img 
@@ -99,7 +99,7 @@ export default function Nav() {
       alt="Arrow"
     />
   </div>
-</Link>
+</Link> */}
 
 
 </div> 

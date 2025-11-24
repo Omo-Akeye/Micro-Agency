@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
 
 
 @tailwind base;
@@ -11,7 +13,13 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
   }
+  .margarine {
+    font-family: "Margarine", cursive;
+  }
 
+  .sedgwick {
+    font-family: "Sedgwick Ave", cursive;
+  }
   .rotate-animation {
     animation: rotate 4s linear infinite;
   }
