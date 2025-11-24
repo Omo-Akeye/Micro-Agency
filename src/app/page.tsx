@@ -13,13 +13,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="orbit-regular mt-10">
-      {/* <h1 className="font-semibold sm:text-[70.25px] sm:leading-[70px] sm:tracking-[-6%] text-[#000000] merriweather text-[40px] leading-[50.36px] tracking-[-8%]  max-sm:px-7">
-        <span className="text-[#000000]/[0.4]">
-          From Sketch <br className="sm:hidden"/> to <br className="max-sm:hidden"/>
-          Scale: <br className="sm:hidden"/>
-        </span>{" "}
-        We Design <br className="max-sm:hidden" /> and  <br className="sm:hidden"/>Develop <br className="max-sm:hidden" /> really <br className="sm:hidden"/> good websites
-      </h1> */}
+
       <section>
    
 
@@ -86,8 +80,7 @@ export default function Home() {
 </div>
         </main>
 
-{/* 
-        <h1 className="font-medium mb-4">What We Offer</h1> */}
+
         <OfferSection/>
 
 

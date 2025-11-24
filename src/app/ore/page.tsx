@@ -1,5 +1,3 @@
-// import { FaSquareXTwitter } from "react-icons/fa6";
-
 
 const page = () => {
 

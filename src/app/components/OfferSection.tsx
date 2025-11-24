@@ -20,35 +20,45 @@ interface Offer {
 
 const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpanded, onToggle }) => {
   return (
-    <div className={`bg-white p-6 rounded-[10px] relative transition-all duration-300 ${
+    <div className={`bg-white p-6 rounded-[10px] relative transition-all duration-500 ease-in-out ${
       isExpanded ? 'col-span-full' : ''
     }`}>
-      {/* Close Button - Only visible when expanded */}
-      {isExpanded && (
-        <button 
-          onClick={onToggle}
-          className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-full border-2 border-black hover:bg-black hover:text-white transition-all duration-300 z-10"
-        >
-          <IoClose className="text-xl" />
-        </button>
-      )}
+  
+   
+      <button 
+        onClick={onToggle}
+        className={`absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-full border-2 border-black hover:bg-black hover:text-white transition-all duration-300 z-10 ${
+          isExpanded ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      >
+        <IoClose className="text-xl" />
+      </button>
 
       <h1 className="text-lg font-medium my-2">{title}</h1>
       <p className="text-[#000000B8]">{description}</p>
       
-      {!isExpanded && (
+  
+      <div className={`transition-all duration-300 ${isExpanded ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-auto mt-2.5'}`}>
         <button 
           onClick={onToggle}
-          className="flex items-center  gap-2 mt-2.5 cursor-pointer transition-opacity hover:opacity-70"
+          className="flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-70"
+          
+          disabled={isExpanded} 
         >
           <FaChevronDown className="transition-transform duration-300 max-sm:size-3" />
           <p className="text-[#000000B8] underline">What's included</p>
         </button>
-      )}
+      </div>
 
-      {/* Expanded Content */}
-      {isExpanded && (
-        <div className="mt-6 animate-fadeIn">
+     
+  
+      <div 
+        className={`grid transition-all duration-500 ease-in-out ${
+          isExpanded ? 'grid-rows-[1fr] opacity-100 mt-6' : 'grid-rows-[0fr] opacity-0 mt-0'
+        }`}
+      >
+        <div className="overflow-hidden min-h-0">
+         
           <button 
             onClick={onToggle}
             className="flex items-center gap-2 mb-4 cursor-pointer transition-opacity hover:opacity-70"
@@ -57,16 +67,16 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
             <p className="text-[#000000B8] underline">What's included</p>
           </button>
           
-          <ul className="space-y-3  text-[#000000B8]">
+          <ul className="space-y-3 text-[#000000B8]">
             {items.map((item, index) => (
               <li key={index} className="flex items-center gap-3">
-                <span >•</span>
+                <span>•</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
-      )}
+      </div>
     </div>
   );
 };
@@ -123,10 +133,11 @@ export default function OfferSection() {
   };
 
   return (
-    <section >
+    <section>
       <h1 className="font-medium mb-4">What We Offer</h1>
       <main className="bg-[#F5F5F5] p-3 rounded-[10px] grid sm:grid-cols-2 gap-2.5">
         {offers.map((offer, index) => (
+      
           expandedIndex === null || expandedIndex === index ? (
             <OfferCard
               key={index}
@@ -139,23 +150,6 @@ export default function OfferSection() {
           ) : null
         ))}
       </main>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        .animate-slideIn {
-          animation: slideIn 0.4s ease-out forwards;
-          opacity: 0;
-        }
-      `}</style>
     </section>
   );
 }

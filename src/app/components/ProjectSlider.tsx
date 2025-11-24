@@ -37,7 +37,7 @@ export default function ProjectSlider() {
   
   ];
 
-  // Toggle project visibility
+
   const toggleProjects = (): void => {
     setShowProjects(!showProjects);
   };
@@ -60,7 +60,7 @@ export default function ProjectSlider() {
             : 'max-h-0 opacity-0'
         }`}
       >
-         {/* <section className="flex items-center gap-6 max-sm:flex-col">  */}
+ 
          <section className="grid grid-cols-2 items-center gap-6 max-sm:grid-cols-1"> 
        
 

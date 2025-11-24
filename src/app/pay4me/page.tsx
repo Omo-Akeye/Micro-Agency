@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-import ProjectSlider from '../components/OtherProjects';
 import Link from 'next/link';
 import { HoverCard } from '../components/FeaturedCards';
 

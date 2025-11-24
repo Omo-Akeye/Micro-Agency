@@ -50,8 +50,6 @@ export const HoverCard: React.FC<HoverCardProps> = ({
       )}
     
 
-      {/* Default Images Container */}
-      {/* <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out group-hover:opacity-0 group-hover:transform group-hover:scale-95"> */}
        <div className="absolute -bottom-[25%] left-[10%] right-8 h-[350px] w-full transition-all duration-700 ease-out transform translate-y-0 sm:group-hover:translate-y-full sm:group-hover:opacity-0 max-xs:hidden">
         <div className="absolute overflow-hidden transition-transform duration-500 bottom-[22%] max-w-[270px] sm:max-w-[392px] w-full z-50">
           <img 
@@ -70,7 +68,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
         </div>
       </div>
 
-      {/* Hover Content */}
+ 
       <div className="absolute inset-0 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100 max-xs:hidden">
         {isComingSoon ? (
           <div className="text-center z-20">
@@ -87,7 +85,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
               <img 
                 src={hoverImage} 
                 alt={`${title} hover image`}
-                // className=" max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform scale-90 group-hover:scale-100 opacity-90 group-hover:opacity-100"
+
 
                  className="max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform translate-y-full sm:group-hover:translate-y-0 opacity-90 sm:group-hover:opacity-100"
               />
@@ -97,13 +95,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
       </div>
 
 
-      {/* <div className='sm:hidden max-w-[320px] w-full h-[220px]'>
-           <img 
-            src={mobileImg} 
-            alt={`${title} image 1`}
-            className="w-full h-full object-cover transition-transform duration-500"
-          />
-      </div> */}
+
 
 <div className='xs:hidden absolute bottom-0 left-6 right-6 h-[60%]'>
   <div className="w-full h-full rounded-[12px] max-w-[355px] bg-white">
@@ -218,71 +210,3 @@ const CardGrid = () => {
 };
 
 export default CardGrid;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const HoverCard: React.FC<HoverCardProps> = ({ title, category, year, image1, image2, bgColor = "bg-blue-500" }) => {
-//   return (
-//     <div className={`relative ${bgColor} rounded-lg p-6 overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-105 h-80`}>
-//       {/* Header */}
-//       <div className="flex justify-between items-start mb-6 relative z-10">
-//         <div>
-//           <h3 className="text-2xl font-bold text-white mb-1">{title}</h3>
-//           <p className="text-white/80 text-sm">{category}</p>
-//         </div>
-//         {year && (
-//           <span className="text-white/60 text-sm font-medium">{year}</span>
-//         )}
-//       </div>
-
-//       {/* Arrow Icon - appears on hover */}
-//       <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-//         {/* <ArrowRight className="w-6 h-6 text-white" /> */}
-//       </div>
-
-//       {/* Image Container */}
-//       <div className="absolute bottom-6 left-6 right-6 h-48">
-//         {/* First Image - slides out on hover */}
-//         <div className="absolute inset-0 bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-500 group-hover:translate-x-12 group-hover:opacity-80">
-//           <img 
-//             src={image1} 
-//             alt={`${title} image 1`}
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-
-//         {/* Second Image - centers on hover */}
-//         <div className="absolute inset-0 bg-white rounded-lg overflow-hidden shadow-lg transform translate-x-8 transition-transform duration-500 group-hover:translate-x-0">
-//           <img 
-//             src={image2} 
-//             alt={`${title} image 2`}
-//             className="w-full h-full object-cover"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };

@@ -56,7 +56,7 @@ const TestimonialSlider = () => {
   return (
     <section className="max-sm:mx-7 my-12">
       <div className=" relative overflow-hidden">
-        {/* Pagination Dots - At the top */}
+      
         <div className="flex gap-2 mb-6 sm:mb-8 justify-start">
           {testimonials.map((_, index) => (
             <button
