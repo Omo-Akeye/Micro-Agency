@@ -17,10 +17,26 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [error, setError] = useState("");
+  
    useEffect(() => {
     const tab = searchParams.get('tab');
     if (tab === 'call') {
       setActiveTab('call');
+    }
+
+    // Check for service param to pre-fill checkbox
+    const serviceParam = searchParams.get('service');
+    if (serviceParam) {
+      setFormData(prev => {
+        // Only add if it's not already there to avoid duplication
+        if (!prev.services.includes(serviceParam)) {
+          return {
+            ...prev,
+            services: [...prev.services, serviceParam]
+          };
+        }
+        return prev;
+      });
     }
   }, [searchParams]);
 

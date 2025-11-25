@@ -21,6 +21,18 @@ interface Offer {
 }
 
 const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpanded, onToggle }) => {
+  
+  // Helper to determine the service param based on the Offer Title
+  const getLinkHref = (title: string) => {
+    if (title === "Landing Page Package") {
+      return "/startproject?service=Web%20Design%20%26%20Development";
+    }
+    if (title === "Web App MVP" || title === "Full Product Build") {
+      return "/startproject?service=Full%20Design%20%26%20Development%20(MVP%20/%20Web%20App%20Build)";
+    }
+    return "/startproject";
+  };
+
   return (
     <div className={`bg-white p-6 rounded-[10px] relative transition-all duration-500 ease-in-out ${
       isExpanded ? 'col-span-full' : ''
@@ -79,9 +91,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
           </ul>
 
    <Link 
-  href="/startproject" 
- 
-
+     href={getLinkHref(title)}
      className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
     transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95 inline-block my-4"
 >
