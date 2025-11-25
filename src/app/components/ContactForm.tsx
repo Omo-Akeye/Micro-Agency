@@ -11,7 +11,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    services: ["Development"],
+    services: [] as string[],
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,7 +70,7 @@ export default function ContactForm() {
     setFormData({
       fullName: '',
       email: '',
-      services: ['Development'],
+      services: [],
       message: '',
     });
   } catch (err) {
@@ -80,6 +80,20 @@ export default function ContactForm() {
     setIsSubmitting(false);
   }
 };
+
+useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        router.back();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [router]);
 
 
   return (
@@ -145,29 +159,38 @@ export default function ContactForm() {
               <p className="sm:text-xl text-sm font-medium sm:mb-6 mb-4">
                 What service(s) are you interested in?
               </p>
-              <div className="flex flex-wrap sm:gap-4 gap-2 max-sm:text-xs">
-                {["Web design", "Development", "Product design", "Motion design"].map((service) => (
-                  <label key={service} className="inline-flex items-center cursor-pointer">
-                    <div
-                      className="relative flex items-center justify-center mr-2 w-5 h-5 border border-gray-300 rounded-full"
-                      onClick={() => handleServiceChange(service)}
-                    >
-                      {formData.services.includes(service) && (
-                        <div className="w-3 h-3 bg-black rounded-full"></div>
-                      )}
-                      <input
-                        type="checkbox"
-                        name="services"
-                        value={service}
-                        checked={formData.services.includes(service)}
-                        onChange={() => handleServiceChange(service)}
-                        className="sr-only"
-                      />
-                    </div>
-                    <span>{service}</span>
-                  </label>
-                ))}
-              </div>
+           <div className="flex flex-wrap sm:gap-4 gap-2 max-sm:text-xs">
+  {["Web Design & Development", "Full Design & Development (MVP / Web App Build)", "Motion design"].map((service) => (
+    <label key={service} className="inline-flex items-center cursor-pointer">
+      <div
+        className={`relative flex items-center justify-center mr-2 w-5 h-5 border-2 rounded transition-colors duration-200 ${
+          formData.services.includes(service) 
+            ? "bg-black border-black" 
+            : "border-gray-400 bg-transparent"
+        }`}
+      >
+        {formData.services.includes(service) && (
+          <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              fillRule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+        <input
+          type="checkbox"
+          name="services"
+          value={service}
+          checked={formData.services.includes(service)}
+          onChange={() => handleServiceChange(service)}
+          className="sr-only"
+        />
+      </div>
+      <span>{service}</span>
+    </label>
+  ))}
+</div>
             </div>
 
             <div className="mb-6">

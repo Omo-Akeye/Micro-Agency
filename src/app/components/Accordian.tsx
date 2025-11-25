@@ -68,7 +68,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
             return (
               <div
                 key={item.id}
-                className="border-b border-[#00000052] overflow-hidden border-opacity-60   duration-300 "
+                className="border-b border-[#00000052] overflow-hidden border-opacity-60   duration-300 last:border-none"
               >
                 <button
                   onClick={() => toggleItem(item.id)}
@@ -82,10 +82,10 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
                   <div className="flex-shrink-0">
                     <div className={`transform transition-transform duration-300 ease-out ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
                       {isOpen ? (
-                        // <Minus className="w-5 h-5 text-gray-600" />
+                    
                         <FaMinus />
                       ) : (
-                        // <Plus className="w-5 h-5 text-gray-600" />
+                     
                         <FaPlus />
                       )}
                     </div>

@@ -39,7 +39,7 @@ const page = () => {
 
 
           <div className="inline-flex gap-3 max-md:mt-10">
-          <a href="#" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
+          <a href="/akeye-cv20251.pdf" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
             <p className="text-xs">CV</p>
             <img src="/CV.svg"/>
         </a>

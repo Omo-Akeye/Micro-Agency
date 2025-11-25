@@ -1,11 +1,11 @@
-import { FaChevronDown } from "react-icons/fa6";
+
 import FAQAccordion from "./components/Accordian";
 import CardGrid from "./components/FeaturedCards";
-import ProjectSlider from "./components/ProjectSlider";
 import OfferSection from "./components/OfferSection";
 import TestimonialSlider from "./components/Testimonials";
 import PlayReelSection from "./components/PlayReelSection";
 import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
 
 
   
@@ -30,12 +30,22 @@ export default function Home() {
            <p className="sm:my-[18px] max-sm:mt-3 max-sm:mb-7  max-sm:px-7 max-sm:text-sm">Built for startups, creators & small teams who want to go from idea → live in weeks</p>
 
            <span className="gap-3 flex items-center  max-sm:px-7 font-medium">
-            <Link href="/startproject" className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3">Start a project</Link>
+      
             <Link 
-             href={{
-    pathname: '/startproject',
-    query: { tab: 'call' }
-  }} className="text-xs text-[#000000] border-[0.74px] border-[#D9D9D9] rounded-[44.35px] sm:py-3 py-2.5 sm:px-5 px-4">Book a 15-min audit call</Link>
+    href="/startproject" 
+    className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
+    transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95"
+  >
+            
+            Start a project</Link>
+            <Link 
+    href="https://cal.com/function-studioo/15min"
+  target="_blank"
+  rel="noopener noreferrer"
+  
+  className="text-xs text-[#000000] border-[0.74px] border-[#D9D9D9] rounded-[44.35px] sm:py-3 py-2.5 sm:px-5 px-4
+    transition-all duration-300 hover:border-black hover:bg-gray-50 group"
+  >Book a 15-min discovery call</Link>
                        </span>
       </section>
 
@@ -45,7 +55,24 @@ export default function Home() {
       </section>
 
       <section className=" max-sm:mx-7">
-        <h1 className="font-medium mb-4">Why Work With Us?</h1>
+      
+           <div className='flex justify-between items-center  mb-4'>
+    <h1 className="font-medium">Why Work With Us?</h1>
+
+
+      <Link 
+  href="/startproject" 
+  className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
+> 
+  <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
+    Start a project
+  </span>  
+  <IoIosArrowForward 
+    className='text-black mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
+  /> 
+</Link>
+    
+      </div>
         <main className="bg-[#F5F5F5] p-3 rounded-[10px] flex flex-col gap-2.5 mb-12">
           <div className="bg-white p-6 rounded-[10px]">
 
@@ -92,6 +119,26 @@ export default function Home() {
       <TestimonialSlider/>
 
       <FAQAccordion/>
+      
+
+ 
+
+      <Link href="/startproject" className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
+  <h1 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
+    Start a 
+  </h1> 
+
+  <div className="flex items-center gap-2"> 
+    <h1 className="text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black">
+      project
+    </h1>
+   
+    <IoIosArrowForward 
+      className='text-black mt-[2px] transition-all duration-300 transform group-hover:translate-x-4 group-hover:scale-110' 
+      size={36} 
+    /> 
+  </div>
+</Link>
 
 
       <PlayReelSection/>

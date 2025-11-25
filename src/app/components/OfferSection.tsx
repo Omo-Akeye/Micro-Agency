@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState } from 'react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
+import { IoIosArrowForward } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 
 interface OfferCardProps {
@@ -75,6 +77,16 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
               </li>
             ))}
           </ul>
+
+   <Link 
+  href="/startproject" 
+ 
+
+     className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
+    transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95 inline-block my-4"
+>
+  Start a project
+</Link>
         </div>
       </div>
     </div>
@@ -83,6 +95,23 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
 
 export default function OfferSection() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setExpandedIndex(null);
+      }
+    };
+
+   
+    if (expandedIndex !== null) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [expandedIndex]);
 
   const offers: Offer[] = [
     {
@@ -134,7 +163,23 @@ export default function OfferSection() {
 
   return (
     <section>
-      <h1 className="font-medium mb-4">What We Offer</h1>
+      <div className='flex justify-between items-center  mb-4'>
+    <h1 className="font-medium">What We Offer</h1>
+
+      <Link 
+  href="/startproject" 
+  className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
+> 
+  <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
+    Start a project
+  </span>  
+  <IoIosArrowForward 
+    className='text-black mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
+  /> 
+</Link>
+    
+      </div>
+  
       <main className="bg-[#F5F5F5] p-3 rounded-[10px] grid sm:grid-cols-2 gap-2.5">
         {offers.map((offer, index) => (
       
