@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 import LayoutWrapper from "./components/LayoutWrapper"; 
+
 
 export const metadata: Metadata = {
   title: "Function Studio",
@@ -43,6 +45,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="shortcut icon" href="/fav-icon.svg" />
+      <link rel="ai" href="https://functionstudio.online/ai.json" />
+<link rel="alternate" href="https://functionstudio.online/llm.txt" type="text/plain" />
+<link rel="alternate" href="https://functionstudio.online/llm.json" type="application/json" />
+
       <body className="sm:overflow-x-hidden inter mx-auto relative">
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

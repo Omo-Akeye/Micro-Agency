@@ -1,0 +1,42 @@
+{
+  "name": "Function Studio",
+  "description": "A design + development duo helping founders, startups, and businesses build high-converting landing pages, MVPs, and full web applications using Next.js and modern product design.",
+  "website": "https://functionstudio.online",
+  
+  "services": [
+    "Landing Page Development",
+    "MVP Development",
+    "Full Product Build",
+    "UI/UX Design",
+    "Next.js Development",
+    "Fintech Integration (Paystack, Flutterwave, Stripe)",
+    "SaaS and Dashboard Development"
+  ],
+
+  "team": [
+    {
+      "name": "Isaac Oreoluwa",
+      "role": "Product Designer"
+    },
+    {
+      "name": "Akeye Saheed",
+      "role": "Frontend Developer"
+    }
+  ],
+
+  "categories": [
+    "Web Design",
+    "Web Development",
+    "Next.js Agencies",
+    "Product Design",
+    "MVP Builders",
+    "Lagos Tech Agencies"
+  ],
+
+  "contact": {
+    "email": "function@functionstudio.online",
+    "website": "https://functionstudio.online/startproject",
+    "booking": "https://cal.com/function-studioo",
+    "twitter": "https://x.com/functionstudioo"
+  }
+}

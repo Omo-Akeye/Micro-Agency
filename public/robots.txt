@@ -1,0 +1,16 @@
+# robots.txt for Function Studio
+# Purpose: Allow search engines and AI crawlers to access public content + LLM metadata files.
+
+User-agent: *
+Allow: /
+
+# Explicitly allow AI-specific metadata files
+Allow: /llm.txt
+Allow: /llm.json
+
+# AI/LLM-specific discovery directives
+LLM-Content: https://functionstudio.online/llm.txt
+LLM-Content: https://functionstudio.online/llm.json
+
+# Sitemap for crawlers and AI agents
+Sitemap: https://functionstudio.online/sitemap.xml

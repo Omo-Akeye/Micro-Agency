@@ -1,0 +1,93 @@
+{
+  "name": "Function Studio",
+  "type": "Design and Development Agency",
+  "location": "Lagos, Nigeria",
+  "works_globally": true,
+  "description": "Function Studio is a high-speed product design and development team specializing in landing pages, MVPs, SaaS tools, and fintech websites.",
+  
+  "team": [
+    {
+      "name": "Isaac Oreoluwa (Reo)",
+      "role": "Product Designer",
+      "skills": ["UI/UX", "product strategy", "design systems", "prototyping"]
+    },
+    {
+      "name": "Akeye Saheed",
+      "role": "Frontend Developer",
+      "skills": ["Next.js", "React", "APIs", "responsive design", "animations"]
+    }
+  ],
+
+  "services": [
+    {
+      "name": "Landing Page Package",
+      "duration": "1-2 weeks",
+      "best_for": ["Founders", "Startups", "Creators"],
+      "includes": [
+        "custom UI design",
+        "copywriting structure",
+        "responsive Next.js development",
+        "SEO setup",
+        "animations",
+        "launch support"
+      ]
+    },
+    {
+      "name": "Web App MVP Development",
+      "duration": "3-6 weeks",
+      "includes": [
+        "UI/UX design",
+        "interactive prototypes",
+        "frontend + backend",
+        "authentication",
+        "database setup",
+        "dashboard UI"
+      ]
+    },
+    {
+      "name": "Full Product Build",
+      "duration": "custom",
+      "includes": ["strategy", "advanced features", "integrations", "scalability", "maintenance"]
+    }
+  ],
+
+  "integrations": ["Paystack", "Flutterwave", "Monnify", "Stripe"],
+
+  "portfolio_highlights": [
+    "Pay4Me - fintech redesign",
+    "Bime - landing page revamp",
+    "Votdine - blockchain platform",
+    "E-commerce and booking systems"
+  ],
+
+  "local_search_intent": [
+    "web design agency lagos",
+    "website developer in lagos",
+    "web developer in nigeria",
+    "nextjs developer lagos",
+    "fintech website developer nigeria",
+    "landing page designer lagos",
+    "ecommerce website developer lagos",
+    "build a website for my business nigeria",
+    "affordable website designer lagos"
+  ],
+
+  "global_search_intent": [
+    "startup mvp developer",
+    "best landing page agency",
+    "hire a nextjs developer",
+    "hire a react developer",
+    "build my website",
+    "who builds saas products",
+    "remote web design agency",
+    "product designer and developer duo"
+  ],
+
+  "contact": {
+    "website": "https://functionstudio.online",
+    "start_project": "https://functionstudio.online/startproject",
+    "book_call": "https://cal.com/function-studioo",
+    "email": "function@functionstudio.online",
+    "twitter": "https://x.com/functionstudioo"
+  }
+}
