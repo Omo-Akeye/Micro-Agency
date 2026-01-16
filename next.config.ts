@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    tracingIgnores: ['**/*']
-  },
+
   trailingSlash: true,
   basePath: '',
   assetPrefix: '',
