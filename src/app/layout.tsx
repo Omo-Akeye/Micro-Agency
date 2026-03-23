@@ -51,6 +51,7 @@ export default function RootLayout({
 
       <body className="sm:overflow-x-hidden inter mx-auto relative">
         <LayoutWrapper>{children}</LayoutWrapper>
+        <Analytics />
       </body>
     </html>
   );
