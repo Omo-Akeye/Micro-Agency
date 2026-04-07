@@ -82,7 +82,7 @@ export default function ContactForm() {
       },
       body: new URLSearchParams({
         access_key: web3FormsAccessKey,
-        subject: 'New message from Micro-Agency',
+        subject: 'New message from Function Studioo',
         name: formData.fullName,
         replyto: formData.email,
         services: formData.services.join(', '),
