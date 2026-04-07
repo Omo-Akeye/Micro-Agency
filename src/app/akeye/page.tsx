@@ -28,7 +28,7 @@ const page = () => {
             <p className="text-xs">Twitter</p>
             <img src="/bio-arrow.svg"/>
         </a>
-        <a href="https://akeye-portfolio.netlify.app/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[145px] w-full">
+        <a href="https://www.akeyesaheed.tech/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[145px] w-full">
         <p className="text-xs">Portolio website</p>
         <img src="/bio-arrow.svg"/>
         </a>
@@ -39,7 +39,7 @@ const page = () => {
 
 
           <div className="inline-flex gap-3 max-md:mt-10">
-          <a href="/akeye-cv20251.pdf" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
+          <a href="/Saheed_Akeye_frontendengineer.pdf" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  ">
             <p className="text-xs">CV</p>
             <img src="/CV.svg"/>
         </a>
@@ -57,10 +57,10 @@ const page = () => {
 
            <ul className="sm:w-full max-sm:mx-7 max-sm:text-sm flex flex-col gap-y-4">
             <li className="flex justify-between items-center border-[#B3B3B399] rounded-[10px] border p-5 font-medium">
-              <p>Getricht Food</p>
+              <p>Invoice Generator Pro</p>
 
               <span className="flex gap-2">
-                <a href="https://getricht-akey.netlify.app/" className="underline">Live link</a>
+                <a href="https://www.invoicegeneratorpro.online/" className="underline">Live link</a>
                 <img src="/bio-arrow.svg" alt="arrow" />
               </span>
             </li>
@@ -86,7 +86,7 @@ const page = () => {
        
 
         <article className="flex flex-col gap-y-6 mt-11 max-sm:mx-7">
-            <p>I am a frontend developer specialize in creating responsive,functional, accessible and visually appealing websites. I have a keen eye for beautiful designs, user-friendly and functionality web applications.
+            <p>I am a software developer specialize in creating responsive,functional, accessible and visually appealing websites. I have a keen eye for beautiful designs, user-friendly and functionality web applications.
 
  </p>
 <p>I have hands-on experience in building websites and writing reusable, maintainable code. I am continually evolving my skills and staying up-to-date with the latest web development technologies. I align technical solutions with the broader project vision, bringing both expertise and passion to every project I undertake.</p>

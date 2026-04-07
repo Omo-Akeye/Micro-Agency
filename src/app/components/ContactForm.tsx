@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import emailjs from 'emailjs-com';
 
 
 export default function ContactForm() {
@@ -17,6 +16,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [error, setError] = useState("");
+  const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
   
    useEffect(() => {
     const tab = searchParams.get('tab');
@@ -68,20 +68,35 @@ export default function ContactForm() {
   setIsSubmitting(true);
   setError('');
 
-  const templateParams = {
-    full_name: formData.fullName,
-    email: formData.email,
-    services: formData.services.join(', '),
-    message: formData.message,
-  };
+  if (!web3FormsAccessKey) {
+    setError('Missing Web3Forms access key. Add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to your environment.');
+    setIsSubmitting(false);
+    return;
+  }
 
   try {
-    await emailjs.send(
-      'service_eglj8qn',   
-      'template_2p45xxb',   
-      templateParams,
-      'hy7HEmSuLj1YCyvkZ'    
-    );
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: web3FormsAccessKey,
+        subject: 'New message from Micro-Agency',
+        name: formData.fullName,
+        replyto: formData.email,
+        services: formData.services.join(', '),
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || result.success === false) {
+      throw new Error(result?.message || 'Failed to send message.');
+    }
+
     setSubmitSuccess(true);
     setFormData({
       fullName: '',
@@ -90,7 +105,7 @@ export default function ContactForm() {
       message: '',
     });
   } catch (err) {
-    console.error('EmailJS error:', err);
+    console.error('Web3Forms error:', err);
     setError('Failed to send message. Please try again.');
   } finally {
     setIsSubmitting(false);
