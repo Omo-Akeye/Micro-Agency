@@ -78,17 +78,16 @@ export default function ContactForm() {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({
+      body: new URLSearchParams({
         access_key: web3FormsAccessKey,
         subject: 'New message from Micro-Agency',
         name: formData.fullName,
         replyto: formData.email,
         services: formData.services.join(', '),
         message: formData.message,
-      }),
+      }).toString(),
     });
 
     const result = await response.json();

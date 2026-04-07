@@ -44,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="/fav-icon.svg" />
+      <link rel="shortcut icon" href="/new-logo.png" />
       <link rel="ai" href="https://functionstudio.online/ai.json" />
 <link rel="alternate" href="https://functionstudio.online/llm.txt" type="text/plain" />
 <link rel="alternate" href="https://functionstudio.online/llm.json" type="application/json" />
