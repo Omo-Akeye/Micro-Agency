@@ -116,6 +116,19 @@ export const HoverCard: React.FC<HoverCardProps> = ({
 const CardGrid = () => {
 
   const cards = [
+       {
+      title: "Lyngo",
+      category: "Consumer/Edtech",
+      year: "2026",
+      bgColor: "bg-gradient-to-b from-[#CF1AB0] to-[#FF8AEC]", 
+      image1: '/lyngo1.png',
+      textColor: "text-[#ffff]",
+      image2: '/lyngo2.png',
+      hoverImage: '/lyngo-hover.png', 
+      isComingSoon: false,
+      link: "/lyngo",
+      mobileImg:"/lyngo-hover.png"
+    },
     {
       title: "Pay4me",
       category: "Financial technology",
@@ -163,7 +176,7 @@ const CardGrid = () => {
     <div className='flex flex-col  w-full'>
       <div className='flex justify-between items-center text-[#000000A3] mb-10'>
         <h2 className=''>Featured Projects</h2>
-      <p>[03]</p>
+      <p>[04]</p>
       </div>
         <div className="flex flex-col gap-8">
       
