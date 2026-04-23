@@ -37,11 +37,10 @@ const page = () => {
         <Image
         
         width={1200}
-        height={600}
+        height={466}
         src="/landing1.png"
         alt="Lyngo landing page"
-        className="w-full"
-        style={{ maxHeight: '466px' }}
+        className="w-full h-auto"
         />
 
         <article className="flex flex-col gap-5 sm:my-16 my-10 sm:[&_p]:leading-7 sm:[&_p]:tracking-[-0.04em]">
@@ -64,8 +63,7 @@ Lyngo is that door.</p>
         height={466}
         src="/Landing2.png"
         alt="Lyngo landing page 2"
-        className="w-full"
-        style={{ maxHeight: '416px' }}
+         className="w-full h-auto"
         />
 
         <article className="flex flex-col gap-5 sm:my-16 my-10 sm:[&_p]:leading-7 sm:[&_p]:tracking-[-0.04em]">
@@ -92,7 +90,7 @@ Lyngo is that door.</p>
         src="/Landing3.png"
         alt="Lyngo landing page 3"
         className="w-full"
-        style={{ maxHeight: '496px' }}
+ 
         />
 
 
@@ -120,8 +118,8 @@ The result is something that respects your time and rewards your curiosity — e
         height={600}
         src="/Landing4.png"
         alt="Lyngo landing page 4"
-        className="w-full"
-        style={{ maxHeight: '496px' }}
+          className="w-full h-auto"
+     
         />
 
              <Image
@@ -130,8 +128,7 @@ The result is something that respects your time and rewards your curiosity — e
         height={600}
         src="/Landing5.png"
         alt="Lyngo landing page 5"
-        className="w-full"
-        style={{ maxHeight: '496px' }}
+         className="w-full h-auto"
         />
 
               <Image
@@ -140,8 +137,7 @@ The result is something that respects your time and rewards your curiosity — e
         height={646}
         src="/Landing7.png"
         alt="Lyngo landing page 7"
-        className="w-full"
-        style={{ maxHeight: '646px' }}
+         className="w-full h-auto"
         />
 
              </section>
@@ -164,8 +160,7 @@ The result is something that respects your time and rewards your curiosity — e
         height={416}
         src="/Landing8.png"
         alt="Lyngo landing page 8"
-        className="w-full"
-        style={{ maxHeight: '416px' }}
+       className="w-full h-auto"
         />
         <article className="flex flex-col sm:my-16 my-10  sm:leading-7 sm:tracking-[-0.04em]">
           <p className="mb-1">Lyngo reflects how Function Studioo approaches products:</p>
@@ -183,8 +178,7 @@ The result is something that respects your time and rewards your curiosity — e
         height={416}
         src="/Landing9.png"
         alt="Lyngo landing page 9"
-        className="w-full"
-        style={{ maxHeight: '416px' }}
+       className="w-full h-auto"
         />
 
 
