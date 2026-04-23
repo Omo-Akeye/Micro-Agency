@@ -1,17 +1,28 @@
-
+import Image from 'next/image'
+import SortMySceneCard from './SortMySceneCard'
 const page = () => {
 
    
     return (
       <div className="sm:mt-20 mt-7 ">
-        <section className="flex flex-col justify-between max-sm:mx-7 sm:mb-10 max-sm:gap-7">
+        <section className="flex flex-col justify-between max-sm:mx-7 sm:mb-[65px] max-sm:gap-7">
+
+
+           <h1 className='merriweather md:text-[75.85px] sm:text-6xl md:leading-[80px] sm:tracking-[-4%] text-[32px] leading-[40.36px] tracking-[-8%]'>
+    <span className="text-[#00000066] text-opacity-40">Oreoluwa here. </span> 
+     <br />
+I design products that <br />drive  growth, not just <br /> attention
+          </h1>
      
 
-          <h1 className='merriweather md:text-[75.85px] sm:text-6xl md:leading-[80px] sm:tracking-[-4%] text-[32px] leading-[40.36px] tracking-[-8%]'>
-          <span  className="text-[#00000066] text-opacity-40">O</span>reo<span className="text-[#00000066] text-opacity-40">luwa</span> here<span className="text-[#00000066] text-opacity-40">.</span> I <br />  design with
-impact,  <br />  and 
-it shows <br /> 
-          </h1>
+        {/* <h1
+          className='md:text-[75.85px] md:leading-[80px] md:tracking-[-0.04em] text-[32px] leading-[40.36px] tracking-[-0.04em] font-normal'
+          style={{ fontFamily: '"Merriweather 24pt' }}
+        >
+          <span className="text-[#00000066]">Oreoluwa here. </span> 
+          <br />
+          I design products that drive growth, not just attention
+        </h1> */}
 
           <div className="flex  justify-between sm:mt-10 max-sm:flex-col max-sm:gap-4 max-sm:mb-7">
 
@@ -59,27 +70,38 @@ it shows <br />
           </div>
     
         </section>
+
+
+             <Image
+                
+                width={1200}
+                height={483}
+                src="/ore-frame.png"
+                alt="Lyngo landing page 9"
+               className="w-full h-auto"
+                />
+        
    
        
 
-        <article className="flex flex-col gap-y-6 max-sm:mx-7 text-[#000000B8]">
+        <article className="flex flex-col gap-y-6 max-sm:mx-7 text-[#000000B8] mt-10">
             <p>I’m a passionate product designer driven by the power of ideas and their ability to shape impactful, user-centric experiences. I thrive on transforming concepts into tangible, meaningful designs that resonate with users and meet business goals. 
 
  </p>
 <p>With a sharp eye for detail and a strategic mindset, I specialize in crafting products that not only look great but function seamlessly.</p>
 
-<section className="grid sm:grid-cols-3 bg-[#F5F5F5] p-2 gap-3 rounded-[10px]">
-  <div className="bg-white p-6 flex justify-center items-center rounded-md">
-  <img src="/brand1.png" alt="brand1" className="h-6"  />
-  </div>
+<section className="sm:grid sm:grid-cols-3 max-sm:flex max-sm:justify-between items-center sm:gap-6 gap-4 sm:mt-10 sm:mb-16 mt-5 mb-8 sm:max-w-[420px] w-full">
+  
+  <SortMySceneCard />
+ 
+ 
+ <img src="/brand2.png" alt="brand3"  width={120.7} height={24} />
 
-  <div className="bg-white p-6 flex justify-center items-center rounded-md">
-  <img src="/brand3.png" alt="brand2"  className="h-6"  />
-  </div>
 
- <div className="bg-white p-6 flex justify-center items-center rounded-md">
- <img src="/brand2.png" alt="brand3" className="h-6" />
- </div>
+  <img src="/brand1.png" alt="brand1" width={46} height={24} />
+
+
+
 
 </section>
 
