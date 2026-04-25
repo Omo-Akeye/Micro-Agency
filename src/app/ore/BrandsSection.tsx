@@ -54,7 +54,7 @@ export default function BrandsSection() {
 
         {/* Brand 2 */}
         <img
-          src="/brand2.png"
+          src="/ivory.png"
           alt="brand2"
           width={120.7}
           height={24}
@@ -63,7 +63,7 @@ export default function BrandsSection() {
 
         {/* Brand 1 */}
         <img
-          src="/brand1.png"
+          src="/brand3.png"
           alt="brand1"
           width={46}
           height={24}

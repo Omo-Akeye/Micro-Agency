@@ -159,7 +159,7 @@ export default function Nav() {
                 <div className="mt-3 space-y-3">
                   <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"
                      onClick={closeAboutPopup}>
-                    <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
+                    <img src="/ore.png" alt="Isaac Oreoluwa" width={34} className="mr-[10px] rounded-[140px]" />
                     <span>Isaac Oreoluwa - Designer</span>
                   </Link>
                   <Link href="/akeye" className="flex items-center bg-[#F5F5F5] py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"

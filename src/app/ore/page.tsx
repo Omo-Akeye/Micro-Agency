@@ -111,7 +111,7 @@ I design products that <br />drive  growth, not just <br /> attention
 
         <div className="flex gap-2.5 mt-8">
            <span>
-            <img src="https://ik.imagekit.io/9t24q4vku9/ore-rive.svg?updatedAt=1747833271092" alt="ore" className="h-[49px] w-[51.49px] rounded-full"/>
+            <img src="/ore.png" alt="ore" className="h-[49px] w-[51.49px]"/>
           </span>
         
           <span className="text-xl" >
