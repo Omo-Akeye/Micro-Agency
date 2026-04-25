@@ -17,7 +17,7 @@ export default function SortMySceneCard() {
 
   return (
     <div className="relative w-fit">
-      {/* Trigger image */}
+   
       <img
         ref={triggerRef}
         src="/SORTMYSCENE.png"
@@ -37,23 +37,23 @@ export default function SortMySceneCard() {
           onMouseEnter={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl w-full mx-auto sm:px-[2%]">
             <div className="bg-[#F5F5F5] border border-[#DDDDDD] rounded-[10px] overflow-hidden  pointer-events-auto animate-in fade-in duration-150 p-[27px]">
           
               <div className=" flex flex-col gap-1">
-                <p className="text-[#000000B8] text-sm font-medium  leading-[23.91px] tracking-[4%]" >
+                <p className="text-[#000000B8] text-sm font-medium  leading-[23.91px] tracking-[4%] inter1" >
                   At SortMyScene, I led a focused redesign to make event discovery faster, clearer, and easier to
                   navigate, especially for users with short attention spans and inconsistent internet. I simplified
                   browsing, reworked filtering, and improved the overall flow so users can find relevant events with
                   less effort.
                 </p>
-                <p className="text-[#000000B8] text-sm font-medium leading-[23.91px] tracking-[4%]" >
+                <p className="text-[#000000B8] text-sm font-medium leading-[23.91px] tracking-[4%] inter1" >
                   Beyond UI, I shaped key product decisions, defining scalable filters, refining the marketplace
                   structure, and improving tools for organizers. My work helped align the experience with real user
                   behavior, making the platform more efficient for attendees and more effective for event promoters.
                 </p>
 
-                {/* Footer */}
+          
                 <div className="flex items-center justify-between mt-[61px]">
                   <span className="text-sm text-[#00000066] font-medium">Dec 202X – Mar 202X &nbsp;·&nbsp; 0 mos</span>
                    <img
