@@ -222,7 +222,7 @@ export default function Nav() {
                 <li className="">
                   <Link href="/ore" className="text-4xl flex items-center gap-2 underline font-medium" 
                    onClick={closeMobileMenu} >
-                  <img src="/ore.svg" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
+                  <img src="/ore.png" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
                     Isaac Oreoluwa - Designer
                   </Link>
                 </li>
