@@ -1,7 +1,7 @@
 {
   "name": "Function Studio",
   "description": "A design + development duo helping founders, startups, and businesses build high-converting landing pages, MVPs, and full web applications using Next.js and modern product design.",
-  "website": "https://functionstudio.online",
+  "website": "https://functionstudioo.com",
   
   "services": [
     "Landing Page Development",
@@ -10,7 +10,8 @@
     "UI/UX Design",
     "Next.js Development",
     "Fintech Integration (Paystack, Flutterwave, Stripe)",
-    "SaaS and Dashboard Development"
+    "SaaS and Dashboard Development",
+    "E-commerce Development"
   ],
 
   "team": [
@@ -30,12 +31,14 @@
     "Next.js Agencies",
     "Product Design",
     "MVP Builders",
-    "Lagos Tech Agencies"
+    "Lagos Tech Agencies",
+    "Fintech Website Development",
+    "SaaS Development"
   ],
 
   "contact": {
     "email": "function@functionstudio.online",
-    "website": "https://functionstudio.online/startproject",
+    "website": "https://functionstudioo.com/startproject/",
     "booking": "https://cal.com/function-studioo",
     "twitter": "https://x.com/functionstudioo"
   }

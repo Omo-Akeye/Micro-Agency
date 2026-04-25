@@ -1,4 +1,5 @@
 
+import type { Metadata } from "next";
 import FAQAccordion from "./components/Accordian";
 import CardGrid from "./components/FeaturedCards";
 import OfferSection from "./components/OfferSection";
@@ -7,12 +8,72 @@ import PlayReelSection from "./components/PlayReelSection";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
+export const metadata: Metadata = {
+  title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
+  description: "A design and development agency helping startups, founders, and small teams go from idea to live product in weeks. Landing pages, MVPs, and full web apps. Based in Lagos, working globally.",
+  alternates: {
+    canonical: "https://functionstudioo.com",
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is it like working together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Working with Function Studio means working with a tight, two-person team, designer and developer, who collaborate in real-time. We're fast, focused, and intentional. No handoffs, no delays. You'll be part of a smooth process where ideas turn into usable products quickly. Think of it like working with a product-minded duo that handles both the look and the logic, without the bloat of a big agency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can we get done in a month?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot, especially because we work as a synced designer–developer team. In one month, we can take an idea from early sketches to a live, working product. That might mean designing and building a full landing page, shipping a small web app, or tackling core parts of a larger platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of projects do you take on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We focus on digital products - landing pages, web apps, and internal tools. Most of our work involves designing and building front-end experiences that are fast, clean, and easy to use. Whether you're a startup validating an idea or a team refining an existing platform, we step in where design and code need to work closely together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who do we work best with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work best with founders, product leads, or small teams who value speed, clear communication, and tight collaboration. If you're looking for a no-fluff team that can move ideas into production without long timelines or layered approvals, we'll likely be a great fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do you need from us to get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once we've had a discovery call and aligned on scope, we'll just need a short brief, what you're trying to build, any existing materials (like brand assets or wireframes), and access to relevant tools. We'll handle the rest from there, keeping you in the loop with frequent updates and check-ins."
+      }
+    }
+  ]
+};
 
   
 
 export default function Home() {
   return (
     <div className="orbit-regular mt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
 
       <section>
    
@@ -57,7 +118,7 @@ export default function Home() {
       <section className=" max-sm:mx-7">
       
            <div className='flex justify-between items-center  mb-4'>
-    <h1 className="font-medium">Why Work With Us?</h1>
+    <h2 className="font-medium">Why Work With Us?</h2>
 
 
       <Link 
@@ -76,20 +137,20 @@ export default function Home() {
         <main className="bg-[#F5F5F5] p-3 rounded-[10px] flex flex-col gap-2.5 mb-12">
           <div className="bg-white p-6 rounded-[10px]">
 
-            <img src="Link.png" alt="link" className="h-6 w-6"/>
+            <img src="Link.png" alt="Streamlined collaboration icon" className="h-6 w-6"/>
 
-            <h1 className="text-lg font-medium my-2">Streamlined Collaboration</h1>
+            <h3 className="text-lg font-medium my-2">Streamlined Collaboration</h3>
 
-            <p className="text-[#000000B8]">You don’t have to coordinate between designer and dev, we’re synced.</p>
+            <p className="text-[#000000B8]">You don't have to coordinate between designer and dev, we're synced.</p>
 
           </div>
 
 
           <div className="bg-white p-6 rounded-[10px]">
 
-<img src="Star Circle.png" alt="link" className="h-6 w-6"/>
+<img src="Star Circle.png" alt="End-to-end expertise icon" className="h-6 w-6"/>
 
-<h1 className="text-lg font-medium my-2">End-to-End Expertise</h1>
+<h3 className="text-lg font-medium my-2">End-to-End Expertise</h3>
 
 <p className="text-[#000000B8]">We think big but execute down to the smallest details, ensuring no aspects pf your product is overlooked. </p>
 
@@ -98,9 +159,9 @@ export default function Home() {
 
 <div className="bg-white p-6 rounded-[10px]">
 
-<img src="Glasses.png" alt="link" className="h-6 w-6"/>
+<img src="Glasses.png" alt="Personalized attention icon" className="h-6 w-6"/>
 
-<h1 className="text-lg font-medium my-2">Personalized Attention</h1>
+<h3 className="text-lg font-medium my-2">Personalized Attention</h3>
 
 <p className="text-[#000000B8]">As a small team, we prioritize your project with undivided focus and dedication</p>
 
@@ -124,14 +185,14 @@ export default function Home() {
  
 
       <Link href="/startproject" className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
-  <h1 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
+  <h2 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
     Start a 
-  </h1> 
+  </h2> 
 
   <div className="flex items-center gap-2"> 
-    <h1 className="text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black">
+    <h2 className="text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black">
       project
-    </h1>
+    </h2>
    
     <IoIosArrowForward 
       className='text-black mt-[2px] transition-all duration-300 transform group-hover:translate-x-4 group-hover:scale-110' 

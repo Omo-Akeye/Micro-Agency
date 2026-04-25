@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Image from 'next/image'
 import Link from 'next/link'
 import { HoverCard } from '../components/FeaturedCards'
+
+export const metadata: Metadata = {
+  title: "Lyngo — Consumer/Edtech Case Study",
+  description: "How we designed and built Lyngo: a daily vocabulary app with niche personalization, streaks, and rewards. End-to-end product strategy, UX/UI design, and development.",
+  alternates: {
+    canonical: "https://functionstudioo.com/lyngo/",
+  },
+};
 
 const page = () => {
     const featuredProjects = [

@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "About Function Studio | Design & Development Agency in Lagos",
+  description: "We're a designer + developer duo building user-friendly, high-quality digital products. Learn about our process, values, and why clients choose us.",
+  alternates: {
+    canonical: "https://functionstudioo.com/functionstudio/",
+  },
+};
 
 export default function page() {
   return (

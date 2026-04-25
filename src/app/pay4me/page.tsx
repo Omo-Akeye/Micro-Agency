@@ -1,7 +1,15 @@
-"use client"
+import type { Metadata } from "next";
 import React from 'react'
 import Link from 'next/link';
 import { HoverCard } from '../components/FeaturedCards';
+
+export const metadata: Metadata = {
+  title: "Pay4Me — Fintech Redesign Case Study",
+  description: "Case study: How Function Studio redesigned Pay4Me's website for trust-centered cross-border tuition payments. More clarity, more conversions.",
+  alternates: {
+    canonical: "https://functionstudioo.com/pay4me/",
+  },
+};
 
 const page = () => {
   const featuredProjects = [

@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Akeye Saheed — Frontend Developer",
+  description: "Meet Akeye Saheed, the frontend developer at Function Studio. Specializing in Next.js, React, responsive interfaces, animations, and scalable web architecture.",
+  alternates: {
+    canonical: "https://functionstudioo.com/akeye/",
+  },
+};
 
 const page = () => {
     return (

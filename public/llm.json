@@ -54,6 +54,7 @@
   "integrations": ["Paystack", "Flutterwave", "Monnify", "Stripe"],
 
   "portfolio_highlights": [
+    "Lyngo - consumer/edtech vocabulary app",
     "Pay4Me - fintech redesign",
     "Bime - landing page revamp",
     "Votdine - blockchain platform",
@@ -84,8 +85,8 @@
   ],
 
   "contact": {
-    "website": "https://functionstudio.online",
-    "start_project": "https://functionstudio.online/startproject",
+    "website": "https://functionstudioo.com",
+    "start_project": "https://functionstudioo.com/startproject/",
     "book_call": "https://cal.com/function-studioo",
     "email": "function@functionstudio.online",
     "twitter": "https://x.com/functionstudioo"

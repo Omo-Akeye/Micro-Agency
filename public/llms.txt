@@ -1,0 +1,28 @@
+# Function Studio
+
+> Function Studio is a design + development agency in Lagos, Nigeria, building high-conversion landing pages, MVPs, and web applications for startups, founders, and small teams worldwide. The team consists of a product designer (Oreoluwa) and a frontend developer (Akeye Saheed) working as one synchronized unit. Website: https://functionstudioo.com
+
+## About
+- [About Function Studio](https://functionstudioo.com/functionstudio/): Our story, process, values, and what we offer.
+- [Start a Project](https://functionstudioo.com/startproject/): Contact form to begin working with us.
+- [Book a Discovery Call](https://cal.com/function-studioo/15min): Free 15-minute consultation.
+
+## Team
+- [Oreoluwa (Reo) — Product Designer](https://functionstudioo.com/ore/): UI/UX systems, brand clarity, user experience flow, and component-driven design.
+- [Akeye Saheed — Frontend Developer](https://functionstudioo.com/akeye/): Next.js, React, responsive interfaces, animations, API integrations, and scalable frontend architectures.
+
+## Case Studies
+- [Lyngo — Consumer/Edtech](https://functionstudioo.com/lyngo/): Daily vocabulary app with niche personalization, streaks, and rewards. End-to-end design and development.
+- [Pay4Me — Fintech](https://functionstudioo.com/pay4me/): Trust-centered redesign for cross-border tuition payments.
+- [Bime — Fintech](https://functionstudioo.com/bime/): Landing page revamp to improve clarity and conversion rates.
+
+## Services
+- Landing Page Package (1–2 weeks): Custom UI design, copywriting structure, responsive Next.js build, SEO setup, animations, launch support.
+- Web App MVP Development (3–6 weeks): Full UI/UX design, interactive prototypes, frontend + backend development, auth, database, dashboard UI.
+- Full Product Build (custom timeline): Strategy, advanced features, integrations, scalability, deployment, maintenance.
+
+## Contact
+- Website: https://functionstudioo.com
+- Email: function@functionstudio.online
+- Twitter: https://x.com/functionstudioo
+- Book a Call: https://cal.com/function-studioo/15min

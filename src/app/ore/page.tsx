@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Image from 'next/image'
-import SortMySceneCard from './SortMySceneCard'
+import BrandsSection from './BrandsSection'
+
+export const metadata: Metadata = {
+  title: "Oreoluwa — Product Designer",
+  description: "Meet Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
+  alternates: {
+    canonical: "https://functionstudioo.com/ore/",
+  },
+};
+
 const page = () => {
 
    
@@ -90,20 +100,7 @@ I design products that <br />drive  growth, not just <br /> attention
  </p>
 <p>With a sharp eye for detail and a strategic mindset, I specialize in crafting products that not only look great but function seamlessly.</p>
 
-<section className="sm:grid sm:grid-cols-3 max-sm:flex max-sm:justify-between items-center sm:gap-6 gap-4 sm:mt-10 sm:mb-16 mt-5 mb-8 sm:max-w-[420px] w-full">
-  
-  <SortMySceneCard />
- 
- 
- <img src="/brand2.png" alt="brand3"  width={120.7} height={24} />
-
-
-  <img src="/brand1.png" alt="brand1" width={46} height={24} />
-
-
-
-
-</section>
+<BrandsSection />
 
 <div className="relative sm:h-[200px] h-[250px]">
     <section className="absolute text-white z-50 sm:left-[3%] left-5 right-7  sm:right-[8%] top-[15%]">

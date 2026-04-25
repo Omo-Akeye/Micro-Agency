@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import React from 'react'
 import ProjectSlider from '../components/OtherProjects';
 import { HoverCard } from '../components/FeaturedCards';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Bime — Fintech Landing Page Revamp",
+  description: "Case study: How Function Studio revamped Bime's landing page to improve clarity, messaging, and conversion rates for their intelligent business platform.",
+  alternates: {
+    canonical: "https://functionstudioo.com/bime/",
+  },
+};
 
 export default function page() {
 
