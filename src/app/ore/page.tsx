@@ -83,14 +83,15 @@ I design products that <br />drive  growth, not just <br /> attention
         </section>
 
 
-             <Image
-                
-                width={1200}
-                height={483}
-                src="/ore-frame.png"
-                alt="Lyngo landing page 9"
-               className="w-full h-auto"
-                />
+             <div className="max-sm:px-7">
+               <Image
+                 width={1200}
+                 height={483}
+                 src="/ore.gif"
+                 alt="Lyngo landing page 9"
+                 className="w-full h-auto"
+               />
+             </div>
         
    
        
