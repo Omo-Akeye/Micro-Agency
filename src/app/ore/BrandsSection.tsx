@@ -15,7 +15,7 @@ export default function BrandsSection() {
         "At SortMyScene, I led a focused redesign to make event discovery faster, clearer, and easier to navigate, especially for users with short attention spans and inconsistent internet. I simplified browsing, reworked filtering, and improved the overall flow so users can find relevant events with less effort.",
         "Beyond UI, I shaped key product decisions, defining scalable filters, refining the marketplace structure, and improving tools for organizers. My work helped align the experience with real user behavior, making the platform more efficient for attendees and more effective for event promoters."
       ]}
-      date="Dec 202X – Mar 202X · 0 mos"
+      date="April 2025 · Still WIP"
       logoSrc="/SORTMYSCENE.png"
       logoWidth={146}
       logoHeight={15}
@@ -29,7 +29,7 @@ export default function BrandsSection() {
         "At Ivory Finance, I led the end-to-end design of the AI assistant that powers portfolio insights and research workflows, making it easier for users to understand their investments and take action. I worked closely with product and engineering to shape MVPs from the ground up, defining user flows, designing interfaces, and ensuring the experience stayed simple and useful.",
         "I also designed dashboards and tools that help users track portfolio health and discover new investment opportunities. Beyond execution, I contributed to early product thinking around AI in UX, helping define how prompts, responses, and conversations should work so the system feels clear, reliable, and easy to use."
       ]}
-      date="Jul 2024 - Mar 2025"
+      date="Jul 2024 - Mar 2025 · 9 mos"
       logoSrc="/ivory.png"
       logoWidth={120.7}
       logoHeight={24}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from 'next/image'
 import BrandsSection from './BrandsSection'
+import OreAvatarPreview from './OreAvatarPreview'
 
 export const metadata: Metadata = {
   title: "Oreoluwa — Product Designer",
@@ -111,7 +112,7 @@ I design products that <br />drive  growth, not just <br /> attention
 
         <div className="flex gap-2.5 mt-8">
            <span>
-            <img src="/ore.png" alt="ore" className="h-[49px] w-[51.49px]"/>
+            <OreAvatarPreview />
           </span>
         
           <span className="text-xl" >
