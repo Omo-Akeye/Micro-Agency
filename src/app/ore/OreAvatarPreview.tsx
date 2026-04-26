@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 
 const OreAvatarPreview = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [pos, setPos] = useState({ bottom: 0, left: 0 });
+  const [pos, setPos] = useState<{ bottom: number; left: number } | null>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseEnter = () => {
@@ -44,21 +44,23 @@ const OreAvatarPreview = () => {
       </button>
 
      
-      <div
-        className={`fixed z-[9999] pointer-events-none transition-all duration-300 origin-bottom-left ${
-          isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
-        }`}
-        style={{ bottom: pos.bottom, left: pos.left, width: 356, height: 339 }}
-      >
-        <Image
-          src="/ore-big.png"
-          alt="Oreoluwa portrait enlarged"
-          fill
-          className="object-cover"
-          sizes="356px"
-          priority
-        />
-      </div>
+      {pos && (
+        <div
+          className={`fixed z-[9999] pointer-events-none transition-all duration-300 origin-bottom ${
+            isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+          style={{ bottom: pos.bottom, left: pos.left, width: 356, height: 339 }}
+        >
+          <Image
+            src="/ore-big.png"
+            alt="Oreoluwa portrait enlarged"
+            fill
+            className="object-cover"
+            sizes="356px"
+            priority
+          />
+        </div>
+      )}
     </>
   );
 };
