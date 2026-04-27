@@ -99,8 +99,8 @@ I design products that <br />drive  growth, not just <br /> attention
                  width={1200}
                  height={483}
                  src="/ore.gif"
-                 alt="Lyngo landing page 9"
-                 className="w-full h-auto"
+                 alt="Work showcase"
+                 className="w-full h-auto rounded-xl"
                />
              </div>
         
