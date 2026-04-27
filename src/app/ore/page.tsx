@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oreoluwa — Product Designer",
     description: "Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
-    images: ['/ore-opengraph.png'],
+    images: ['/ore-opengraph.png?v=1'],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Oreoluwa — Product Designer",
     description: "Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
-    images: ['/ore-opengraph.png'],
+    images: ['/ore-opengraph.png?v=1'],
   },
 };
 
