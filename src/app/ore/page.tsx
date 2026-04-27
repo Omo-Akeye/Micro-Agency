@@ -5,9 +5,20 @@ import OreAvatarPreview from './OreAvatarPreview'
 
 export const metadata: Metadata = {
   title: "Oreoluwa — Product Designer",
-  description: "Meet Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
+  description: "Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
   alternates: {
     canonical: "https://functionstudioo.com/ore/",
+  },
+  openGraph: {
+    title: "Oreoluwa — Product Designer",
+    description: "Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
+    images: ['/ore-opengraph.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Oreoluwa — Product Designer",
+    description: "Oreoluwa (Reo), the product designer at Function Studio. Specializing in UI/UX systems, brand clarity, user experience flow, and growth-driven design.",
+    images: ['/ore-opengraph.png'],
   },
 };
 

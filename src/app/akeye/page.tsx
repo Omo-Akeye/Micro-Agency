@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Akeye Saheed — Frontend Developer",
-  description: "Meet Akeye Saheed, the frontend developer at Function Studio. Specializing in Next.js, React, responsive interfaces, animations, and scalable web architecture.",
+  title: "Akeye Saheed — Software Developer",
+  description: "Akeye Saheed, the software developer at Function Studio. Specializing in Next.js, React, responsive interfaces, animations, and scalable web architecture.",
   alternates: {
     canonical: "https://functionstudioo.com/akeye/",
+  },
+  openGraph: {
+    title: "Akeye Saheed — Software Developer",
+    description: "Akeye Saheed, the software developer at Function Studio. Specializing in Next.js, React, responsive interfaces, animations, and scalable web architecture.",
+    images: ['/akeye-opengrah.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Akeye Saheed — Software Developer",
+    description: "Akeye Saheed, the software developer at Function Studio. Specializing in Next.js, React, responsive interfaces, animations, and scalable web architecture.",
+    images: ['/akeye-opengrah.png'],
   },
 };
 
