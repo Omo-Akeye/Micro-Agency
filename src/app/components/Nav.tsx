@@ -130,7 +130,7 @@ export default function Nav() {
                   Email
                 </a>
             
-                  <a href="https://x.com/functionstudioo" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
+                  <a target="_blank" rel="noopener noreferrer" href="https://x.com/functionstudioo" className="inline-flex items-center bg-[#F5F5F5] py-[10px] pr-12 pl-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500 ">
                     Twitter
                   </a>
                 
@@ -207,10 +207,10 @@ export default function Nav() {
               <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">Links</h2>
               <ul className="flex items-center  gap-4">
                 <li className=" py-2">
-                  <a href="https://twitter.com/functionstudioo" className="text-4xl underline font-medium">Twitter</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/functionstudioo" className="text-4xl underline font-medium">Twitter</a>
                 </li>
                 <li className="py-2">
-                  <a href="https://linkedin.com" className="text-4xl underline font-medium">LinkedIn</a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com" className="text-4xl underline font-medium">LinkedIn</a>
                 </li>
               </ul>
             </div>

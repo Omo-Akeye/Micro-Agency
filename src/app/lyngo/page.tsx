@@ -37,7 +37,7 @@ const page = () => {
             <p className='text-gray-500 mb-6'>2026 - Consumer/Edtech</p>
         </div>
         <div className='space-x-2 '>
-            <a href="https://lyngo.live/" className='underline flex gap-x-2' >
+            <a target="_blank" rel="noopener noreferrer" href="https://lyngo.live/" className='underline flex gap-x-2' >
             Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
         </div>
       </section>
@@ -192,7 +192,7 @@ The result is something that respects your time and rewards your curiosity — e
 
 
             <div className="mt-14 sm:mt-24 max-sm:text-left w-full flex sm:space-x-16 max-sm:flex-col max-sm:space-y-2 sm:items-center">
-      <a href="https://lyngo.live/" className='underline flex gap-x-2' >
+      <a target="_blank" rel="noopener noreferrer" href="https://lyngo.live/" className='underline flex gap-x-2' >
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
 
     

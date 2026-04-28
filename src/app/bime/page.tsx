@@ -37,7 +37,7 @@ export default function page() {
             <p className='text-[#00000099] mb-6'>2024 - Financial technology</p>
         </div>
         <div className='space-x-2 '>
-            <a href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
+            <a target="_blank" rel="noopener noreferrer" href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
             Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
         </div>
       </section>
@@ -83,12 +83,12 @@ export default function page() {
     </div>
 
           <span className="bg-[#F5F5F5F5] px-[10px] py-[10px] text-xs font-medium rounded-lg inline-flex">
-                Copy Writing by <a href="https://x.com/copybyhabeeb" className='underline'>Copybyhabeeb</a>
+                Copy Writing by <a target="_blank" rel="noopener noreferrer" href="https://x.com/copybyhabeeb" className='underline'>Copybyhabeeb</a>
              </span>
 
 
              <div className="">
-      <a href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
+      <a target="_blank" rel="noopener noreferrer" href="https://revamp-xi.vercel.app/" className='underline flex gap-x-2' >
       Visit website    <img src="/Arrow Right Up.svg" alt="" /></a>
 
       {/* <a href="#" className='underline flex sm:gap-x-2 max-sm:w-full justify-start text-[#0000007A]' >

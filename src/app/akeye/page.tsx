@@ -36,19 +36,19 @@ const page = () => {
 
     <div className="flex flex-col justify-between max-md:mb-10">
           <span className="flex sm:flex-col gap-4 max-sm:flex-wrap sm:items-end">
-        <a href="https://github.com/Omo-Akeye" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px] max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Omo-Akeye" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px] max-w-[105px] w-full">
         <p className="text-xs">Github</p>
         <img src="/bio-arrow.svg"/>
         </a>
-        <a href="https://www.linkedin.com/in/akeye001/"className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/akeye001/"className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
             <p className="text-xs">LinkedIn</p>
             <img src="/bio-arrow.svg"/>
         </a>
-        <a href="https://x.com/omo_akeye"  className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://x.com/omo_akeye"  className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
             <p className="text-xs">Twitter</p>
             <img src="/bio-arrow.svg"/>
         </a>
-        <a href="https://www.akeyesaheed.tech/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[145px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.akeyesaheed.tech/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[145px] w-full">
         <p className="text-xs">Portolio website</p>
         <img src="/bio-arrow.svg"/>
         </a>
@@ -80,7 +80,7 @@ const page = () => {
               <p>Invoice Generator Pro</p>
 
               <span className="flex gap-2">
-                <a href="https://www.invoicegeneratorpro.online/" className="underline">Live link</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.invoicegeneratorpro.online/" className="underline">Live link</a>
                 <img src="/bio-arrow.svg" alt="arrow" />
               </span>
             </li>
@@ -89,7 +89,7 @@ const page = () => {
               <p>Sharries E-commerce</p>
 
               <span className="flex gap-2">
-                <a href="https://sharries.vercel.app/" className="underline">Live link</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://sharries.vercel.app/" className="underline">Live link</a>
                 <img src="/bio-arrow.svg" alt="arrow" />
               </span>
             </li>
@@ -98,7 +98,7 @@ const page = () => {
               <p>User Dashboard</p>
 
               <span className="flex gap-2">
-                <a href="https://usersettings-akeye.netlify.app/" className="underline">Live link</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://usersettings-akeye.netlify.app/" className="underline">Live link</a>
                 <img src="/bio-arrow.svg" alt="arrow" />
               </span>
             </li>

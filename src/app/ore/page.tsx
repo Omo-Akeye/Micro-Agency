@@ -60,24 +60,24 @@ I design products that <br />drive  growth, not just <br /> attention
 
           </div>
           <span className="flex  gap-2 max-sm:flex-wrap sm:items-end">
-        <a href="https://www.behance.net/isaacoreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px] max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.behance.net/isaacoreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px] max-w-[105px] w-full">
             <p className="text-xs"> Behance</p>
             <img src="/bio-arrow.svg"/>
           
         </a>
-        <a href="http://linkedin.com/in/oshideroore/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="http://linkedin.com/in/oshideroore/" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
             <p className="text-xs">LinkedIn</p>
             <img src="/bio-arrow.svg"/>
            
         </a>
-        <a href="http://twitter.com/reoworx" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/reoworx" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
         <p className="text-xs">Twitter</p>
             <img src="/bio-arrow.svg"/>
          
         </a>
 
     
-        <a href="https://contra.com/oshiderooreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
+        <a target="_blank" rel="noopener noreferrer" href="https://contra.com/oshiderooreoluwa" className="inline-flex gap-2 bg-[#F5F5F5] items-center px-3 py-2.5 rounded-[36.88px]  max-w-[105px] w-full">
             <p className="text-xs">Contra</p>
             <img src="/bio-arrow.svg"/>          
         </a>
