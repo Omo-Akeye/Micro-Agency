@@ -106,10 +106,12 @@ export default function Nav() {
 </div> 
         </span>
 
-        <img src="/Hamburger Menu.svg" alt="hamburger" className="min-[900px]:hidden cursor-pointer"
+        <img src="/Hamburger Menu.svg" alt="hamburger" className="md:hidden cursor-pointer"
          onClick={() => setShowMobileMenu(true)} />
 
-        <div className="min-[900px]:flex gap-x-6 hidden items-center">
+        <div className="md:flex gap-x-6 hidden items-center">
+
+          <Link href="https://interaction.functionstudioo.com/" className="underline" target="_blank" rel="noopener noreferrer">Interaction</Link>
 
 <div ref={linkPopupRef} className='relative'>
           <div
