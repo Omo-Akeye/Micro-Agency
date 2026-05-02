@@ -205,6 +205,8 @@ export default function Nav() {
         {/* Menu Content */}
         <div className="p-4 pt-10">
           <div className="space-y-8">
+
+             <Link href="https://interaction.functionstudioo.com/" className="underline text-4xl  merriweather font-medium" target="_blank" rel="noopener noreferrer">Interaction</Link>
             <div>
               <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">Links</h2>
               <ul className="flex items-center  gap-4">
