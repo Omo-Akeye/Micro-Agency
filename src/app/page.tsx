@@ -6,6 +6,7 @@ import OfferSection from "./components/OfferSection";
 import TestimonialSlider from "./components/Testimonials";
 import PlayReelSection from "./components/PlayReelSection";
 import Link from "next/link";
+import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 
 export const metadata: Metadata = {
@@ -170,9 +171,14 @@ export default function Home() {
 
 
         <OfferSection/>
-
-
         
+        <Image 
+        src="/function.gif"
+        alt="gif"
+        width={1440}
+        height={365}
+        className="w-full md:h-[365px] object-cover rounded-[10px] mt-8"
+        />
         
       </section>
 

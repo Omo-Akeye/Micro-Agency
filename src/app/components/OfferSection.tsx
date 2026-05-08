@@ -5,6 +5,12 @@ import React, { useEffect, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
+import { Sedgwick_Ave } from 'next/font/google';
+
+const sedgwick = Sedgwick_Ave({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 interface OfferCardProps {
   title: string;
@@ -34,7 +40,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
   };
 
   return (
-    <div className={`bg-white p-6 rounded-[10px] relative transition-all duration-500 ease-in-out ${
+    <div className={`bg-white p-2 rounded-[10px] relative transition-all duration-500 ease-in-out ${
       isExpanded ? 'col-span-full' : ''
     }`}>
   
@@ -48,11 +54,21 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
         <IoClose className="text-xl" />
       </button>
 
-      <h1 className="text-lg font-medium my-2">{title}</h1>
-      <p className="text-[#000000B8]">{description}</p>
+      <div 
+        className="w-full h-[143px] rounded-[8px] mb-6 flex items-center justify-center bg-black bg-cover bg-center bg-no-repeat px-2.5 py-4" 
+        style={{ backgroundImage: "url('/offer-bg.png')" }}
+      >
+        <h2 className={`${sedgwick.className} text-white text-3xl sm:text-[37.34px] sm:leading-[38.28px] tracking-[-0.04em] bg-black rounded-[10px] px-[10px] py-[16px] text-center`}>
+          {title === "Landing Page Package" && "*landing page*"}
+          {title === "Web App MVP" && "/web app mvp/"}
+          {title === "Full Product Build" && "{full product build}"}
+        </h2>
+      </div>
+
+      <p className="text-[#000000B8] pl-4">{description}</p>
       
   
-      <div className={`transition-all duration-300 ${isExpanded ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-auto mt-2.5'}`}>
+      <div className={`transition-all pl-4 duration-300 ${isExpanded ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-auto mt-2.5'}`}>
         <button 
           onClick={onToggle}
           className="flex items-center gap-2 cursor-pointer transition-opacity hover:opacity-70"
@@ -67,7 +83,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
      
   
       <div 
-        className={`grid transition-all duration-500 ease-in-out ${
+        className={`grid transition-all pl-4 duration-500 ease-in-out ${
           isExpanded ? 'grid-rows-[1fr] opacity-100 mt-6' : 'grid-rows-[0fr] opacity-0 mt-0'
         }`}
       >
