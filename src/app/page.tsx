@@ -8,6 +8,7 @@ import PlayReelSection from "./components/PlayReelSection";
 import Link from "next/link";
 import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
+import CalButton from "./components/CalButton";
 
 export const metadata: Metadata = {
   title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
@@ -100,14 +101,7 @@ export default function Home() {
   >
             
             Start a project</Link>
-            <Link 
-    href="https://cal.com/function-studioo/15min"
-  target="_blank"
-  rel="noopener noreferrer"
-  
-  className="text-xs text-[#000000] border-[0.74px] border-[#D9D9D9] rounded-[44.35px] sm:py-3 py-2.5 sm:px-5 px-4
-    transition-all duration-300 hover:border-black hover:bg-gray-50 group"
-  >Book a 15-min discovery call</Link>
+            <CalButton />
                        </span>
       </section>
 
