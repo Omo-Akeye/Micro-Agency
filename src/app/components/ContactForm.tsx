@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import CalButton from "./CalButton";
 
 
 export default function ContactForm() {
@@ -296,11 +297,9 @@ useEffect(() => {
          <p className="text-lg text-black mb-6">
               Click the button below to book a call with us directly on Cal.com.
             </p>
-            <a
-            href="https://cal.com/function-studioo"
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-black"
+            <CalButton 
+              calLink="function-studioo/15min"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-gray-800 transition-colors duration-300"
             >
               Book a Call
               <svg className="ml-2 w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -312,7 +311,7 @@ useEffect(() => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </CalButton>
         </div>
       )}
     </div>
