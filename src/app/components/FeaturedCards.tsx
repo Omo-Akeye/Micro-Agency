@@ -32,13 +32,13 @@ export const HoverCard: React.FC<HoverCardProps> = ({
   return (
     <div className={`group relative ${bgColor} rounded-[10px] p-6 overflow-hidden cursor-pointer sm:h-[380px] h-[320px]  w-full `}>
       {/* Header */}
-      <div className={`flex justify-between items-start mb-6 relative z-10 ${textColor} transition-all duration-300`}>
+      <div className={`flex justify-between items-start mb-6 relative z-10 ${textColor} transition-all duration-500 sm:group-hover:opacity-0`}>
         <div>
           <h3 className="sm:text-2xl text-xl font-medium mb-1 ">{title}</h3>
           <p className="text-sm  transition-all duration-300 ">{category}</p>
         </div>
         {year && (
-          <span className="text-sm transition-all duration-300 group-hover:opacity-0">{year}</span>
+          <span className="text-sm transition-all duration-300">{year}</span>
         )}
       </div>
       {!isComingSoon && (
@@ -69,7 +69,7 @@ export const HoverCard: React.FC<HoverCardProps> = ({
       </div>
 
  
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100 max-xs:hidden">
+      <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 sm:group-hover:opacity-100 transition-all duration-700 ease-out transform scale-110 sm:group-hover:scale-100 max-xs:hidden">
         {isComingSoon ? (
           <div className="text-center z-20">
             <h2 className={`text-4xl sm:text-8xl font-bold mb-4 text-white transition-all duration-500 transform translate-y-8 group-hover:translate-y-0`}>
@@ -81,13 +81,11 @@ export const HoverCard: React.FC<HoverCardProps> = ({
           </div>
         ) : (
           hoverImage && (
-            <div className="max-w-[422px] h-full flex items-end mt-10 justify-center">
+            <div className="absolute inset-0 w-full h-full">
               <img 
                 src={hoverImage} 
                 alt={`${title} hover image`}
-
-
-                 className="max-w-[80%] sm:max-w-full max-h-full object-contain transition-all duration-700 ease-out transform translate-y-full sm:group-hover:translate-y-0 opacity-90 sm:group-hover:opacity-100"
+                className="w-full h-full object-cover rounded-[10px] transition-all duration-700 ease-out transform translate-y-full sm:group-hover:translate-y-0"
               />
             </div>
           )
