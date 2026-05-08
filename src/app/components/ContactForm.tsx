@@ -298,7 +298,7 @@ useEffect(() => {
               Click the button below to book a call with us directly on Cal.com.
             </p>
             <CalButton 
-              calLink="function-studioo/15min"
+              calLink="function-studioo"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-gray-800 transition-colors duration-300"
             >
               Book a Call
