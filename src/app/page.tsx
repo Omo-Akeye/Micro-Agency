@@ -105,7 +105,12 @@ export default function Home() {
                        </span>
       </section>
 
-      <section className="mt-12 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
+      <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
+        <img src="/bimelogo.svg" width={58} alt="bime" className="h-auto object-cover" />
+         <img src="/pay4me.svg"  width={88} alt="pay4me" className="h-auto object-cover" />
+      </section>
+
+      <section className="sm:mt-12 mt-8 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
       
           < CardGrid/>       
       </section>
