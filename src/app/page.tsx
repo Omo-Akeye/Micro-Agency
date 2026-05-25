@@ -116,6 +116,20 @@ export default function Home() {
       </section>
 
       <section className=" max-sm:mx-7">
+
+          <OfferSection/>
+
+        <Image 
+        src="/function.gif"
+        alt="gif"
+        width={1440}
+        height={365}
+        className="w-full md:h-[365px] object-cover rounded-[10px] my-8"
+        />
+
+      
+
+      
       
            <div className='flex justify-between items-center  mb-4'>
     <h2 className="font-medium">Why Work With Us?</h2>
@@ -134,7 +148,9 @@ export default function Home() {
 </Link>
     
       </div>
-        <main className="bg-[#F5F5F5] p-3 rounded-[10px] flex flex-col gap-2.5 mb-12">
+
+      
+        <main className="bg-[#F5F5F5] p-3 rounded-[10px] flex flex-col gap-2.5">
           <div className="bg-white p-6 rounded-[10px]">
 
             <img src="Link.png" alt="Streamlined collaboration icon" className="h-6 w-6"/>
@@ -168,16 +184,9 @@ export default function Home() {
 </div>
         </main>
 
-
-        <OfferSection/>
+   
         
-        <Image 
-        src="/function.gif"
-        alt="gif"
-        width={1440}
-        height={365}
-        className="w-full md:h-[365px] object-cover rounded-[10px] mt-8"
-        />
+     
         
       </section>
 
