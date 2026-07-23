@@ -6,5 +6,6 @@ export const ROUTES = {
   BIME: '/bime',
   AKEYE: '/akeye',
   ORE: '/ore',
+  PROJECTS: '/projects',
   PRIVACY_POLICY: '/privacy-policy',
 } as const;

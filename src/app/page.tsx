@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { ROUTES } from "@/constants/routes";
 import FAQAccordion from "./components/Accordian";
-import CardGrid from "./components/FeaturedCards";
+// import CardGrid from "./components/FeaturedCards";
 import OfferSection from "./components/OfferSection";
 import TestimonialSlider from "./components/Testimonials";
 import PlayReelSection from "./components/PlayReelSection";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 import CalButton from "./components/CalButton";
+import InteractionShowcase from "./components/InteractionShowcase";
 
 export const metadata: Metadata = {
   title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
@@ -106,15 +107,17 @@ export default function Home() {
                        </span>
       </section>
 
-      <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
+      <InteractionShowcase />
+
+      {/* <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
         <img src="/bimelogo.svg" width={58} alt="bime" className="h-auto object-cover" />
          <img src="/pay4me.svg"  width={88} alt="pay4me" className="h-auto object-cover" />
-      </section>
+      </section> */}
 
-      <section className="sm:mt-12 mt-8 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
+      {/* <section className="sm:mt-12 mt-8 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
       
           < CardGrid/>       
-      </section>
+      </section> */}
 
       <section className=" max-sm:mx-7">
 

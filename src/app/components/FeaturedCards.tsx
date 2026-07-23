@@ -173,9 +173,9 @@ const CardGrid = () => {
   return (
    
     <div className='flex flex-col  w-full'>
-      <div className='flex justify-between items-center text-[#000000A3] mb-10'>
-        <h2 className=''>Featured Projects</h2>
-      <p>[04]</p>
+      <div className='mb-10 merriweather font-medium text-[33.81px] leading-[34.66px] tracking-[-0.06em]'>
+        <h2 className='inline text-black'>Projects</h2>
+        <span className='inline text-[#000000A3]'> (04)</span>
       </div>
         <div className="flex flex-col gap-8">
       

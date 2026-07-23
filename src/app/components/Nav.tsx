@@ -112,7 +112,10 @@ export default function Nav() {
 
         <div className="md:flex gap-x-6 hidden items-center">
 
-          <Link href="https://interaction.functionstudioo.com/" className="underline" target="_blank" rel="noopener noreferrer">Interaction</Link>
+          {/* <Link href="https://interaction.functionstudioo.com/" className="underline" target="_blank" rel="noopener noreferrer">Interaction</Link> */}
+          <Link href={ROUTES.PROJECTS} className="underline" >
+            Projects
+          </Link>
 
 <div ref={linkPopupRef} className='relative'>
           <div
@@ -206,8 +209,10 @@ export default function Nav() {
         {/* Menu Content */}
         <div className="p-4 pt-10">
           <div className="space-y-8">
-
-             <Link href="https://interaction.functionstudioo.com/" className="underline text-4xl  merriweather font-medium" target="_blank" rel="noopener noreferrer">Interaction</Link>
+             <Link href={ROUTES.PROJECTS} className="underline text-4xl  merriweather font-medium" onClick={closeMobileMenu}>
+               Projects
+             </Link>
+             {/* <Link href="https://interaction.functionstudioo.com/" className="underline text-4xl  merriweather font-medium" target="_blank" rel="noopener noreferrer">Interaction</Link> */}
             <div>
               <h2 className="text-4xl text-[#00000066] mb-4 merriweather font-medium">Links</h2>
               <ul className="flex items-center  gap-4">
