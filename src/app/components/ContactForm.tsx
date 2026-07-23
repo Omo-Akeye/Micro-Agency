@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { ROUTES } from "@/constants/routes";
 import CalButton from "./CalButton";
 
 
@@ -283,7 +284,7 @@ useEffect(() => {
 
             <p className="sm:text-sm text-[#000000B8] mt-6 text-xs">
               By clicking this button, you agree to the site's{" "}
-              <a href="/privacy-policy" className="underline">
+              <a href={ROUTES.PRIVACY_POLICY} className="underline">
                 Privacy Policy
               </a>{" "}
               and consent to the processing of your personal data.

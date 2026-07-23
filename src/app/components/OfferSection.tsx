@@ -1,5 +1,7 @@
 "use client";
 
+import { ROUTES } from "@/constants/routes";
+
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa6';
@@ -31,12 +33,12 @@ const OfferCard: React.FC<OfferCardProps> = ({ title, description, items, isExpa
   // Helper to determine the service param based on the Offer Title
   const getLinkHref = (title: string) => {
     if (title === "Landing Page Package") {
-      return "/startproject?service=Web%20Design%20%26%20Development";
+      return `${ROUTES.START_PROJECT}?service=Web%20Design%20%26%20Development`;
     }
     if (title === "Web App MVP" || title === "Full Product Build") {
-      return "/startproject?service=Full%20Design%20%26%20Development%20(MVP%20/%20Web%20App%20Build)";
+      return `${ROUTES.START_PROJECT}?service=Full%20Design%20%26%20Development%20(MVP%20/%20Web%20App%20Build)`;
     }
-    return "/startproject";
+    return ROUTES.START_PROJECT;
   };
 
   return (
@@ -193,7 +195,7 @@ export default function OfferSection() {
     <h1 className="font-medium">What We Offer</h1>
 
       <Link 
-  href="/startproject" 
+  href={ROUTES.START_PROJECT} 
   className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
 > 
   <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>

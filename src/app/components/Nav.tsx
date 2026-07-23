@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link';
+import { ROUTES } from "@/constants/routes";
 import React, { useState,useEffect, useRef } from 'react'
 import { useParams } from 'next/navigation';
 
@@ -84,7 +85,7 @@ export default function Nav() {
      
      <div className=" flex items-center sm:gap-x-2">
       
-<Link href={"/"}>
+<Link href={ROUTES.HOME}>
             <img 
               src='/new-logo.svg'
               alt="profile" 
@@ -159,12 +160,12 @@ export default function Nav() {
               <div className="absolute top-7 right-0 rounded-md transition-opacity duration-300 ease-in-out opacity-100 max-w-[350px] bg-white mt-8 z-50">
               
                 <div className="mt-3 space-y-3">
-                  <Link href="/ore" className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"
+                  <Link href={ROUTES.ORE} className="flex items-center bg-[#F5F5F5]  py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"
                      onClick={closeAboutPopup}>
                     <img src="/ore.png" alt="Isaac Oreoluwa" width={34} className="mr-[10px] rounded-[140px]" />
                     <span>Isaac Oreoluwa - Designer</span>
                   </Link>
-                  <Link href="/akeye" className="flex items-center bg-[#F5F5F5] py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"
+                  <Link href={ROUTES.AKEYE} className="flex items-center bg-[#F5F5F5] py-[10px] px-4 flex-shrink-0 rounded-lg cursor-pointer hover:text-gray-500"
                      onClick={closeAboutPopup}>
                     <img src="/akeye.svg" alt="Akeye Saheed" width={34} className="mr-[10px]" />
                     <span>Akeye Saheed - Developer</span>
@@ -224,14 +225,14 @@ export default function Nav() {
              
               <ul className="flex flex-col mt-6 gap-6">
                 <li className="">
-                  <Link href="/ore" className="text-4xl flex items-center gap-2 underline font-medium" 
+                  <Link href={ROUTES.ORE} className="text-4xl flex items-center gap-2 underline font-medium" 
                    onClick={closeMobileMenu} >
                   <img src="/ore.png" alt="Isaac Oreoluwa" width={34} className="mr-[10px]" />
                     Isaac Oreoluwa - Designer
                   </Link>
                 </li>
                 <li className="">
-                  <Link href="/akeye" className="text-4xl flex items-center gap-2 underline font-medium" 
+                  <Link href={ROUTES.AKEYE} className="text-4xl flex items-center gap-2 underline font-medium" 
                    onClick={closeMobileMenu} >
                     Akeye Saheed
                     -Developer

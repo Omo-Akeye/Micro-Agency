@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+import { ROUTES } from "@/constants/routes";
 import FAQAccordion from "./components/Accordian";
 import CardGrid from "./components/FeaturedCards";
 import OfferSection from "./components/OfferSection";
@@ -95,7 +96,7 @@ export default function Home() {
            <span className="gap-3 flex items-center  max-sm:px-7 font-medium">
       
             <Link 
-    href="/startproject" 
+    href={ROUTES.START_PROJECT} 
     className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
     transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95"
   >
@@ -136,7 +137,7 @@ export default function Home() {
 
 
       <Link 
-  href="/startproject" 
+  href={ROUTES.START_PROJECT} 
   className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
 > 
   <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
@@ -198,7 +199,7 @@ export default function Home() {
 
  
 
-      <Link href="/startproject" className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
+      <Link href={ROUTES.START_PROJECT} className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
   <h2 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
     Start a 
   </h2> 

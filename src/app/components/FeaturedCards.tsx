@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ROUTES } from "@/constants/routes";
 import React from 'react';
 
 
@@ -124,7 +125,7 @@ const CardGrid = () => {
       image2: '/lyngo2.png',
       hoverImage: '/lyngo-hover.png', 
       isComingSoon: false,
-      link: "/lyngo",
+      link: ROUTES.LYNGO,
       mobileImg:"/lyngo-hover.png"
     },
     {
@@ -137,8 +138,8 @@ const CardGrid = () => {
       image2: '/pay4me2.png',
       hoverImage: '/pay4me-hover.png', 
       isComingSoon: false,
-      link: "/pay4me",
-      mobileImg:"/pay4me-hover.png"
+      link: ROUTES.PAY4ME,
+      mobileImg:"/pay4me-hover2.png"
     },
     {
       title: "Bime",
@@ -150,7 +151,7 @@ const CardGrid = () => {
       image2: "/bime2.png",
       hoverImage: '/bime-hover.png', 
       isComingSoon: false,
-      link: "/bime",
+      link: ROUTES.BIME,
       mobileImg:"/bime-hover.png"
     },
     {
