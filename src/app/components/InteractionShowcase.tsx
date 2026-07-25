@@ -17,10 +17,10 @@ function ClickPrompt({ direction = "right" }: { direction?: "left" | "right" }) 
         direction === "right" ? "left-8" : "right-8 flex-row-reverse"
       }`}
     >
-      <span className="sedgwick whitespace-nowrap text-2xl ">Click me</span>
+      <span className="sedgwick whitespace-nowrap text-2xl  text-[#1C1C1B]/40">Click me</span>
       <svg
         aria-hidden="true"
-        className={direction === "left" ? "-scale-x-100" : ""}
+        className={`text-[#1C1C1B]/40 ${direction === "left" ? "-scale-x-100" : ""}`}
         width="36"
         height="25"
         viewBox="0 0 36 25"
@@ -37,27 +37,138 @@ function ClickPrompt({ direction = "right" }: { direction?: "left" | "right" }) 
   );
 }
 
+
+
 function LogoLink({
   href,
   src,
+  mobileSrc, 
   alt,
   className = "",
+  isLink = true,
 }: {
-  href: string;
+  href?: string;
   src: string;
+  mobileSrc?: string;
   alt: string;
   className?: string;
+  isLink?: boolean;
 }) {
+  const content = (
+    <>
+      {mobileSrc ? (
+        <>
+          {/* Mobile Image */}
+          <Image 
+            src={mobileSrc} 
+            alt={alt} 
+            width={730} 
+            height={402} 
+            className="h-auto w-full object-contain md:hidden" 
+          />
+       
+          <Image 
+            src={src} 
+            alt={alt} 
+            width={730} 
+            height={402} 
+            className="hidden h-auto w-full object-contain md:block" 
+          />
+        </>
+      ) : (
+      
+        <Image src={src} alt={alt} width={730} height={402} className="h-auto w-full object-contain" />
+      )}
+
+      <span aria-hidden="true" className="interaction-logo-shine absolute inset-y-0 -left-1/2 w-1/3 bg-white/70 blur-sm" />
+    </>
+  );
+
+  const containerClassName = `interaction-logo relative block overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-95 ${className}`;
+
+  if (!isLink || !href) {
+    return <div className={containerClassName}>{content}</div>;
+  }
+
   return (
     <Link
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`interaction-logo relative block overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-95 ${className}`}
+      className={containerClassName}
     >
-      <Image src={src} alt={alt} width={730} height={402} className="h-auto w-full object-contain" />
-      <span aria-hidden="true" className="interaction-logo-shine absolute inset-y-0 -left-1/2 w-1/3 bg-white/70 blur-sm" />
+      {content}
     </Link>
+  );
+}
+
+function MobileProjectCard({
+  image,
+  imageAlt,
+  logo,
+  logoAlt,
+  mobileLogo,
+  href,
+}: {
+  image: string;
+  imageAlt: string;
+  logo: string;
+  mobileLogo?: string;
+  logoAlt: string;
+  href: string;
+}) {
+  return (
+    <article className="relative block pt-10 md:hidden">
+    
+      <div className="absolute left-[10%] top-[-5%] z-30 flex flex-col items-start pointer-events-none">
+        <span className="sedgwick text-base text-[#1C1C1B]/40">Click me</span>
+        <svg
+          aria-hidden="true"
+          className="ml-3 -mt-0.5 text-[#1C1C1B]/40"
+          width="24"
+          height="18"
+          viewBox="0 0 36 25"
+          fill="none"
+        >
+          <path
+            d="M.65 1.99c10.2-1.21 27.77-4.89 30.45 9.18.65 3.45-.7 6.18-1.97 9.27-.06.13-1.84 3.02-1.98 2.56-.36-1.22-2.62-8.38-1.2-3.72.15.49.6 4 1.11 4.21 1.37.57 6.79-3.02 8.23-3.61"
+            stroke="currentColor"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+          />
+        </svg>
+      </div>
+
+      
+      <Link
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="relative block aspect-[1.72] w-full rounded-[5px] group"
+      >
+       
+        <div className="absolute top-[-20%] left-1/2 z-20 flex w-[163px] -translate-x-1/2 justify-center">
+          <LogoLink
+            src={logo}
+            mobileSrc={mobileLogo}
+            alt={logoAlt}
+            isLink={false}
+            className="h-[90px] max-w-[200px] min-w-[163px] w-full object-contain"
+          />
+        </div>
+
+      
+        <div className="relative h-full w-full overflow-hidden rounded-[5px] transition-transform duration-300 group-active:scale-[0.98]">
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(max-width: 767px) 100vw, 0px"
+            className="object-cover"
+          />
+        </div>
+      </Link>
+    </article>
   );
 }
 
@@ -66,6 +177,7 @@ function ProjectInteraction({
   imageAlt,
   logo,
   logoAlt,
+  mobileLogo,
   href,
   reversed = false,
 }: {
@@ -73,20 +185,23 @@ function ProjectInteraction({
   imageAlt: string;
   logo: string;
   logoAlt: string;
+  mobileLogo?: string;
   href: string;
   reversed?: boolean;
 }) {
   return (
     <article className="relative">
-      <div className="relative aspect-[1.72] overflow-hidden rounded-[20px] md:hidden">
-        <Image src={image} alt={imageAlt} fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover" />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/55 px-16">
-          <LogoLink href={href} src={logo} alt={logoAlt} className="w-full max-w-[180px]" />
-        </div>
-      </div>
+      <MobileProjectCard
+        image={image}
+        imageAlt={imageAlt}
+        logo={logo}
+        mobileLogo={mobileLogo}
+        logoAlt={logoAlt}
+        href={href}
+      />
 
       <div className={`hidden items-center md:flex ${reversed ? "justify-start" : "justify-end"}`}>
-        <div className="relative aspect-[1.72] w-[70%] overflow-hidden rounded-[20px]">
+        <div className="relative aspect-[1.72] w-[70%] overflow-hidden rounded-[5px]">
           <Image src={image} alt={imageAlt} fill sizes="650px" className="object-cover" />
         </div>
 
@@ -97,7 +212,7 @@ function ProjectInteraction({
         >
           <div className="relative">
             <ClickPrompt direction={reversed ? "left" : "right"} />
-            <LogoLink href={href} src={logo} alt={logoAlt} />
+            <LogoLink href={href} src={logo} alt={logoAlt} mobileSrc={mobileLogo} />
           </div>
         </div>
       </div>
@@ -270,7 +385,7 @@ export default function InteractionShowcase() {
   return (
     <section
       aria-label="Interactive work samples"
-      className="relative left-1/2 my-12 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-8 sm:my-16 sm:gap-y-11"
+      className="relative left-1/2 my-12 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14 sm:my-16 sm:gap-y-11"
     >
       <ProjectInteraction
         image="/home-lavis.png"
@@ -283,6 +398,7 @@ export default function InteractionShowcase() {
         image="/lyngo-hover.png"
         imageAlt="Lyngo vocabulary app interface"
         logo="/lyngologo.png"
+        mobileLogo="/lyngo-mobile.png"
         logoAlt="Open the Lyngo website"
         href="https://lyngo.live/"
         reversed
