@@ -76,11 +76,13 @@ function LogoLink({
           />
         </>
       ) : (
-      
         <Image src={src} alt={alt} width={730} height={402} className="h-auto w-full object-contain" />
       )}
 
-      <span aria-hidden="true" className="interaction-logo-shine absolute inset-y-0 -left-1/2 w-1/3 bg-white/70 blur-sm" />
+     
+      <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-full [clip-path:ellipse(49%_49%_at_50%_50%)]">
+        <span aria-hidden="true" className="interaction-logo-shine absolute inset-y-0 -left-1/2 w-1/3 bg-white/70 blur-sm" />
+      </div>
     </>
   );
 
