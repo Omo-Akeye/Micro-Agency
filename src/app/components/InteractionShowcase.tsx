@@ -390,14 +390,16 @@ export default function InteractionShowcase() {
       className="relative left-1/2 my-12 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14 sm:my-16 sm:gap-y-11"
     >
       <ProjectInteraction
-        image="/home-lavis.png"
+        // image="/home-lavis.png"
+         image="/lavis.gif"
         imageAlt="Lavis furniture store interface"
         logo="/lavis-logo.png"
         logoAlt="Open the Lavis project"
         href="https://ecommerce-function-studioo.vercel.app/"
       />
       <ProjectInteraction
-        image="/lyngo-hover.png"
+        // image="/lyngo-hover.png"
+         image="/lyngo.gif"
         imageAlt="Lyngo vocabulary app interface"
         logo="/lyngologo.png"
         mobileLogo="/lyngo-mobile.png"
