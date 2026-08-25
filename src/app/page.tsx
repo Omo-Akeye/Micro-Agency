@@ -11,6 +11,7 @@ import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 import CalButton from "./components/CalButton";
 import InteractionShowcase from "./components/InteractionShowcase";
+import HomeNav from "./components/HomeNav";
 
 export const metadata: Metadata = {
   title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
@@ -71,7 +72,7 @@ const faqJsonLd = {
 
 export default function Home() {
   return (
-    <div className="orbit-regular mt-10">
+    <div className="orbit-regular">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -79,35 +80,48 @@ export default function Home() {
         }}
       />
 
-      <section>
-   
+      <header className="relative h-[520px] overflow-x-clip bg-black sm:h-[620px]">
+        <div className="absolute left-1/2 top-6 z-30 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-dashed border-white/25 px-4 py-2 text-[10px] font-medium text-white/75 sm:top-8 sm:text-xs">
+          <span className="h-3 w-3 rounded-full bg-[#18d42b] shadow-[0_0_10px_rgba(24,212,43,0.45)]" />
+          Limited to 1 new project this month
+        </div>
 
-      <h1 className="font-normal text-[40px] leading-[50.36px] tracking-[-0.08em] sm:text-[70.25px] sm:leading-[72px] sm:tracking-[-0.06em] text-[#000000]/40 merriweather max-sm:px-7">
-  <span className="text-[#000000]">
-    Design + Dev Duo
-  </span>
-  <br /> 
-  Building Fast, High-
-  <br /> 
-  Conversion Products
-</h1>
+        <Image
+          src="/homegif.gif"
+          alt="Function Studio — turning ideas into impactful digital products"
+          width={1101}
+          height={625}
+          priority
+          unoptimized
+          className="absolute inset-0 h-full w-full object-contain object-center"
+        />
 
-           <p className="sm:my-[18px] max-sm:mt-3 max-sm:mb-7  max-sm:px-7 max-sm:text-sm">Built for startups, creators & small teams who want to go from idea → live in weeks</p>
+        <HomeNav />
 
-           <span className="gap-3 flex items-center  max-sm:px-7 font-medium">
-      
-            <Link 
-    href={ROUTES.START_PROJECT} 
-    className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
-    transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95"
-  >
-            
-            Start a project</Link>
-            <CalButton />
-                       </span>
-      </section>
+        <div className="absolute bottom-0 left-1/2 z-40 flex -translate-x-1/2 translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-2.5 ">
+          <Link
+            href={ROUTES.START_PROJECT}
+            className="rounded-full bg-black px-4 py-3 text-xs font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
+          >
+            Start a project
+          </Link>
+          <CalButton className="rounded-full border border-[#e2e2e2] px-4 py-3 text-xs font-medium text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
+            Book a 15-min audit call
+          </CalButton>
+        </div>
+      </header>
 
-      <InteractionShowcase />
+      <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
+        <section className="pt-20 text-center sm:pt-[78px] tracking-[-4%] leading-[28px]">
+          <h1 className="font-semibold tracking-[-0.02em] text-black">
+            Design + Dev Duo Building Fast, High-Conversion Products
+          </h1>
+          <p className="mx-auto mt-2 max-w-[520px] text-sm leading-5 text-[#000000B8] sm:text-base sm:leading-6">
+            Built for startups, creators &amp; small teams who want to go from<br className="hidden sm:block" /> idea → live in weeks
+          </p>
+        </section>
+
+        <InteractionShowcase />
 
       {/* <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
         <img src="/bimelogo.svg" width={58} alt="bime" className="h-auto object-cover" />
@@ -221,6 +235,7 @@ export default function Home() {
 
 
       <PlayReelSection/>
+      </div>
     </div>
   );
 }
