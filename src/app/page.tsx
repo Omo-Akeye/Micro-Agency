@@ -87,12 +87,12 @@ export default function Home() {
         </div>
 
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute left-1/2 top-1/2 aspect-[1101/625] w-full max-w-[1101px] -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute left-1/2 top-1/2 aspect-[1101/615] w-full max-w-[1101px] -translate-x-1/2 -translate-y-1/2">
             <Image
               src="/homegif.gif"
               alt="Function Studio — turning ideas into impactful digital products"
               width={1101}
-              height={625}
+              height={615}
               priority
               unoptimized
               className="h-full w-full object-contain"
@@ -108,23 +108,23 @@ export default function Home() {
       </header>
 
       <div className="relative z-40 mx-auto h-0 w-full">
-        <div className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-2">
+        <div className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-3">
           <Link
             href={ROUTES.START_PROJECT}
-            className="rounded-full bg-black px-3 py-2 text-[10px] font-medium leading-none text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
+            className="rounded-full bg-black px-3 py-2 text-sm font-medium leading-none text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
           >
             Start a project
           </Link>
-          <CalButton className="rounded-full border border-[#e2e2e2] px-3 py-2 text-[10px] font-medium leading-none text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
+          <CalButton className="rounded-full border border-[#e2e2e2] px-3 py-2 text-sm font-medium leading-none text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
             Book a 15-min audit call
           </CalButton>
         </div>
       </div>
 
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
-        <section className="pt-20 text-center sm:pt-[68px] tracking-[-4%] leading-[28px]">
+        <section className=" text-center sm:pt-[68px] pt-14 tracking-[-4%] leading-[28px]">
           <h1 className="font-semibold tracking-[-0.02em] text-black">
-            Design + Dev Duo Building Fast, High-Conversion Products
+            Design + Dev Duo Building Fast, <br className="md:hidden"/> High-Conversion Products
           </h1>
           <p className="mx-auto mt-2 max-w-[520px] text-sm leading-5 text-[#000000B8] sm:text-base sm:leading-6">
             Built for startups, creators &amp; small teams who want to go from<br className="hidden sm:block" /> idea → live in weeks

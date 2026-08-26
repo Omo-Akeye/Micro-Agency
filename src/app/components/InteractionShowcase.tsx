@@ -122,7 +122,7 @@ function MobileProjectCard({
   return (
     <article className="relative block pt-10 md:hidden">
     
-      <div className="absolute left-[10%] top-[-5%] z-30 flex flex-col items-start pointer-events-none">
+      {/* <div className="absolute left-[10%] top-[-5%] z-30 flex flex-col items-start pointer-events-none">
         <span className="sedgwick text-base text-[#1C1C1B]/40">Click me</span>
         <svg
           aria-hidden="true"
@@ -139,7 +139,7 @@ function MobileProjectCard({
             strokeLinecap="round"
           />
         </svg>
-      </div>
+      </div> */}
 
       
       <Link
