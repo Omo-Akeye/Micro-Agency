@@ -133,20 +133,12 @@ export default function Home() {
 
         <InteractionShowcase />
 
-      {/* <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
-        <img src="/bimelogo.svg" width={58} alt="bime" className="h-auto object-cover" />
-         <img src="/pay4me.svg"  width={88} alt="pay4me" className="h-auto object-cover" />
-      </section> */}
-
-      {/* <section className="sm:mt-12 mt-8 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
-      
-          < CardGrid/>       
-      </section> */}
+    
       </div>
 
       {/* Full-bleed black background section */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center px-4">
-        <div className="bg-black rounded-[10px] p-6 sm:p-8 w-full max-w-[1370px]">
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center sm:px-4 mx-0.5">
+        <div className="bg-black rounded-[10px] py-8 sm:py-12 w-full max-w-[1370px]">
           <div className="max-w-4xl mx-auto">
 
       <section className="max-sm:mx-7">
@@ -171,9 +163,9 @@ export default function Home() {
 
       <Link 
   href={ROUTES.START_PROJECT} 
-  className="text-[#FFFFFFA3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
+  className="text-white font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
 > 
-  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300'>
+  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300 text-white'>
     Start a project
   </span>  
   <IoIosArrowForward 
@@ -238,22 +230,7 @@ export default function Home() {
 
  
 
-      <Link href={ROUTES.START_PROJECT} className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
-  <h2 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
-    Start a 
-  </h2> 
 
-  <div className="flex items-center gap-2"> 
-    <h2 className="text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black">
-      project
-    </h2>
-   
-    <IoIosArrowForward 
-      className='text-black mt-[2px] transition-all duration-300 transform group-hover:translate-x-4 group-hover:scale-110' 
-      size={36} 
-    /> 
-  </div>
-</Link>
 
 
       <PlayReelSection/>

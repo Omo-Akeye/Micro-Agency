@@ -196,9 +196,9 @@ export default function OfferSection() {
 
       <Link 
   href={ROUTES.START_PROJECT} 
-  className="text-[#FFFFFFA3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
+  className="text-white font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
 > 
-  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300'>
+  <span className='underline decoration-white group-hover:decoration-white transition-all duration-300'>
     Start a project
   </span>  
   <IoIosArrowForward 

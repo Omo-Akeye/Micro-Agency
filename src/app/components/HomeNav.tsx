@@ -44,7 +44,7 @@ export default function HomeNav() {
             About
             <Chevron />
           </summary>
-          <div className="absolute bottom-8 right-0 flex w-56 flex-col gap-1 rounded-xl bg-white p-2 text-xs text-black shadow-xl">
+          <div className="absolute bottom-8 right-0 flex w-60 flex-col gap-1 rounded-xl bg-white p-2 text-xs text-black shadow-xl">
             <Link href={ROUTES.ORE} className="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-[#f5f5f5]">
               <img src="/ore.png" alt="" width="28" height="28" className="rounded-full" />
               Isaac Oreoluwa — Designer
