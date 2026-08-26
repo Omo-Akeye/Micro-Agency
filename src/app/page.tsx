@@ -86,33 +86,43 @@ export default function Home() {
           Limited to 1 new project this month
         </div>
 
-        <Image
-          src="/homegif.gif"
-          alt="Function Studio — turning ideas into impactful digital products"
-          width={1101}
-          height={625}
-          priority
-          unoptimized
-          className="absolute inset-0 h-full w-full object-contain object-center"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 aspect-[1101/625] w-full max-w-[1101px] -translate-x-1/2 -translate-y-1/2">
+            <Image
+              src="/homegif.gif"
+              alt="Function Studio — turning ideas into impactful digital products"
+              width={1101}
+              height={625}
+              priority
+              unoptimized
+              className="h-full w-full object-contain"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute bottom-[2%] right-[0.5%] h-[6%] w-[12%] bg-black"
+            />
+          </div>
+        </div>
 
         <HomeNav />
+      </header>
 
-        <div className="absolute bottom-0 left-1/2 z-40 flex -translate-x-1/2 translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-2.5 ">
+      <div className="relative z-40 mx-auto h-0 w-full">
+        <div className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-2">
           <Link
             href={ROUTES.START_PROJECT}
-            className="rounded-full bg-black px-4 py-3 text-xs font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
+            className="rounded-full bg-black px-3 py-2 text-[10px] font-medium leading-none text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
           >
             Start a project
           </Link>
-          <CalButton className="rounded-full border border-[#e2e2e2] px-4 py-3 text-xs font-medium text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
+          <CalButton className="rounded-full border border-[#e2e2e2] px-3 py-2 text-[10px] font-medium leading-none text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
             Book a 15-min audit call
           </CalButton>
         </div>
-      </header>
+      </div>
 
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
-        <section className="pt-20 text-center sm:pt-[78px] tracking-[-4%] leading-[28px]">
+        <section className="pt-20 text-center sm:pt-[68px] tracking-[-4%] leading-[28px]">
           <h1 className="font-semibold tracking-[-0.02em] text-black">
             Design + Dev Duo Building Fast, High-Conversion Products
           </h1>
