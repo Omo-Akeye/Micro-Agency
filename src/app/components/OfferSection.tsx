@@ -192,17 +192,17 @@ export default function OfferSection() {
   return (
     <section>
       <div className='flex justify-between items-center  mb-4'>
-    <h1 className="font-medium">What We Offer</h1>
+    <h1 className="font-medium text-white">What We Offer</h1>
 
       <Link 
   href={ROUTES.START_PROJECT} 
-  className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
+  className="text-[#FFFFFFA3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
 > 
-  <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
+  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300'>
     Start a project
   </span>  
   <IoIosArrowForward 
-    className='text-black mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
+    className='text-white mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
   /> 
 </Link>
     

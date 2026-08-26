@@ -59,7 +59,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
 
       
       <div className="space-y-4">
-        <h2 className="font-medium text-[#000000A3] mb-6">FAQs</h2>
+        <h2 className="font-medium text-[#FFFFFFA3] mb-6">FAQs</h2>
         
         <div className="space-y-3">
           {items.map((item: FAQItem) => {
@@ -68,7 +68,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
             return (
               <div
                 key={item.id}
-                className="border-b border-[#00000052] overflow-hidden border-opacity-60   duration-300 last:border-none"
+                className="border-b border-[#FFFFFF52] overflow-hidden border-opacity-60   duration-300 last:border-none"
               >
                 <button
                   onClick={() => toggleItem(item.id)}
@@ -76,11 +76,11 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
                   aria-expanded={isOpen}
                   aria-controls={`faq-content-${item.id}`}
                 >
-                  <span className="text-lg font-medium text-[#000000] pr-4">
+                  <span className="text-lg font-medium text-white pr-4">
                     {item.question}
                   </span>
                   <div className="flex-shrink-0">
-                    <div className={`transform transition-transform duration-300 ease-out ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+                    <div className={`transform transition-transform duration-300 ease-out text-white ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
                       {isOpen ? (
                     
                         <FaMinus />
@@ -103,7 +103,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
                   <div className={`pb-4 transform transition-transform duration-300 ease-out ${
                     isOpen ? 'translate-y-0' : '-translate-y-2'
                   }`}>
-                    <p className="text-[#000000B8] leading-relaxed">
+                    <p className="text-[#FFFFFFB8] leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

@@ -142,8 +142,14 @@ export default function Home() {
       
           < CardGrid/>       
       </section> */}
+      </div>
 
-      <section className=" max-sm:mx-7">
+      {/* Full-bleed black background section */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center px-4">
+        <div className="bg-black rounded-[10px] p-6 sm:p-8 w-full max-w-[1370px]">
+          <div className="max-w-4xl mx-auto">
+
+      <section className="max-sm:mx-7">
 
           <OfferSection/>
 
@@ -160,18 +166,18 @@ export default function Home() {
       
       
            <div className='flex justify-between items-center  mb-4'>
-    <h2 className="font-medium">Why Work With Us?</h2>
+    <h2 className="font-medium text-white">Why Work With Us?</h2>
 
 
       <Link 
   href={ROUTES.START_PROJECT} 
-  className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
+  className="text-[#FFFFFFA3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
 > 
-  <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
+  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300'>
     Start a project
   </span>  
   <IoIosArrowForward 
-    className='text-black mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
+    className='text-white mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
   /> 
 </Link>
     
@@ -222,6 +228,12 @@ export default function Home() {
       <TestimonialSlider/>
 
       <FAQAccordion/>
+
+          </div>
+        </div>
+      </div>
+      {/* Resume normal container */}
+      <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
       
 
  
