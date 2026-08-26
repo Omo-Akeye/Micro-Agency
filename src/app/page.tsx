@@ -12,6 +12,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import CalButton from "./components/CalButton";
 import InteractionShowcase from "./components/InteractionShowcase";
 import HomeNav from "./components/HomeNav";
+import StickyButtonBar from "./components/StickyButtonBar";
 
 export const metadata: Metadata = {
   title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
@@ -107,8 +108,7 @@ export default function Home() {
         <HomeNav />
       </header>
 
-      <div className="relative z-40 mx-auto h-0 w-full">
-        <div className="absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1.5 whitespace-nowrap rounded-full bg-white p-3">
+      <StickyButtonBar>
           <Link
             href={ROUTES.START_PROJECT}
             className="rounded-full bg-black px-3 py-2 text-sm font-medium leading-none text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
@@ -118,8 +118,7 @@ export default function Home() {
           <CalButton className="rounded-full border border-[#e2e2e2] px-3 py-2 text-sm font-medium leading-none text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
             Book a 15-min audit call
           </CalButton>
-        </div>
-      </div>
+      </StickyButtonBar>
 
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
         <section className=" text-center sm:pt-[68px] pt-14 tracking-[-4%] leading-[28px]">
