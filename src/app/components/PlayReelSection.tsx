@@ -25,7 +25,7 @@ const PlayReelSection = () => {
   return (
     <>
     
-      <section className="mt-[200px] my-12 flex justify-center items-center max-sm:mx-7 relative">
+      <section className="my-[150px] flex justify-center items-center max-sm:mx-7 relative">
         <div className="relative">
 
           <div className="absolute -top-[50px] sm:-top-[60px] left-[10px] sm:left-[60px] z-20">
