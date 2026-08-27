@@ -11,6 +11,8 @@ import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 import CalButton from "./components/CalButton";
 import InteractionShowcase from "./components/InteractionShowcase";
+import HomeNav from "./components/HomeNav";
+import StickyButtonBar from "./components/StickyButtonBar";
 
 export const metadata: Metadata = {
   title: "Function Studio | Design + Dev Duo Building High-Conversion Products",
@@ -71,7 +73,7 @@ const faqJsonLd = {
 
 export default function Home() {
   return (
-    <div className="orbit-regular mt-10">
+    <div className="orbit-regular">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -79,47 +81,69 @@ export default function Home() {
         }}
       />
 
-      <section>
-   
+      <header className="relative h-[520px] overflow-x-clip bg-black sm:h-[620px]">
+        <div className="absolute left-1/2 top-6 z-30 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-dashed border-white/25 px-4 py-2 text-[10px] font-medium text-white/75 sm:top-8 sm:text-xs">
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#18d42b] opacity-75" />
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-[#18d42b]" />
+          </span>
+          Limited to 1 new project this month
+        </div>
 
-      <h1 className="font-normal text-[40px] leading-[50.36px] tracking-[-0.08em] sm:text-[70.25px] sm:leading-[72px] sm:tracking-[-0.06em] text-[#000000]/40 merriweather max-sm:px-7">
-  <span className="text-[#000000]">
-    Design + Dev Duo
-  </span>
-  <br /> 
-  Building Fast, High-
-  <br /> 
-  Conversion Products
-</h1>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute left-1/2 top-1/2 aspect-[1101/615] w-full max-w-[1101px] -translate-x-1/2 -translate-y-1/2">
+            <Image
+              src="/homegif.gif"
+              alt="Function Studio — turning ideas into impactful digital products"
+              width={1101}
+              height={615}
+              priority
+              unoptimized
+              className="h-full w-full object-contain"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute bottom-[2%] right-[0.5%] h-[6%] w-[12%] bg-black"
+            />
+          </div>
+        </div>
 
-           <p className="sm:my-[18px] max-sm:mt-3 max-sm:mb-7  max-sm:px-7 max-sm:text-sm">Built for startups, creators & small teams who want to go from idea → live in weeks</p>
+        <HomeNav />
+      </header>
 
-           <span className="gap-3 flex items-center  max-sm:px-7 font-medium">
-      
-            <Link 
-    href={ROUTES.START_PROJECT} 
-    className="text-xs bg-[#000000] text-white rounded-[72px] sm:px-4 px-3 py-2.5 sm:py-3 
-    transition-all duration-300 ease-out hover:scale-105 hover:bg-[#222] active:scale-95"
-  >
-            
-            Start a project</Link>
-            <CalButton />
-                       </span>
-      </section>
+      <StickyButtonBar>
+          <Link
+            href={ROUTES.START_PROJECT}
+            className="rounded-full bg-black px-3 py-2 text-sm font-medium leading-none text-white transition-all duration-300 hover:scale-[1.03] hover:bg-[#222] active:scale-95"
+          >
+            Start a project
+          </Link>
+          <CalButton className="rounded-full border border-[#e2e2e2] px-3 py-2 text-sm font-medium leading-none text-black transition-colors hover:border-black hover:bg-[#f7f7f7]">
+            Book a 15-min audit call
+          </CalButton>
+      </StickyButtonBar>
 
-      <InteractionShowcase />
+      <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
+        <section className=" text-center sm:pt-[58px] pt-11 tracking-[-4%] leading-[28px]">
+          <h1 className="font-semibold tracking-[-0.02em] text-black">
+            Design + Dev Duo Building Fast, <br className="md:hidden"/> High-Conversion Products
+          </h1>
+          <p className="mx-auto mt-2 max-w-[520px] text-sm leading-5 text-[#000000B8] sm:text-base sm:leading-6">
+            Built for startups, creators &amp; small teams who want to go from<br className="hidden sm:block" /> idea → live in weeks
+          </p>
+        </section>
 
-      {/* <section className="flex items-center gap-8 md:mt-[33px] mt-6 max-sm:px-7">
-        <img src="/bimelogo.svg" width={58} alt="bime" className="h-auto object-cover" />
-         <img src="/pay4me.svg"  width={88} alt="pay4me" className="h-auto object-cover" />
-      </section> */}
+        <InteractionShowcase />
 
-      {/* <section className="sm:mt-12 mt-8 flex flex-col gap-8 mb-10 max-sm:overflow-hidden  max-sm:px-7">
-      
-          < CardGrid/>       
-      </section> */}
+    
+      </div>
 
-      <section className=" max-sm:mx-7">
+      {/* Full-bleed black background section */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen flex justify-center sm:px-4 mx-0.5">
+        <div className="bg-black rounded-[10px] py-8 sm:py-12 w-full max-w-[1370px]">
+          <div className="max-w-4xl mx-auto">
+
+      <section className="max-sm:mx-7">
 
           <OfferSection/>
 
@@ -136,18 +160,18 @@ export default function Home() {
       
       
            <div className='flex justify-between items-center  mb-4'>
-    <h2 className="font-medium">Why Work With Us?</h2>
+    <h2 className="font-medium text-white">Why Work With Us?</h2>
 
 
       <Link 
   href={ROUTES.START_PROJECT} 
-  className="text-[#000000A3] font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-black"
+  className="text-white font-medium flex items-center gap-1 group transition-colors duration-300 hover:text-white"
 > 
-  <span className='underline decoration-[#00000050] group-hover:decoration-black transition-all duration-300'>
+  <span className='underline decoration-[#FFFFFF50] group-hover:decoration-white transition-all duration-300 text-white'>
     Start a project
   </span>  
   <IoIosArrowForward 
-    className='text-black mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
+    className='text-white mt-[2px] transition-transform duration-300 group-hover:translate-x-1' 
   /> 
 </Link>
     
@@ -198,29 +222,21 @@ export default function Home() {
       <TestimonialSlider/>
 
       <FAQAccordion/>
+
+          </div>
+        </div>
+      </div>
+      {/* Resume normal container */}
+      <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
       
 
  
 
-      <Link href={ROUTES.START_PROJECT} className="flex justify-between items-center max-sm:px-7 max-sm:mt-4 group py-4"> 
-  <h2 className='text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black'>
-    Start a 
-  </h2> 
 
-  <div className="flex items-center gap-2"> 
-    <h2 className="text-[#000000A3] text-4xl max-sm:text-2xl leading-[91.21px] font-medium tracking-[4%] transition-colors duration-300 group-hover:text-black">
-      project
-    </h2>
-   
-    <IoIosArrowForward 
-      className='text-black mt-[2px] transition-all duration-300 transform group-hover:translate-x-4 group-hover:scale-110' 
-      size={36} 
-    /> 
-  </div>
-</Link>
 
 
       <PlayReelSection/>
+      </div>
     </div>
   );
 }

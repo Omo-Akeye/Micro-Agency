@@ -10,33 +10,6 @@ const ratingRows = [
   ["Features", 4],
 ] as const;
 
-function ClickPrompt({ direction = "right" }: { direction?: "left" | "right" }) {
-  return (
-    <div
-      className={`pointer-events-none absolute -top-12 z-20 flex items-center gap-2 text-[#1d1b1c] ${
-        direction === "right" ? "left-8" : "right-8 flex-row-reverse"
-      }`}
-    >
-      <span className="sedgwick whitespace-nowrap text-2xl  text-[#1C1C1B]/40">Click me</span>
-      <svg
-        aria-hidden="true"
-        className={`text-[#1C1C1B]/40 ${direction === "left" ? "-scale-x-100" : ""}`}
-        width="36"
-        height="25"
-        viewBox="0 0 36 25"
-        fill="none"
-      >
-        <path
-          d="M.65 1.99c10.2-1.21 27.77-4.89 30.45 9.18.65 3.45-.7 6.18-1.97 9.27-.06.13-1.84 3.02-1.98 2.56-.36-1.22-2.62-8.38-1.2-3.72.15.49.6 4 1.11 4.21 1.37.57 6.79-3.02 8.23-3.61"
-          stroke="currentColor"
-          strokeWidth="1.3"
-          strokeLinecap="round"
-        />
-      </svg>
-    </div>
-  );
-}
-
 
 
 function LogoLink({
@@ -122,24 +95,7 @@ function MobileProjectCard({
   return (
     <article className="relative block pt-10 md:hidden">
     
-      <div className="absolute left-[10%] top-[-5%] z-30 flex flex-col items-start pointer-events-none">
-        <span className="sedgwick text-base text-[#1C1C1B]/40">Click me</span>
-        <svg
-          aria-hidden="true"
-          className="ml-3 -mt-0.5 text-[#1C1C1B]/40"
-          width="24"
-          height="18"
-          viewBox="0 0 36 25"
-          fill="none"
-        >
-          <path
-            d="M.65 1.99c10.2-1.21 27.77-4.89 30.45 9.18.65 3.45-.7 6.18-1.97 9.27-.06.13-1.84 3.02-1.98 2.56-.36-1.22-2.62-8.38-1.2-3.72.15.49.6 4 1.11 4.21 1.37.57 6.79-3.02 8.23-3.61"
-            stroke="currentColor"
-            strokeWidth="1.3"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
+  
 
       
       <Link
@@ -203,9 +159,9 @@ function ProjectInteraction({
       />
 
       <div className={`hidden items-center md:flex ${reversed ? "justify-start" : "justify-end"}`}>
-        <div className="relative aspect-[1.72] w-[70%] overflow-hidden rounded-[5px]">
+        <Link href={href} target="_blank" rel="noreferrer" className="relative block aspect-[1.72] w-[70%] overflow-hidden rounded-[5px] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]">
           <Image src={image} alt={imageAlt} fill sizes="650px" className="object-cover" />
-        </div>
+        </Link>
 
         <div
           className={`absolute top-1/2 z-10 w-[34%] max-w-[360px] -translate-y-1/2 ${
@@ -213,7 +169,7 @@ function ProjectInteraction({
           }`}
         >
           <div className="relative">
-            <ClickPrompt direction={reversed ? "left" : "right"} />
+         
             <LogoLink href={href} src={logo} alt={logoAlt} mobileSrc={mobileLogo} />
           </div>
         </div>
@@ -387,7 +343,7 @@ export default function InteractionShowcase() {
   return (
     <section
       aria-label="Interactive work samples"
-      className="relative left-1/2 my-12 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14 sm:my-16 sm:gap-y-11"
+      className="relative left-1/2 my-10 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14  sm:gap-y-11"
     >
       <ProjectInteraction
         // image="/home-lavis.png"

@@ -74,8 +74,8 @@ const TestimonialSlider = () => {
               onClick={() => goToSlide(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-[#8B8B8B] w-4'
-                  : 'bg-[#D9D9D9] hover:bg-gray-400'
+                  ? 'bg-white w-4'
+                  : 'bg-[#FFFFFF50] hover:bg-[#FFFFFF80]'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -89,11 +89,11 @@ const TestimonialSlider = () => {
               key={index}
               className={`col-start-1 row-start-1 transition-all duration-700 ease-in-out ${getSlideClass(index)}`}
             >
-              <p className="text-[26px] sm:text-[40.9px] leading-[40px] sm:leading-[63.63px] tracking-[-0.04em] font-medium mb-6 sm:mb-8">
+              <p className="text-[26px] sm:text-[40.9px] leading-[40px] sm:leading-[63.63px] tracking-[-0.04em] font-medium mb-6 sm:mb-8 text-white">
                 {testimonial.text}
               </p>
 
-              <p className="text-[20px] sm:text-[26.6px] leading-[30px] sm:leading-[40px] tracking-[-0.04em] font-normal sedgwick">
+              <p className="text-[20px] sm:text-[26.6px] leading-[30px] sm:leading-[40px] tracking-[-0.04em] font-normal sedgwick text-white">
                 <span className="">{testimonial.author}</span>
                 <span className="font-normal">, {testimonial.role}</span>
               </p>
