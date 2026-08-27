@@ -387,7 +387,7 @@ export default function InteractionShowcase() {
   return (
     <section
       aria-label="Interactive work samples"
-      className="relative left-1/2 my-12 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14 sm:my-14 sm:gap-y-11"
+      className="relative left-1/2 my-10 flex w-[calc(100vw-32px)] max-w-[1144px] -translate-x-1/2 flex-col gap-y-14  sm:gap-y-11"
     >
       <ProjectInteraction
         // image="/home-lavis.png"

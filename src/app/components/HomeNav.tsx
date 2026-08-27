@@ -20,9 +20,7 @@ export default function HomeNav() {
   return (
     <nav aria-label="Primary navigation" className="absolute inset-x-0 bottom-[58px] z-30 flex justify-center px-5 sm:bottom-[62px]">
       <div className="flex items-center gap-4 text-white">
-        <Link href={ROUTES.PROJECTS} className="underline underline-offset-2 transition-colors hover:text-white">
-          Projects
-        </Link>
+    
 
         <details className="group relative">
           <summary className="flex cursor-pointer list-none items-center gap-2 underline underline-offset-2 transition-colors hover:text-white [&::-webkit-details-marker]:hidden">
@@ -38,6 +36,9 @@ export default function HomeNav() {
             </a>
           </div>
         </details>
+            <Link href={ROUTES.PROJECTS} className="underline underline-offset-2 transition-colors hover:text-white">
+          Projects
+        </Link>
 
         <details className="group relative">
           <summary className="flex cursor-pointer list-none items-center gap-2 underline underline-offset-2 transition-colors hover:text-white [&::-webkit-details-marker]:hidden">

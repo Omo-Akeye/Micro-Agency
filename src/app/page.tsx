@@ -83,7 +83,10 @@ export default function Home() {
 
       <header className="relative h-[520px] overflow-x-clip bg-black sm:h-[620px]">
         <div className="absolute left-1/2 top-6 z-30 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-dashed border-white/25 px-4 py-2 text-[10px] font-medium text-white/75 sm:top-8 sm:text-xs">
-          <span className="h-3 w-3 rounded-full bg-[#18d42b] shadow-[0_0_10px_rgba(24,212,43,0.45)]" />
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#18d42b] opacity-75" />
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-[#18d42b]" />
+          </span>
           Limited to 1 new project this month
         </div>
 
@@ -121,7 +124,7 @@ export default function Home() {
       </StickyButtonBar>
 
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-[2%]">
-        <section className=" text-center sm:pt-[68px] pt-14 tracking-[-4%] leading-[28px]">
+        <section className=" text-center sm:pt-[58px] pt-11 tracking-[-4%] leading-[28px]">
           <h1 className="font-semibold tracking-[-0.02em] text-black">
             Design + Dev Duo Building Fast, <br className="md:hidden"/> High-Conversion Products
           </h1>
